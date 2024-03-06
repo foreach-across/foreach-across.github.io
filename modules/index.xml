@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modules on Foreach Across</title>
+    <link>https://foreach-across.github.io/modules/</link>
+    <description>Recent content in Modules on Foreach Across</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://foreach-across.github.io/modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Across Web</title>
+      <link>https://foreach-across.github.io/modules/across-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/across-web/</guid>
+      <description>AcrossWebModule is a basic building block of pretty much every Across application.&#xA;It activates Spring MVC support for all modules in the Across context. This means modules can configure Spring MVC features, adding things like controllers, servlets and filters.&#xA;On top of regular Spring MVC components, AcrossWebModule adds the following out of the box:&#xA;Thymeleaf template rendering with a custom Thymeleaf dialect for interacting with the Across web infrastructure&#xA;infrastructure for templates, menu building and registering web resources</description>
+    </item>
+    <item>
+      <title>Hibernate JPA module</title>
+      <link>https://foreach-across.github.io/modules/across-hibernate-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/across-hibernate-module/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;AcrossHibernateJpaModule&lt;/code&gt; activates JPA support for an entire&#xA;Across application. It allows other modules to subscribe their entities&#xA;to the shared JPA &lt;code&gt;EntityManager&lt;/code&gt; represented by the&#xA;&lt;code&gt;AcrossHibernateJpaModule&lt;/code&gt;. The JPA implementation is built on top of&#xA;Hibernate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring Security module</title>
+      <link>https://foreach-across.github.io/modules/spring-security-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/spring-security-module/</guid>
+      <description>The SpringSecurityModule activates Spring security in the Across context and allows other modules to make use of the security infrastructure, as well as to make security configuration changes (eg. register additional security filters).&#xA;It also provides some additional infrastructure for custom security principals.&#xA;This module is required to work with Spring security in an Across application. It is a replacement for the Spring Boot security starter in an Across setup.</description>
+    </item>
+    <item>
+      <title>Debug Web Module</title>
+      <link>https://foreach-across.github.io/modules/debug-web-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/debug-web-module/</guid>
+      <description>&lt;p&gt;Activates support for &lt;code&gt;@DebugWebControllers&lt;/code&gt; in other modules. Provides&#xA;facilities for introspecting a running &lt;code&gt;AcrossContext&lt;/code&gt; configuration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ehcache Module</title>
+      <link>https://foreach-across.github.io/modules/ehcache-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/ehcache-module/</guid>
+      <description>&lt;p&gt;Activates Ehcache cache management support and provides debug&#xA;controllers to view and manage the cache.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logging Module</title>
+      <link>https://foreach-across.github.io/modules/logging-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/logging-module/</guid>
+      <description>&lt;p&gt;Provides logging facilities for modules along with debug controllers to&#xA;configure it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bootstrap UI Module</title>
+      <link>https://foreach-across.github.io/modules/bootstrap-ui-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/bootstrap-ui-module/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;BootstrapUiModule&lt;/code&gt; provides a component layer for generating&#xA;&lt;a href=&#34;https://getbootstrap.com&#34;&gt;Bootstrap&lt;/a&gt; (v4) based web controls from&#xA;Java code. The controls are built on top of the Across Web ViewElement&#xA;infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;This module is a base component for building user interfaces. Other&#xA;modules like &lt;a href=&#34;https://foreach-across.github.io/modules/admin-web-module/&#34;&gt;AdminWebModule&lt;/a&gt;&#xA;and &lt;a href=&#34;https://foreach-across.github.io/modules/entity-module/&#34;&gt;EntityModule&lt;/a&gt; build on top of&#xA;it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Admin Web</title>
+      <link>https://foreach-across.github.io/modules/admin-web-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/admin-web-module/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;AdminWebModule&lt;/code&gt; provides infrastructure for building a secured&#xA;administration section in your site. It sets up a default security layer&#xA;with a form login, and provides a Bootstrap based layout for the UI.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Entity Module</title>
+      <link>https://foreach-across.github.io/modules/entity-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/entity-module/</guid>
+      <description>&lt;p&gt;&lt;code&gt;EntityModule&lt;/code&gt; provides the developer with infrastructure for building&#xA;user interfaces to manage the entities of an application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Application Info Module</title>
+      <link>https://foreach-across.github.io/modules/application-info-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/application-info-module/</guid>
+      <description>&lt;p&gt;Centralized way of providing information about the running application&#xA;(e.g. start time, build number).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Properties Module</title>
+      <link>https://foreach-across.github.io/modules/properties-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/properties-module/</guid>
+      <description>&lt;p&gt;Provides services and facilities to manage collections of strong typed&#xA;properties in a dbms.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring Security Acl Module</title>
+      <link>https://foreach-across.github.io/modules/spring-security-acl-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/spring-security-acl-module/</guid>
+      <description>The SpringSecurityAclModule provides infrastructure for securing your application using Access Control Lists (ACLs). It is built on top of Spring Security ACL.&#xA;Adding SpringSecurityAclModule to your application will set up all infrastructure to create and manage ACLs, as well as to evaluate them using Spring security (in any module). This module requires an RDBMS datasource to create the tables for holding the ACL data.&#xA;Components are also provided to easily build a user interface for updating ACLs using EntityModule.</description>
+    </item>
+    <item>
+      <title>User Module</title>
+      <link>https://foreach-across.github.io/modules/user-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/user-module/</guid>
+      <description>&lt;p&gt;Provides a domain model for users, groups, roles and permissions.&#xA;Integrates automatically with &lt;a href=&#34;https://foreach-across.github.io/modules/admin-web-module/&#34;&gt;Admin Web Module&lt;/a&gt; and &lt;a href=&#34;https://foreach-across.github.io/modules/spring-security-module/&#34;&gt;Security Module&lt;/a&gt;, so you can immediately authenticate&#xA;with these users and perform role based security checks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LDAP Module</title>
+      <link>https://foreach-across.github.io/modules/ldap-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/ldap-module/</guid>
+      <description>&lt;p&gt;&lt;code&gt;LdapModule&lt;/code&gt; provides a services for connecting to&#xA;&lt;a href=&#34;https://ldap.com/&#34;&gt;LDAP&lt;/a&gt; directories. It provides a domain model for&#xA;configuring LDAP connections and integrating them with an&#xA;authentication layer. If &lt;a href=&#34;https://foreach-across.github.io/modules/user-module/&#34;&gt;UserModule&lt;/a&gt;&#xA;is also present support for synchronizing users and groups from LDAP&#xA;will also be active.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OAuth 2 Module</title>
+      <link>https://foreach-across.github.io/modules/oauth2-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/oauth2-module/</guid>
+      <description>&lt;p&gt;Provides &lt;a href=&#34;https://oauth.net/2/&#34;&gt;OAuth 2&lt;/a&gt; related domain model and&#xA;infrastructure using &lt;a href=&#34;https://spring.io/projects/spring-security-oauth&#34;&gt;Spring Security OAuth&#xA;2&lt;/a&gt; and the&#xA;&lt;a href=&#34;https://foreach-across.github.io/modules/user-module/&#34;&gt;UserModule&lt;/a&gt; domain model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>File Manager Module</title>
+      <link>https://foreach-across.github.io/modules/file-manager-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/file-manager-module/</guid>
+      <description>&lt;p&gt;Across standard module that provides a set of uniform services for&#xA;managing files in different types of file/blob repositories.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Server Module</title>
+      <link>https://foreach-across.github.io/modules/imageserver-core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/imageserver-core/</guid>
+      <description>&lt;p&gt;&lt;code&gt;ImageServerCoreModule&lt;/code&gt; provides functionality for serving images in&#xA;different resolutions. It can be used as an alternative to an actual&#xA;Image CDN like &lt;a href=&#34;https://cloudinary.com/&#34;&gt;Cloudinary&lt;/a&gt; when you need to&#xA;have the functionality inside your app (or local network).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Server Admin UI</title>
+      <link>https://foreach-across.github.io/modules/imageserver-admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/imageserver-admin/</guid>
+      <description>&lt;p&gt;&lt;code&gt;ImageServerAdminWebModule&lt;/code&gt; adds some Admin Web controllers for managing&#xA;basic things of your ImageServer:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;managing resolutions&lt;/li&gt;&#xA;&lt;li&gt;uploading an image&lt;/li&gt;&#xA;&lt;li&gt;viewing an image by its unique key&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Web Content Management</title>
+      <link>https://foreach-across.github.io/modules/web-cms-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/web-cms-module/</guid>
+      <description>&lt;p&gt;&lt;code&gt;WebCmsModule&lt;/code&gt; provides some basic web content management features for&#xA;your Across application.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

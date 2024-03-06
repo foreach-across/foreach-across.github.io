@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FAQ on Foreach Across</title>
+    <link>https://foreach-across.github.io/faq/</link>
+    <description>Recent content in FAQ on Foreach Across</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://foreach-across.github.io/faq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>General</title>
+      <link>https://foreach-across.github.io/faq/general/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/general/</guid>
+      <description>Is Across free to use? Yes. Across Framework as well as all modules built by the same team are published under the Apache 2.0 license. The source code can be found on the Foreach Bitbucket space.&#xA;What experience do I need to get started with Across? You need a good grasp of Java (8) and Spring Framework. Spring MVC experience is strongly advised, and some Spring Boot knowledge might be helpful.</description>
+    </item>
+    <item>
+      <title>Fundamentals</title>
+      <link>https://foreach-across.github.io/faq/fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/fundamentals/</guid>
+      <description>What is an Across module? An Across module bundles technical or business domain functionality, most often the latter. It represents a single Spring ApplicationContext that holds all the components the module defines and - optionally - makes these components available to other modules.&#xA;Across modules can depend on other modules. These dependencies will determine the relative order of a module versus other modules in the same application. A module will start (or ‘bootstrap’) after all the modules it depends on have already started.</description>
+    </item>
+    <item>
+      <title>Developing Across applications</title>
+      <link>https://foreach-across.github.io/faq/developing-applications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/developing-applications/</guid>
+      <description>What is the meaning of the project structure created by Across Initializr? Update 2024-02-11: Across Initializr is no longer available.&#xA;Across Initializr generates a typical project structure for an Across application. Which structure gets created exactly depends on the options you checked when generating the project.&#xA;It will create both a Java package structure and a structure for the embedded resources. At first glance some part of it might seem bloated (especially the resources).</description>
+    </item>
+    <item>
+      <title>Developing Across modules</title>
+      <link>https://foreach-across.github.io/faq/developing-modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/developing-modules/</guid>
+      <description>How can I create a module to share between multiple projects? Declaring a module only requires you to define a valid module descriptor. To be able to share it across multiple projects, simply move all components and the descriptor to a shared JAR. A module usually corresponds to a single JAR, but this is not a requirement.&#xA;See the reference documentation section on Development Across modules for general information on developing modules.</description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://foreach-across.github.io/faq/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/troubleshooting/</guid>
+      <description>I try to wire a bean in my application, but while I know it gets created, I still get an exception. This is perhaps the most common problem when working with Across modules. It usually has one of the following causes:&#xA;The bean gets created in another module and is not exposed. The most likely fix here is to expose that bean. See the question Can I manually expose existing beans from another module?</description>
+    </item>
+    <item>
+      <title>Spring Boot Compatibility</title>
+      <link>https://foreach-across.github.io/faq/spring-boot-compatibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/spring-boot-compatibility/</guid>
+      <description>How is Across different from Spring Boot? Across builds much more on top of Spring Framework than on Spring Boot. Across applications execute as a Spring Boot application and use some features provided by Spring Boot (like embedded webserver, YAML configuration and devtools).&#xA;Auto-configuration, however, is not supported, which means simply adding a starter to your project will not be enough. Many available configuration classes from Spring Boot will also not work in an Across application, because they are setup for a single ApplicationContext, whereas Across uses a different hierarchy.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Foreach Across</title>
+    <link>https://foreach-across.github.io/blog/</link>
+    <description>Recent content in Blog on Foreach Across</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Aug 2023 12:00:00 +0200</lastBuildDate>
+    <atom:link href="https://foreach-across.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Across 5.2.1 released</title>
+      <link>https://foreach-across.github.io/blog/2023/08/across-5.2.1-released/</link>
+      <pubDate>Thu, 31 Aug 2023 12:00:00 +0200</pubDate>
+      <guid>https://foreach-across.github.io/blog/2023/08/across-5.2.1-released/</guid>
+      <description>&lt;p&gt;After a few years of little activity, Across Framework and Platform&#xA;5.2.1 have been released today.&lt;/p&gt;&#xA;&lt;p&gt;For the details see the &lt;a href=&#34;https://foreach-across.github.io/release-notes/5.2.1&#34;&gt;Release notes&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across platform 5.1 released</title>
+      <link>https://foreach-across.github.io/blog/2020/12/across-platform-5.1-released/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2020/12/across-platform-5.1-released/</guid>
+      <description>&lt;p&gt;This release updates a number of standard modules with new features and&#xA;a few bugfixes.&lt;/p&gt;&#xA;&lt;h3 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h3&gt;&#xA;&lt;p&gt;Upgrading from 5.0 should be seamless and we advise developers to do so&#xA;when possible. Upgrading only individual modules might result in&#xA;breaking changes and is not advised.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across platform 5.0.2 released</title>
+      <link>https://foreach-across.github.io/blog/2020/11/across-platform-5.0.2-released/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2020/11/across-platform-5.0.2-released/</guid>
+      <description>&lt;p&gt;This release updates a number of standard modules with new features and&#xA;a few bugfixes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 5.0.1 released</title>
+      <link>https://foreach-across.github.io/blog/2020/06/across-platform-5.0.1-released/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2020/06/across-platform-5.0.1-released/</guid>
+      <description>&lt;p&gt;Platform 5.0.1 is a major release containing numerous breaking changes.&#xA;It is the first release using the Spring Boot 2 line.&lt;/p&gt;&#xA;&lt;h2 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h2&gt;&#xA;&lt;p&gt;Upgrading from 2.1.5 will not be trivial, due to major upgrades in the&#xA;Spring line as well. Developers are encouraged to thorougly read the&#xA;separate module release notes and follow the &lt;a href=&#34;https://foreach-across.github.io/ref-docs-5/migration/platform-2.1-to-5.0/index.html&#34;&gt;migration&#xA;guide&lt;/a&gt;&#xA;when upgrading.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.5 released</title>
+      <link>https://foreach-across.github.io/blog/2019/09/across-platform-2.1.5-released/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2019/09/across-platform-2.1.5-released/</guid>
+      <description>&lt;p&gt;This release updates a number of standard modules with new features and&#xA;a few bugfixes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.2 released</title>
+      <link>https://foreach-across.github.io/blog/2018/11/across-platform-2.1.2-released/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/11/across-platform-2.1.2-released/</guid>
+      <description>&lt;p&gt;This release upgrades several modules and related dependencies. Mostly&#xA;bugfixes and security patches, with the addition of some minor features.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.1 released</title>
+      <link>https://foreach-across.github.io/blog/2018/07/across-platform-2.1.1-released/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/07/across-platform-2.1.1-released/</guid>
+      <description>&lt;p&gt;This release upgrades several modules and related dependencies. Mostly&#xA;bugfixes and security patches, with the addition of some minor features.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New and improved documentation site</title>
+      <link>https://foreach-across.github.io/blog/2018/07/new-and-improved-documentation-site/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/07/new-and-improved-documentation-site/</guid>
+      <description>In the past couple of months we&amp;rsquo;ve been very actively migrating the available documentation to a new setup. Today is an important milestone as we&amp;rsquo;ve integrated the new documentation site in the Across website. All available documentation for every standard module can now easily be accessed from the single new section.&#xA;Some background Both the core projects and all standard modules have always had their own documentation repository. Documentation itself was usually written in Asciidoc and then generated as a separate HTML document, deployed on a static webserver.</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.0 released</title>
+      <link>https://foreach-across.github.io/blog/2018/04/across-platform-2.1.0-released/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/04/across-platform-2.1.0-released/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.across.dev/across-platform/2.1.0.RELEASE/reference/#2-1-0-release&#34;&gt;Across Platform&#xA;2.1.0&lt;/a&gt;&#xA;bumps Across Core to a new major version (3.x) that greatly improves&#xA;compatibility with standard Spring and Spring Boot. The Spring Boot&#xA;dependency has also been updated from 1.4.x to 1.5.x.&lt;/p&gt;&#xA;&lt;p&gt;This platform upgrade has a lot of updated modules, both with new&#xA;features and technical (sometimes breaking) refactorings/improvements.&#xA;We strongly advise you to read the &lt;a href=&#34;across-platform-2-1-0-released.html#whats-new-sections&#34;&gt;module specific release&#xA;notes&lt;/a&gt; for all&#xA;details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.0.2 released</title>
+      <link>https://foreach-across.github.io/blog/2017/12/across-platform-2.0.2-released/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/12/across-platform-2.0.2-released/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.across.dev/across-platform/2.0.2.RELEASE/reference/#_what_s_new_in_this_version&#34;&gt;Across Platform&#xA;2.0.2&lt;/a&gt;&#xA;updates a number of the standard modules with new features.&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s new&lt;/h2&gt;&#xA;&lt;p&gt;A summary of the most important updates included in this release. Refer&#xA;to the &lt;a href=&#34;across-platform-2-0-2-released.html#whats-new-sections&#34;&gt;module specific&#xA;documentation&lt;/a&gt;&#xA;for all details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.0.1 released</title>
+      <link>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</guid>
+      <description>&lt;p&gt;Across Platform 2.0.1 has been released, including several new versions&#xA;of standard modules. Some new libraries (and the first public version&#xA;of WebCmsModule) have been added as well.See&#xA;the &lt;!-- raw HTML omitted --&gt;&#xA;reference documentation&lt;!-- raw HTML omitted --&gt; for&#xA;all details. As usual, it is advised for anyone using&#xA;the &lt;code&gt;2.0.1-SNAPSHOT&lt;/code&gt; to switch to the release version(&lt;code&gt;2.0.1.RELEASE&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This week in Across - June 2nd 2017</title>
+      <link>https://foreach-across.github.io/blog/2017/06/this-week-in-across-june-2nd-2017/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/06/this-week-in-across-june-2nd-2017/</guid>
+      <description>Changes in Across Framework, Bootstrap UI Module, Admin Web Module, Entity Module and Web CMS Module.</description>
+    </item>
+    <item>
+      <title>This week in Across - May 5th 2017</title>
+      <link>https://foreach-across.github.io/blog/2017/05/this-week-in-across-may-5th-2017/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/05/this-week-in-across-may-5th-2017/</guid>
+      <description>Changes in Entity Module, Bootstrap UI Module and Web CMS Module.</description>
+    </item>
+    <item>
+      <title>Across Platform 2.0.0 released</title>
+      <link>https://foreach-across.github.io/blog/2017/05/across-platform-2.0.0-released/</link>
+      <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/05/across-platform-2.0.0-released/</guid>
+      <description>Across Platform 2.0.0 has been released and this includes new release versions for several modules. See the reference documentation for an overview of the different module versions.&#xA;Anyone working with platform-bom 2.0.0-SNAPSHOT should switch as soon as possible as the SNAPSHOT versions will be removed from the repository.&#xA;The Across starter project has been updated for release 2.0.0 as well.</description>
+    </item>
+    <item>
+      <title>This week in Across - April 28th 2017</title>
+      <link>https://foreach-across.github.io/blog/2017/04/this-week-in-across-april-28th-2017/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/04/this-week-in-across-april-28th-2017/</guid>
+      <description>Changes in Across Core, Bootstrap UI Module, Entity UI Module and LDAP module.</description>
+    </item>
+    <item>
+      <title>Across starter project created</title>
+      <link>https://foreach-across.github.io/blog/2017/03/across-starter-project-created/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/03/across-starter-project-created/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Update 2024-02-11: Across Initializr is no longer available.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;We&amp;rsquo;ve created a starter project template for Across applications. This&#xA;should help you quickly setup new projects with the most common basic&#xA;options.&lt;/p&gt;&#xA;&lt;p&gt;You can find the starter&#xA;at &lt;a href=&#34;https://bitbucket.org/beforeach/across-starter&#34;&gt;https://bitbucket.org/beforeach/across-starter&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

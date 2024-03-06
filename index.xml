@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foreach Across</title>
+    <link>https://foreach-across.github.io/</link>
+    <description>Recent content on Foreach Across</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jan 2024 12:00:00 +0100</lastBuildDate>
+    <atom:link href="https://foreach-across.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>General</title>
+      <link>https://foreach-across.github.io/faq/general/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/general/</guid>
+      <description>Is Across free to use? Yes. Across Framework as well as all modules built by the same team are published under the Apache 2.0 license. The source code can be found on the Foreach Bitbucket space.&#xA;What experience do I need to get started with Across? You need a good grasp of Java (8) and Spring Framework. Spring MVC experience is strongly advised, and some Spring Boot knowledge might be helpful.</description>
+    </item>
+    <item>
+      <title>Fundamentals</title>
+      <link>https://foreach-across.github.io/faq/fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/fundamentals/</guid>
+      <description>What is an Across module? An Across module bundles technical or business domain functionality, most often the latter. It represents a single Spring ApplicationContext that holds all the components the module defines and - optionally - makes these components available to other modules.&#xA;Across modules can depend on other modules. These dependencies will determine the relative order of a module versus other modules in the same application. A module will start (or ‘bootstrap’) after all the modules it depends on have already started.</description>
+    </item>
+    <item>
+      <title>Developing Across applications</title>
+      <link>https://foreach-across.github.io/faq/developing-applications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/developing-applications/</guid>
+      <description>What is the meaning of the project structure created by Across Initializr? Update 2024-02-11: Across Initializr is no longer available.&#xA;Across Initializr generates a typical project structure for an Across application. Which structure gets created exactly depends on the options you checked when generating the project.&#xA;It will create both a Java package structure and a structure for the embedded resources. At first glance some part of it might seem bloated (especially the resources).</description>
+    </item>
+    <item>
+      <title>Developing Across modules</title>
+      <link>https://foreach-across.github.io/faq/developing-modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/developing-modules/</guid>
+      <description>How can I create a module to share between multiple projects? Declaring a module only requires you to define a valid module descriptor. To be able to share it across multiple projects, simply move all components and the descriptor to a shared JAR. A module usually corresponds to a single JAR, but this is not a requirement.&#xA;See the reference documentation section on Development Across modules for general information on developing modules.</description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://foreach-across.github.io/faq/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/troubleshooting/</guid>
+      <description>I try to wire a bean in my application, but while I know it gets created, I still get an exception. This is perhaps the most common problem when working with Across modules. It usually has one of the following causes:&#xA;The bean gets created in another module and is not exposed. The most likely fix here is to expose that bean. See the question Can I manually expose existing beans from another module?</description>
+    </item>
+    <item>
+      <title>Spring Boot Compatibility</title>
+      <link>https://foreach-across.github.io/faq/spring-boot-compatibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/faq/spring-boot-compatibility/</guid>
+      <description>How is Across different from Spring Boot? Across builds much more on top of Spring Framework than on Spring Boot. Across applications execute as a Spring Boot application and use some features provided by Spring Boot (like embedded webserver, YAML configuration and devtools).&#xA;Auto-configuration, however, is not supported, which means simply adding a starter to your project will not be enough. Many available configuration classes from Spring Boot will also not work in an Across application, because they are setup for a single ApplicationContext, whereas Across uses a different hierarchy.</description>
+    </item>
+    <item>
+      <title>Prerequisites</title>
+      <link>https://foreach-across.github.io/maintenance/prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/maintenance/prerequisites/</guid>
+      <description>&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GraphViz&lt;/li&gt;&#xA;&lt;li&gt;Python: minimum 3.10&lt;/li&gt;&#xA;&lt;li&gt;Java: 8 for Across 5, 17 for Across 6&lt;/li&gt;&#xA;&lt;li&gt;Maven: Latest 3.9&lt;/li&gt;&#xA;&lt;li&gt;Hugo: extended version&lt;/li&gt;&#xA;&lt;li&gt;Go (if using a Hugo theme which requires Go modules)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;IntelliJ: install the &lt;a href=&#34;https://plugins.jetbrains.com/plugin/13215-hugo-integration&#34;&gt;Hugo plugin&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Regular maintenance</title>
+      <link>https://foreach-across.github.io/maintenance/regular-maintenance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/maintenance/regular-maintenance/</guid>
+      <description>&lt;p&gt;This page describes regular maintenance that needs to be performed,&#xA;such as rotating tokens and keys.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Web</title>
+      <link>https://foreach-across.github.io/modules/across-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/across-web/</guid>
+      <description>AcrossWebModule is a basic building block of pretty much every Across application.&#xA;It activates Spring MVC support for all modules in the Across context. This means modules can configure Spring MVC features, adding things like controllers, servlets and filters.&#xA;On top of regular Spring MVC components, AcrossWebModule adds the following out of the box:&#xA;Thymeleaf template rendering with a custom Thymeleaf dialect for interacting with the Across web infrastructure&#xA;infrastructure for templates, menu building and registering web resources</description>
+    </item>
+    <item>
+      <title>Hibernate JPA module</title>
+      <link>https://foreach-across.github.io/modules/across-hibernate-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/across-hibernate-module/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;AcrossHibernateJpaModule&lt;/code&gt; activates JPA support for an entire&#xA;Across application. It allows other modules to subscribe their entities&#xA;to the shared JPA &lt;code&gt;EntityManager&lt;/code&gt; represented by the&#xA;&lt;code&gt;AcrossHibernateJpaModule&lt;/code&gt;. The JPA implementation is built on top of&#xA;Hibernate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring Security module</title>
+      <link>https://foreach-across.github.io/modules/spring-security-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/spring-security-module/</guid>
+      <description>The SpringSecurityModule activates Spring security in the Across context and allows other modules to make use of the security infrastructure, as well as to make security configuration changes (eg. register additional security filters).&#xA;It also provides some additional infrastructure for custom security principals.&#xA;This module is required to work with Spring security in an Across application. It is a replacement for the Spring Boot security starter in an Across setup.</description>
+    </item>
+    <item>
+      <title>Debug Web Module</title>
+      <link>https://foreach-across.github.io/modules/debug-web-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/debug-web-module/</guid>
+      <description>&lt;p&gt;Activates support for &lt;code&gt;@DebugWebControllers&lt;/code&gt; in other modules. Provides&#xA;facilities for introspecting a running &lt;code&gt;AcrossContext&lt;/code&gt; configuration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ehcache Module</title>
+      <link>https://foreach-across.github.io/modules/ehcache-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/ehcache-module/</guid>
+      <description>&lt;p&gt;Activates Ehcache cache management support and provides debug&#xA;controllers to view and manage the cache.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logging Module</title>
+      <link>https://foreach-across.github.io/modules/logging-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/logging-module/</guid>
+      <description>&lt;p&gt;Provides logging facilities for modules along with debug controllers to&#xA;configure it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bootstrap UI Module</title>
+      <link>https://foreach-across.github.io/modules/bootstrap-ui-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/bootstrap-ui-module/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;BootstrapUiModule&lt;/code&gt; provides a component layer for generating&#xA;&lt;a href=&#34;https://getbootstrap.com&#34;&gt;Bootstrap&lt;/a&gt; (v4) based web controls from&#xA;Java code. The controls are built on top of the Across Web ViewElement&#xA;infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;This module is a base component for building user interfaces. Other&#xA;modules like &lt;a href=&#34;https://foreach-across.github.io/modules/admin-web-module/&#34;&gt;AdminWebModule&lt;/a&gt;&#xA;and &lt;a href=&#34;https://foreach-across.github.io/modules/entity-module/&#34;&gt;EntityModule&lt;/a&gt; build on top of&#xA;it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Admin Web</title>
+      <link>https://foreach-across.github.io/modules/admin-web-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/admin-web-module/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;AdminWebModule&lt;/code&gt; provides infrastructure for building a secured&#xA;administration section in your site. It sets up a default security layer&#xA;with a form login, and provides a Bootstrap based layout for the UI.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Entity Module</title>
+      <link>https://foreach-across.github.io/modules/entity-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/entity-module/</guid>
+      <description>&lt;p&gt;&lt;code&gt;EntityModule&lt;/code&gt; provides the developer with infrastructure for building&#xA;user interfaces to manage the entities of an application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Application Info Module</title>
+      <link>https://foreach-across.github.io/modules/application-info-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/application-info-module/</guid>
+      <description>&lt;p&gt;Centralized way of providing information about the running application&#xA;(e.g. start time, build number).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Properties Module</title>
+      <link>https://foreach-across.github.io/modules/properties-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/properties-module/</guid>
+      <description>&lt;p&gt;Provides services and facilities to manage collections of strong typed&#xA;properties in a dbms.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring Security Acl Module</title>
+      <link>https://foreach-across.github.io/modules/spring-security-acl-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/spring-security-acl-module/</guid>
+      <description>The SpringSecurityAclModule provides infrastructure for securing your application using Access Control Lists (ACLs). It is built on top of Spring Security ACL.&#xA;Adding SpringSecurityAclModule to your application will set up all infrastructure to create and manage ACLs, as well as to evaluate them using Spring security (in any module). This module requires an RDBMS datasource to create the tables for holding the ACL data.&#xA;Components are also provided to easily build a user interface for updating ACLs using EntityModule.</description>
+    </item>
+    <item>
+      <title>User Module</title>
+      <link>https://foreach-across.github.io/modules/user-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/user-module/</guid>
+      <description>&lt;p&gt;Provides a domain model for users, groups, roles and permissions.&#xA;Integrates automatically with &lt;a href=&#34;https://foreach-across.github.io/modules/admin-web-module/&#34;&gt;Admin Web Module&lt;/a&gt; and &lt;a href=&#34;https://foreach-across.github.io/modules/spring-security-module/&#34;&gt;Security Module&lt;/a&gt;, so you can immediately authenticate&#xA;with these users and perform role based security checks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LDAP Module</title>
+      <link>https://foreach-across.github.io/modules/ldap-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/ldap-module/</guid>
+      <description>&lt;p&gt;&lt;code&gt;LdapModule&lt;/code&gt; provides a services for connecting to&#xA;&lt;a href=&#34;https://ldap.com/&#34;&gt;LDAP&lt;/a&gt; directories. It provides a domain model for&#xA;configuring LDAP connections and integrating them with an&#xA;authentication layer. If &lt;a href=&#34;https://foreach-across.github.io/modules/user-module/&#34;&gt;UserModule&lt;/a&gt;&#xA;is also present support for synchronizing users and groups from LDAP&#xA;will also be active.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OAuth 2 Module</title>
+      <link>https://foreach-across.github.io/modules/oauth2-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/oauth2-module/</guid>
+      <description>&lt;p&gt;Provides &lt;a href=&#34;https://oauth.net/2/&#34;&gt;OAuth 2&lt;/a&gt; related domain model and&#xA;infrastructure using &lt;a href=&#34;https://spring.io/projects/spring-security-oauth&#34;&gt;Spring Security OAuth&#xA;2&lt;/a&gt; and the&#xA;&lt;a href=&#34;https://foreach-across.github.io/modules/user-module/&#34;&gt;UserModule&lt;/a&gt; domain model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>File Manager Module</title>
+      <link>https://foreach-across.github.io/modules/file-manager-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/file-manager-module/</guid>
+      <description>&lt;p&gt;Across standard module that provides a set of uniform services for&#xA;managing files in different types of file/blob repositories.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Server Module</title>
+      <link>https://foreach-across.github.io/modules/imageserver-core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/imageserver-core/</guid>
+      <description>&lt;p&gt;&lt;code&gt;ImageServerCoreModule&lt;/code&gt; provides functionality for serving images in&#xA;different resolutions. It can be used as an alternative to an actual&#xA;Image CDN like &lt;a href=&#34;https://cloudinary.com/&#34;&gt;Cloudinary&lt;/a&gt; when you need to&#xA;have the functionality inside your app (or local network).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Server Admin UI</title>
+      <link>https://foreach-across.github.io/modules/imageserver-admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/imageserver-admin/</guid>
+      <description>&lt;p&gt;&lt;code&gt;ImageServerAdminWebModule&lt;/code&gt; adds some Admin Web controllers for managing&#xA;basic things of your ImageServer:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;managing resolutions&lt;/li&gt;&#xA;&lt;li&gt;uploading an image&lt;/li&gt;&#xA;&lt;li&gt;viewing an image by its unique key&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Web Content Management</title>
+      <link>https://foreach-across.github.io/modules/web-cms-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/modules/web-cms-module/</guid>
+      <description>&lt;p&gt;&lt;code&gt;WebCmsModule&lt;/code&gt; provides some basic web content management features for&#xA;your Across application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.4.0 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.4.0/</link>
+      <pubDate>Fri, 19 Jan 2024 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.4.0/</guid>
+      <description>&lt;p&gt;The main change in Across 5.4 is the upgrade from Spring Boot 2.4 to&#xA;2.6. This required no changes in the Across code itself, only a few&#xA;minor changes in tests. If you are on Across 5.2 or 5.3, it should be&#xA;almost trivial to upgrade.&lt;/p&gt;&#xA;&lt;p&gt;Note that Spring Boot 2.5 is the first version &lt;a href=&#34;https://docs.spring.io/spring-boot/docs/2.5.x/reference/html/getting-started.html#getting-started.system-requirements&#34;&gt;to support Java&#xA;17&lt;/a&gt;,&#xA;so it should finally be possible to upgrade, but this hasn&amp;rsquo;t been&#xA;tested at this moment. FYI, all Across 5.x releases are still built&#xA;with Java 8.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.3.0 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.3.0/</link>
+      <pubDate>Fri, 12 Jan 2024 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.3.0/</guid>
+      <description>&lt;p&gt;The one big change in &lt;code&gt;5.3&lt;/code&gt; is that Across development has moved to an&#xA;&lt;a href=&#34;https://gitlab.isaac.nl/antwerpen/across/&#34;&gt;internal GitLab server&lt;/a&gt;,&#xA;with the repositories also mirrored (publicly) to&#xA;&lt;a href=&#34;https://github.com/ForeachOS&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Across modules have been reorganized into a much smaller number of&#xA;git repositories, to speed up the release process. As a result of&#xA;this, there are a few small changes you need in your application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.2.2 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.2.2/</link>
+      <pubDate>Tue, 07 Nov 2023 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.2.2/</guid>
+      <description>&lt;p&gt;Small maintenance upgrade to make it possible to use Spring Boot 2.6&#xA;with Across 5.2, without completely rebuilding Across Framework and&#xA;Platform.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.2.1 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.2.1/</link>
+      <pubDate>Thu, 31 Aug 2023 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.2.1/</guid>
+      <description>&lt;p&gt;Notable changes in 5.2.1:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Upgraded to Spring Boot 2.4&lt;/li&gt;&#xA;&lt;li&gt;Upgraded to Spring Framework 5.3&lt;/li&gt;&#xA;&lt;li&gt;Upgraded test database versions&lt;/li&gt;&#xA;&lt;li&gt;And some minor changes in Spring Framework&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.2.1 released</title>
+      <link>https://foreach-across.github.io/blog/2023/08/across-5.2.1-released/</link>
+      <pubDate>Thu, 31 Aug 2023 12:00:00 +0200</pubDate>
+      <guid>https://foreach-across.github.io/blog/2023/08/across-5.2.1-released/</guid>
+      <description>&lt;p&gt;After a few years of little activity, Across Framework and Platform&#xA;5.2.1 have been released today.&lt;/p&gt;&#xA;&lt;p&gt;For the details see the &lt;a href=&#34;https://foreach-across.github.io/release-notes/5.2.1&#34;&gt;Release notes&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across platform 5.1 released</title>
+      <link>https://foreach-across.github.io/blog/2020/12/across-platform-5.1-released/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2020/12/across-platform-5.1-released/</guid>
+      <description>&lt;p&gt;This release updates a number of standard modules with new features and&#xA;a few bugfixes.&lt;/p&gt;&#xA;&lt;h3 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h3&gt;&#xA;&lt;p&gt;Upgrading from 5.0 should be seamless and we advise developers to do so&#xA;when possible. Upgrading only individual modules might result in&#xA;breaking changes and is not advised.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across platform 5.0.2 released</title>
+      <link>https://foreach-across.github.io/blog/2020/11/across-platform-5.0.2-released/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2020/11/across-platform-5.0.2-released/</guid>
+      <description>&lt;p&gt;This release updates a number of standard modules with new features and&#xA;a few bugfixes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 5.0.1 released</title>
+      <link>https://foreach-across.github.io/blog/2020/06/across-platform-5.0.1-released/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2020/06/across-platform-5.0.1-released/</guid>
+      <description>&lt;p&gt;Platform 5.0.1 is a major release containing numerous breaking changes.&#xA;It is the first release using the Spring Boot 2 line.&lt;/p&gt;&#xA;&lt;h2 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h2&gt;&#xA;&lt;p&gt;Upgrading from 2.1.5 will not be trivial, due to major upgrades in the&#xA;Spring line as well. Developers are encouraged to thorougly read the&#xA;separate module release notes and follow the &lt;a href=&#34;https://foreach-across.github.io/ref-docs-5/migration/platform-2.1-to-5.0/index.html&#34;&gt;migration&#xA;guide&lt;/a&gt;&#xA;when upgrading.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.5 released</title>
+      <link>https://foreach-across.github.io/blog/2019/09/across-platform-2.1.5-released/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2019/09/across-platform-2.1.5-released/</guid>
+      <description>&lt;p&gt;This release updates a number of standard modules with new features and&#xA;a few bugfixes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.2 released</title>
+      <link>https://foreach-across.github.io/blog/2018/11/across-platform-2.1.2-released/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/11/across-platform-2.1.2-released/</guid>
+      <description>&lt;p&gt;This release upgrades several modules and related dependencies. Mostly&#xA;bugfixes and security patches, with the addition of some minor features.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.1 released</title>
+      <link>https://foreach-across.github.io/blog/2018/07/across-platform-2.1.1-released/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/07/across-platform-2.1.1-released/</guid>
+      <description>&lt;p&gt;This release upgrades several modules and related dependencies. Mostly&#xA;bugfixes and security patches, with the addition of some minor features.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New and improved documentation site</title>
+      <link>https://foreach-across.github.io/blog/2018/07/new-and-improved-documentation-site/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/07/new-and-improved-documentation-site/</guid>
+      <description>In the past couple of months we&amp;rsquo;ve been very actively migrating the available documentation to a new setup. Today is an important milestone as we&amp;rsquo;ve integrated the new documentation site in the Across website. All available documentation for every standard module can now easily be accessed from the single new section.&#xA;Some background Both the core projects and all standard modules have always had their own documentation repository. Documentation itself was usually written in Asciidoc and then generated as a separate HTML document, deployed on a static webserver.</description>
+    </item>
+    <item>
+      <title>Across Platform 2.1.0 released</title>
+      <link>https://foreach-across.github.io/blog/2018/04/across-platform-2.1.0-released/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2018/04/across-platform-2.1.0-released/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.across.dev/across-platform/2.1.0.RELEASE/reference/#2-1-0-release&#34;&gt;Across Platform&#xA;2.1.0&lt;/a&gt;&#xA;bumps Across Core to a new major version (3.x) that greatly improves&#xA;compatibility with standard Spring and Spring Boot. The Spring Boot&#xA;dependency has also been updated from 1.4.x to 1.5.x.&lt;/p&gt;&#xA;&lt;p&gt;This platform upgrade has a lot of updated modules, both with new&#xA;features and technical (sometimes breaking) refactorings/improvements.&#xA;We strongly advise you to read the &lt;a href=&#34;across-platform-2-1-0-released.html#whats-new-sections&#34;&gt;module specific release&#xA;notes&lt;/a&gt; for all&#xA;details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.0.2 released</title>
+      <link>https://foreach-across.github.io/blog/2017/12/across-platform-2.0.2-released/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/12/across-platform-2.0.2-released/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.across.dev/across-platform/2.0.2.RELEASE/reference/#_what_s_new_in_this_version&#34;&gt;Across Platform&#xA;2.0.2&lt;/a&gt;&#xA;updates a number of the standard modules with new features.&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s new&lt;/h2&gt;&#xA;&lt;p&gt;A summary of the most important updates included in this release. Refer&#xA;to the &lt;a href=&#34;across-platform-2-0-2-released.html#whats-new-sections&#34;&gt;module specific&#xA;documentation&lt;/a&gt;&#xA;for all details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across Platform 2.0.1 released</title>
+      <link>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</guid>
+      <description>&lt;p&gt;Across Platform 2.0.1 has been released, including several new versions&#xA;of standard modules. Some new libraries (and the first public version&#xA;of WebCmsModule) have been added as well.See&#xA;the &lt;!-- raw HTML omitted --&gt;&#xA;reference documentation&lt;!-- raw HTML omitted --&gt; for&#xA;all details. As usual, it is advised for anyone using&#xA;the &lt;code&gt;2.0.1-SNAPSHOT&lt;/code&gt; to switch to the release version(&lt;code&gt;2.0.1.RELEASE&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This week in Across - June 2nd 2017</title>
+      <link>https://foreach-across.github.io/blog/2017/06/this-week-in-across-june-2nd-2017/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/06/this-week-in-across-june-2nd-2017/</guid>
+      <description>Changes in Across Framework, Bootstrap UI Module, Admin Web Module, Entity Module and Web CMS Module.</description>
+    </item>
+    <item>
+      <title>This week in Across - May 5th 2017</title>
+      <link>https://foreach-across.github.io/blog/2017/05/this-week-in-across-may-5th-2017/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/05/this-week-in-across-may-5th-2017/</guid>
+      <description>Changes in Entity Module, Bootstrap UI Module and Web CMS Module.</description>
+    </item>
+    <item>
+      <title>Across Platform 2.0.0 released</title>
+      <link>https://foreach-across.github.io/blog/2017/05/across-platform-2.0.0-released/</link>
+      <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/05/across-platform-2.0.0-released/</guid>
+      <description>Across Platform 2.0.0 has been released and this includes new release versions for several modules. See the reference documentation for an overview of the different module versions.&#xA;Anyone working with platform-bom 2.0.0-SNAPSHOT should switch as soon as possible as the SNAPSHOT versions will be removed from the repository.&#xA;The Across starter project has been updated for release 2.0.0 as well.</description>
+    </item>
+    <item>
+      <title>This week in Across - April 28th 2017</title>
+      <link>https://foreach-across.github.io/blog/2017/04/this-week-in-across-april-28th-2017/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/04/this-week-in-across-april-28th-2017/</guid>
+      <description>Changes in Across Core, Bootstrap UI Module, Entity UI Module and LDAP module.</description>
+    </item>
+    <item>
+      <title>Across starter project created</title>
+      <link>https://foreach-across.github.io/blog/2017/03/across-starter-project-created/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/blog/2017/03/across-starter-project-created/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Update 2024-02-11: Across Initializr is no longer available.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;We&amp;rsquo;ve created a starter project template for Across applications. This&#xA;should help you quickly setup new projects with the most common basic&#xA;options.&lt;/p&gt;&#xA;&lt;p&gt;You can find the starter&#xA;at &lt;a href=&#34;https://bitbucket.org/beforeach/across-starter&#34;&gt;https://bitbucket.org/beforeach/across-starter&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>https://foreach-across.github.io/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/overview/</guid>
+      <description>Across Framework Across is a Java framework for developing your application using a modular approach. It provides a way to define application modules as well as the infrastructure to run the entire application. Geared towards developers with a love for Spring, Across is both free and open source.&#xA;An Across module:&#xA;bundles technical or business domain functionality&#xA;explicitly depends on zero or more other modules&#xA;exposes components like services or repositories for other modules to use</description>
+    </item>
+  </channel>
+</rss>

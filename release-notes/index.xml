@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Release Notes on Foreach Across</title>
+    <link>https://foreach-across.github.io/release-notes/</link>
+    <description>Recent content in Release Notes on Foreach Across</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jan 2024 12:00:00 +0100</lastBuildDate>
+    <atom:link href="https://foreach-across.github.io/release-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Across 5.4.0 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.4.0/</link>
+      <pubDate>Fri, 19 Jan 2024 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.4.0/</guid>
+      <description>&lt;p&gt;The main change in Across 5.4 is the upgrade from Spring Boot 2.4 to&#xA;2.6. This required no changes in the Across code itself, only a few&#xA;minor changes in tests. If you are on Across 5.2 or 5.3, it should be&#xA;almost trivial to upgrade.&lt;/p&gt;&#xA;&lt;p&gt;Note that Spring Boot 2.5 is the first version &lt;a href=&#34;https://docs.spring.io/spring-boot/docs/2.5.x/reference/html/getting-started.html#getting-started.system-requirements&#34;&gt;to support Java&#xA;17&lt;/a&gt;,&#xA;so it should finally be possible to upgrade, but this hasn&amp;rsquo;t been&#xA;tested at this moment. FYI, all Across 5.x releases are still built&#xA;with Java 8.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.3.0 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.3.0/</link>
+      <pubDate>Fri, 12 Jan 2024 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.3.0/</guid>
+      <description>&lt;p&gt;The one big change in &lt;code&gt;5.3&lt;/code&gt; is that Across development has moved to an&#xA;&lt;a href=&#34;https://gitlab.isaac.nl/antwerpen/across/&#34;&gt;internal GitLab server&lt;/a&gt;,&#xA;with the repositories also mirrored (publicly) to&#xA;&lt;a href=&#34;https://github.com/ForeachOS&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Across modules have been reorganized into a much smaller number of&#xA;git repositories, to speed up the release process. As a result of&#xA;this, there are a few small changes you need in your application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.2.2 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.2.2/</link>
+      <pubDate>Tue, 07 Nov 2023 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.2.2/</guid>
+      <description>&lt;p&gt;Small maintenance upgrade to make it possible to use Spring Boot 2.6&#xA;with Across 5.2, without completely rebuilding Across Framework and&#xA;Platform.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across 5.2.1 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.2.1/</link>
+      <pubDate>Thu, 31 Aug 2023 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.2.1/</guid>
+      <description>&lt;p&gt;Notable changes in 5.2.1:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Upgraded to Spring Boot 2.4&lt;/li&gt;&#xA;&lt;li&gt;Upgraded to Spring Framework 5.3&lt;/li&gt;&#xA;&lt;li&gt;Upgraded test database versions&lt;/li&gt;&#xA;&lt;li&gt;And some minor changes in Spring Framework&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
