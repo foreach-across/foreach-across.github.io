@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Image Server Module | Foreach Across</title>
+    <title>Release procedure | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="ImageServerCoreModule provides functionality for serving images in
-different resolutions. It can be used as an alternative to an actual
-Image CDN like Cloudinary when you need to
-have the functionality inside your app (or local network).">
+    <meta name="description" content="The release procedure consists of:
+
+
+Making a release plan file.
+
+
+Running a script for each repository you are releasing.
+
+
+And a few post-release steps.
+
+">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -35,31 +43,55 @@ have the functionality inside your app (or local network).">
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/modules/imageserver-core/">
+      <link rel="canonical" href="https://foreach-across.github.io/maintenance/release-procedure/">
     
 
-    <meta property="og:title" content="Image Server Module" />
-<meta property="og:description" content="ImageServerCoreModule provides functionality for serving images in
-different resolutions. It can be used as an alternative to an actual
-Image CDN like Cloudinary when you need to
-have the functionality inside your app (or local network)." />
+    <meta property="og:title" content="Release procedure" />
+<meta property="og:description" content="The release procedure consists of:
+
+
+Making a release plan file.
+
+
+Running a script for each repository you are releasing.
+
+
+And a few post-release steps.
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/modules/imageserver-core/" /><meta property="article:section" content="modules" />
+<meta property="og:url" content="https://foreach-across.github.io/maintenance/release-procedure/" /><meta property="article:section" content="maintenance" />
 
 
 
-<meta itemprop="name" content="Image Server Module">
-<meta itemprop="description" content="ImageServerCoreModule provides functionality for serving images in
-different resolutions. It can be used as an alternative to an actual
-Image CDN like Cloudinary when you need to
-have the functionality inside your app (or local network).">
+<meta itemprop="name" content="Release procedure">
+<meta itemprop="description" content="The release procedure consists of:
 
-<meta itemprop="wordCount" content="252">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Image Server Module"/>
-<meta name="twitter:description" content="ImageServerCoreModule provides functionality for serving images in
-different resolutions. It can be used as an alternative to an actual
-Image CDN like Cloudinary when you need to
-have the functionality inside your app (or local network)."/>
+
+Making a release plan file.
+
+
+Running a script for each repository you are releasing.
+
+
+And a few post-release steps.
+
+">
+
+<meta itemprop="wordCount" content="1099">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Release procedure"/>
+<meta name="twitter:description" content="The release procedure consists of:
+
+
+Making a release plan file.
+
+
+Running a script for each repository you are releasing.
+
+
+And a few post-release steps.
+
+"/>
 
       
     
@@ -198,7 +230,7 @@ have the functionality inside your app (or local network)."/>
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        Modules
+        Maintenance
       </aside>
       
 
@@ -216,7 +248,7 @@ have the functionality inside your app (or local network)."/>
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Image Server Module</h1>
+      <h1 class="f1 athelas mt3 mb1">Release procedure</h1>
       
       
       
@@ -224,57 +256,248 @@ have the functionality inside your app (or local network)."/>
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><code>ImageServerCoreModule</code> provides functionality for serving images in
-different resolutions. It can be used as an alternative to an actual
-Image CDN like <a href="https://cloudinary.com/">Cloudinary</a> when you need to
-have the functionality inside your app (or local network).</p>
-<p>Apart from a server-side setup for actually serving and storing the
-images, you will need to have a graphics library installed. A separate
-client library is also provided for easy connecting to the ImageServer
-from external applications.</p>
-<h3 id="artifacts">Artifacts</h3>
-<p>The ImageServer dependency is present in Across Platform.</p>
-<pre><code>&lt;!-- Core ImageServer --&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
-  &lt;artifactId&gt;imageserver-core&lt;/artifactId&gt;
-&lt;/dependency&gt;
-
-&lt;!-- Client library for external applications connecting to imageserver --&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
-  &lt;artifactId&gt;imageserver-client&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre>
-<h3 id="how-it-works">How it works</h3>
-<p>The basic principle of ImageServer is that original images are
-uploaded to ImageServer and should never be removed. Variations of
-that image - for example a crop or resize - are stored for performance
-but can be removed as they will simply be recreated upon the next
-request.</p>
-<h3 id="available-features">Available features</h3>
-<p>ImageServer does not come close in available features to something
-like a real Image CDN. But it does allow you to define image crops and
-perform simple image transformations. It tries to be as performant as
-possible. You can always throw away variant images, just don&rsquo;t throw
-away the original.</p>
-<h3 id="integration-with-other-modules">Integration with other modules</h3>
-<p><a href="/modules/web-cms-module/">WebCmsModule</a> has configuration
-options to automatically connect to an ImageServer as an alternative
-to Cloudinary.</p>
-<h3 id="technical-requirements">Technical requirements</h3>
-<p>ImageServer requires either:</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The release procedure consists of:</p>
 <ul>
 <li>
-<p><a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> or</p>
+<p>Making a release plan file.</p>
 </li>
 <li>
-<p><a href="http://www.graphicsmagick.org/">GraphicsMagick</a></p>
+<p>Running a script for each repository you are releasing.</p>
+</li>
+<li>
+<p>And a few post-release steps.</p>
 </li>
 </ul>
-<p>to be present on the system. The location of the binaries can be
-configured using the <a href="https://repository.foreach.be/projects/image-server/4.0.0.RELEASE/reference/#_module_settings">module
-settings</a>.</p><ul class="pa0">
+<h2 id="create-a-release-plan-file">Create a release plan file</h2>
+<p>On the <code>main</code> branch of the <code>across-development</code> repository, go to the
+<code>release-plans</code> directory. This will look something like:</p>
+<pre><code>5.3.0-M1.yml
+5.3.0-M2.yml
+5.3.0.yml
+5.4.0.yml
+</code></pre>
+<p>In this example, we&rsquo;ll release <code>5.4.1</code>, so the easiest option is to
+start from the <code>5.4.0.yml</code> file:</p>
+<pre><code>cp 5.4.0.yml 5.4.1.yml
+git add 5.4.1.yml
+</code></pre>
+<p>Edit the content of the new release plan file with the repositories
+and their corresponding new versions. For the <code>5.4.1</code> example, this
+will look like:</p>
+<pre><code>across-framework: 5.4.1
+across-autoconfigure: 2.4.1
+across-base-modules: 4.4.1
+across-entity-admin-modules: 4.4.1
+across-user-auth-modules: 4.4.1
+across-media-modules: 6.4.1
+across-platform: 5.4.1
+</code></pre>
+<p>Note that the order is important: it should follow the dependencies,
+and the order in which the repositories are to be released.</p>
+<h2 id="run-the-release-script-for-each-repository">Run the release script for each repository</h2>
+<p>First of all, make sure you have sourced the right Python virtual
+environments, and your <code>JAVA_HOME</code> and <code>PATH</code> environment variables
+point to the right JDK (1.8 for Across 5, 17 for Across 6). For my
+setup, this is:</p>
+<pre><code>. ../../venv/across/bin/activate
+. env.sh
+</code></pre>
+<p>Verify this:</p>
+<ul>
+<li>
+<p><code>which python</code> should show the path to the <code>python</code> executable in
+the <code>across</code> virtualenv:</p>
+<pre><code>  $ which python
+  /home/dvsp/git/venv/across/bin/python
+</code></pre>
+</li>
+<li>
+<p><code>mvn --version</code> should print the right JDK version:</p>
+<pre><code>  $ mvn --version
+  Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+  Maven home: /home/dvsp/tools/maven
+  Java version: 1.8.0_332, vendor: Temurin, runtime: /home/dvsp/.jdks/temurin-1.8.0_332/jre
+  Default locale: en_US, platform encoding: UTF-8
+  OS name: &quot;linux&quot;, version: &quot;6.5.0-21-generic&quot;, arch: &quot;amd64&quot;, family: &quot;unix&quot;
+</code></pre>
+</li>
+</ul>
+<p>In the example, we are making a new release for each repository, so we
+start with <code>across-framework</code>. From your <code>across-development</code>
+repository (where you have cloned all the other repositories), run:</p>
+<pre><code>ax-release.py start release-plans/5.4.1.yml across-framework
+</code></pre>
+<p>This will perform a few basic checks, edit the required <code>pom.xml</code>
+files to change the version numbers, and show you the diff of those
+changes. It will then ask for your confirmation. If you&rsquo;re OK with the
+changes, type <code>y</code> + enter to continue.</p>
+<p>From here onwards, everything will be done automatically (for the
+current repository):</p>
+<ul>
+<li>
+<p>A <code>mvn</code> build will be run locally, without any tests, to ensure that
+the modified <code>pom.xml</code> files will actually build.</p>
+</li>
+<li>
+<p>The changes will be committed and pushed to GitLab.</p>
+</li>
+<li>
+<p>This will trigger a regular pipeline in GitLab, with one small
+variation, because the <code>revision</code> is now no longer a <code>-SNAPSHOT</code>: in
+the final job (<code>deploy:foreach</code>), <code>mvn</code> will deploy the artifacts to
+the <code>across-releases</code> repository on the Foreach Nexus server
+(instead of the <code>across-snapshots</code> repository).</p>
+</li>
+<li>
+<p>When that pipeline is finished successfully, the script will create
+a git tag (<code>v5.4.1</code> in this example) and push that to GitLab.</p>
+</li>
+<li>
+<p>Pushing that tag will trigger another pipeline in GitLab, but with
+just a single job: <code>deploy:sonatype</code> (a job that is never run in a
+&ldquo;regular&rdquo; branch or merge-request pipeline). This job will perform
+all of the steps documented at:</p>
+<p><a href="https://central.sonatype.org/publish/publish-guide/">https://central.sonatype.org/publish/publish-guide/</a></p>
+<p>FYI: Across is on the &ldquo;legacy&rdquo; host: <a href="https://oss.sonatype.org/">https://oss.sonatype.org/</a>, not
+on the newer <a href="https://s01.oss.sonatype.org/">https://s01.oss.sonatype.org/</a>.</p>
+</li>
+</ul>
+<p>Once that last pipeline is finished successfully, the script will end
+with the following message:</p>
+<blockquote>
+<p>Remember to close, release and drop the staging repository at
+<a href="https://oss.sonatype.org/#stagingRepositories">https://oss.sonatype.org/#stagingRepositories</a> But keep in mind that
+can be done for all releases together at the end as well.</p>
+</blockquote>
+<p>We&rsquo;ll take the last option, and release everything together at the
+very end.</p>
+<p>For now, perform the above procedure again, for each of the remaining
+repositories. Once all of those are done successfully, go to the next
+step.</p>
+<h2 id="deploy-to-maven-central">Deploy to Maven Central</h2>
+<p>In this step, we follow this procedure from Maven Central:</p>
+<p><a href="https://central.sonatype.org/publish/release/">https://central.sonatype.org/publish/release/</a></p>
+<p>In short: go to:</p>
+<p><a href="https://oss.sonatype.org/#stagingRepositories">https://oss.sonatype.org/#stagingRepositories</a></p>
+<p>and login with your account that gives you access to Across (check
+with the lead Across maintainer for access).  If you don&rsquo;t see any
+repository, click the &ldquo;Refresh&rdquo; button.</p>
+<p>Before we release (<em>There is no undo!</em>), we will do a brief check of the
+content of the staging repository:</p>
+<ul>
+<li>
+<p>Click on the staging repository</p>
+</li>
+<li>
+<p>At the bottom, select the &ldquo;Content&rdquo; tab.</p>
+</li>
+<li>
+<p>Open the tree, and check that all the expected maven artifacts are
+there. For instance:</p>
+</li>
+<li>
+<p><code>across-core</code>, <code>across-test</code> and <code>across-web</code>, with the right
+versions, if you made a new release for the <code>across-framework</code>
+repository.</p>
+<ul>
+<li>
+<p><code>across-autoconfigure</code> if you released the corresponding
+repository.</p>
+</li>
+<li>
+<p>Check that all the modules you released are under
+<code>com.foreach.across.modules</code>, with the right versions.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Once you are certain that the staging repository contains the right
+artifacts:</p>
+<ul>
+<li>
+<p>Select the staging repository.</p>
+</li>
+<li>
+<p>Click the &ldquo;Close&rdquo; button: this takes a while, because it checks
+whether all artifacts comply with the <a href="https://central.sonatype.org/publish/requirements/">Maven Central
+requirements</a>,
+such as <code>sources</code> jar files, GPG signatures, &hellip; Unless those
+requirements have changes, the build procedure should have taken
+care of them all.</p>
+</li>
+<li>
+<p>Once the repository is closed, the &ldquo;Release&rdquo; button becomes
+available. Once you click that, there is no way back: the artifacts
+will be deployed to Maven Central, and can never be removed or
+modified again. So, be very sure of the contents, before you click
+that button!</p>
+</li>
+</ul>
+<p>After (in principle) maximum 10 minutes, the new artifacts should be
+available at Maven Central:</p>
+<p><a href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/</a></p>
+<h2 id="deploy-javadocs-to-the-website">Deploy Javadocs to the website</h2>
+<p>The API Javadocs are hosted using GitHub Pages, using this repository:</p>
+<p><a href="https://github.com/foreach-across/api-docs-5">https://github.com/foreach-across/api-docs-5</a></p>
+<p>Run the equivalent of:</p>
+<pre><code>ax-release.py javadoc release-plans/5.4.1.yml
+</code></pre>
+<p>This will:</p>
+<ul>
+<li>
+<p>Clone the GitHub repository.</p>
+</li>
+<li>
+<p>Download the <code>javadoc</code> jar files from Maven Central (so they must
+have deployed before you can do this) and unzip them in the right
+directory.</p>
+</li>
+<li>
+<p>Regenerate the <code>index.html</code> files with the new entries.</p>
+</li>
+<li>
+<p>Update the <code>current</code> symlinks to point to the latest release, but
+only if needed. For instance, if you release <code>5.4.2</code>, but <code>5.5.0</code>
+was already released, the &ldquo;current&rdquo; version will still be <code>5.5.0</code>.</p>
+</li>
+<li>
+<p>Commit and push the changes to GitHub (unless you used the
+<code>--no-push</code> option).</p>
+</li>
+</ul>
+<p>When the changes are pushed, GitHub Pages will automatically
+re-deploy the site to:</p>
+<p><a href="https://foreach-across.github.io/api-docs-5/">https://foreach-across.github.io/api-docs-5/</a></p>
+<p>This may take a minute or two. With the right permissions, you can
+check when the site was last deployed at:</p>
+<p><a href="https://github.com/foreach-across/api-docs-5/actions">https://github.com/foreach-across/api-docs-5/actions</a></p>
+<h2 id="write-and-deploy-release-notes">Write and deploy release notes</h2>
+<p>Create the release notes under the <code>releases-notes</code> directory, for
+instance by starting from an older release note:</p>
+<pre><code>cd release-notes/
+cp 5.4.0.md 5.4.1.md
+git add 5.4.1.md
+</code></pre>
+<p>Change the title, date and author (if necessary) in the header of the
+new document.</p>
+<p>Start the <a href="https://gohugo.io">Hugo static site generator</a> in
+development mode:</p>
+<pre><code>cd website
+make start
+</code></pre>
+<p>Open <a href="http://localhost:1313/">http://localhost:1313/</a> in your browser
+and navigate to your new release notes. Whenever you edit the Markdown
+file (in your editor), it will immediately be rerendered in the
+browser.</p>
+<p>Once your releases notes are finished you can deploy the changes to
+the website (you will need write access to the <a href="https://github.com/foreach-across/foreach-across.github.io">website
+repository</a>):</p>
+<pre><code>cd website
+./deploy.sh &quot;Release notes for 5.4.1&quot;
+</code></pre>
+<p>Since this is very small, deployment will be fast, but you can follow
+the progress here:</p>
+<p><a href="https://github.com/foreach-across/foreach-across.github.io/actions">https://github.com/foreach-across/foreach-across.github.io/actions</a></p><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -283,122 +506,22 @@ settings</a>.</p><ul class="pa0">
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this maintenance</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#create-a-release-plan-file">Create a release plan file</a></li>
+    <li><a href="#run-the-release-script-for-each-repository">Run the release script for each repository</a></li>
+    <li><a href="#deploy-to-maven-central">Deploy to Maven Central</a></li>
+    <li><a href="#deploy-javadocs-to-the-website">Deploy Javadocs to the website</a></li>
+    <li><a href="#write-and-deploy-release-notes">Write and deploy release notes</a></li>
+  </ul>
+</nav>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-<h3>Quick links</h3>
-
-
-<style>
-    a.m-quick__link {
-        display: block;
-        margin: .6rem 0rem;
-        padding: 10px;
-        border: 1px solid #DBE0E1;
-        background-color: #f9f9fA;
-        text-decoration: none;
-        font-size: 1rem;
-        color: #1F3141;
-        font-weight: 600;
-    }
-</style>
-
-<table width="100%">
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://github.com/foreach-across/across-media-modules"
-               target="github-across-media-modules">
-                GitHub
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://gitlab.isaac.nl/antwerpen/across/across-media-modules"
-               target="gitlab-across-media-modules">
-                GitLab
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/ref-docs-5/imageserver-core"
-               target="refdoc-imageserver-core"
-            >
-                Documentation
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/api-docs-5/com.foreach.across.modules/imageserver-core/current/"
-               target="javadoc-imageserver-core"
-            >
-                Javadoc API
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://central.sonatype.com/artifact/com.foreach.across.modules/imageserver-core"
-               target="maven-central-imageserver-core"
-            >
-                <img style="vertical-align: middle"
-                     src="https://img.shields.io/maven-central/v/com.foreach.across.modules/imageserver-core"
-                     alt="Maven central link for imageserver-core"/>
-            </a>
-        </td>
-    </tr>
-</table>
-
-<h3>Legacy links</h3>
-
-<table width="100%">
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://bitbucket.org/beforeach/across-imageserver-modules"
-               target="bitbucket-imageserver-core">
-                Bitbucket
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            
-        </td>
-    </tr>
-</table>
 
 
 
