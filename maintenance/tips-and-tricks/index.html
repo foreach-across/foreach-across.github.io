@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Maintenance | Foreach Across</title>
+    <title>Tips and tricks | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Some tips and tricks for maintaining Across.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -30,24 +30,24 @@
     
 
     
-    
-      <link href="/maintenance/index.xml" rel="alternate" type="application/rss+xml" title="Foreach Across" />
-      <link href="/maintenance/index.xml" rel="feed" type="application/rss+xml" title="Foreach Across" />
-      
-    
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/maintenance/">
+      <link rel="canonical" href="https://foreach-across.github.io/maintenance/tips-and-tricks/">
     
 
-    <meta property="og:title" content="Maintenance" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://foreach-across.github.io/maintenance/" />
+    <meta property="og:title" content="Tips and tricks" />
+<meta property="og:description" content="Some tips and tricks for maintaining Across." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foreach-across.github.io/maintenance/tips-and-tricks/" /><meta property="article:section" content="maintenance" />
 
-<meta itemprop="name" content="Maintenance">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Maintenance"/>
-<meta name="twitter:description" content=""/>
+
+
+<meta itemprop="name" content="Tips and tricks">
+<meta itemprop="description" content="Some tips and tricks for maintaining Across.">
+
+<meta itemprop="wordCount" content="157">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Tips and tricks"/>
+<meta name="twitter:description" content="Some tips and tricks for maintaining Across."/>
 
       
     
@@ -57,9 +57,11 @@
   <body class="ma0 avenir bg-near-white production">
 
     
+   
+  
 
   <header>
-    <div class="pb3-m pb6-l bg-black">
+    <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -172,116 +174,116 @@
   </div>
 </nav>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          Maintenance
-        </h1>
-        
-      </div>
     </div>
   </header>
 
 
+
     <main class="pb7" role="main">
       
-  <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
-    <section class="flex-ns flex-wrap justify-around mt5">
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Maintenance
+      </aside>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Maintenance</span>
-    <h1 class="f3 near-black">
-      <a href="/maintenance/prerequisites/" class="link black dim">
-        Prerequisites
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="prerequisites">Prerequisites</h2>
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Tips and tricks</h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Some tips and tricks for maintaining Across.</p>
+<h2 id="ax-execsh">ax-exec.sh</h2>
+<p>You can use this script to run a command in each of the 7
+repositories, for instance:</p>
+<pre><code>ax-exec.sh git status
+ax-exec.sh git fetch -p
+ax-exec.sh git pull --ff-only
+</code></pre>
+<p>Danger zone: If you want to &ldquo;undo&rdquo; everything in all 7 repositories:</p>
+<pre><code>ax-exec.sh git reset --hard
+</code></pre>
+<h2 id="ax-set-snapshot-versionspy">ax-set-snapshot-versions.py</h2>
+<p>This script looks at the current branch of each of the 7 repositories,
+and updates the <code>pom.xml</code> files of each repository to use the right
+snapshot version for that repository, and its dependencies. E.g. if
+your current branches are:</p>
+<pre><code>across-framework.version:            5.4
+across-autoconfigure.version:        2.4
+across-base-modules.version:         4.4
+across-entity-admin-modules.version: 4.4
+across-user-auth-modules.version:    4.4
+across-media-modules.version:        6.4
+across-platform.version:             5.4
+</code></pre>
+<p>Then the script will propose this:</p>
+<pre><code>across-framework.version=5.4-SNAPSHOT
+across-autoconfigure.version=2.4-SNAPSHOT
+across-base-modules.version=4.4-SNAPSHOT
+across-entity-admin-modules.version=4.4-SNAPSHOT
+across-user-auth-modules.version=4.4-SNAPSHOT
+across-media-modules.version=6.4-SNAPSHOT
+across-platform.version=5.4-SNAPSHOT
+Are you sure you want to set the above -SNAPSHOT versions? [y/N]:
+</code></pre>
+<p>There are two use cases for this:</p>
 <ul>
-<li>GraphViz</li>
-<li>Python: minimum 3.10</li>
-<li>Java: 8 for Across 5, 17 for Across 6</li>
-<li>Maven: Latest 3.9</li>
-<li>Hugo: extended version</li>
-<li>Go (if using a Hugo theme which requires Go modules)</li>
+<li>
+<p>You&rsquo;ve started a new branch.</p>
+</li>
+<li>
+<p>You&rsquo;ve finished a release, and now need to <a href="https://foreach-across.github.io/maintenance/release-procedure/#reset-versions-to---snapshot">reset the revision back
+to &ndash;SNAPSHOT</a>.</p>
+</li>
+</ul><ul class="pa0">
+  
 </ul>
-<p>IntelliJ: install the <a href="https://plugins.jetbrains.com/plugin/13215-hugo-integration">Hugo plugin</a></p>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
     </div>
-    <a href="/maintenance/prerequisites/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
+
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this maintenance</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ax-execsh">ax-exec.sh</a></li>
+    <li><a href="#ax-set-snapshot-versionspy">ax-set-snapshot-versions.py</a></li>
+  </ul>
+</nav>
 </div>
 
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Maintenance</span>
-    <h1 class="f3 near-black">
-      <a href="/maintenance/tips-and-tricks/" class="link black dim">
-        Tips and tricks
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Some tips and tricks for maintaining Across.</p>
-    </div>
-    <a href="/maintenance/tips-and-tricks/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
 
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Maintenance</span>
-    <h1 class="f3 near-black">
-      <a href="/maintenance/release-procedure/" class="link black dim">
-        Release procedure
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>The release procedure consists of:</p>
-<ul>
-<li>
-<p>Making a release plan file.</p>
-</li>
-<li>
-<p>Running a script for each repository you are releasing.</p>
-</li>
-<li>
-<p>And a few post-release steps.</p>
-</li>
-</ul>
-    </div>
-    <a href="/maintenance/release-procedure/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
 
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Maintenance</span>
-    <h1 class="f3 near-black">
-      <a href="/maintenance/regular-maintenance/" class="link black dim">
-        Regular maintenance
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>This page describes regular maintenance that needs to be performed,
-such as rotating tokens and keys.</p>
-    </div>
-    <a href="/maintenance/regular-maintenance/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
 
-        </div>
-      
-    </section></article>
+
+
+</aside>
+
+  </article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">

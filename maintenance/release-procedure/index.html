@@ -78,7 +78,7 @@ And a few post-release steps.
 
 ">
 
-<meta itemprop="wordCount" content="1099">
+<meta itemprop="wordCount" content="1184">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Release procedure"/>
 <meta name="twitter:description" content="The release procedure consists of:
 
@@ -497,7 +497,31 @@ repository</a>):</p>
 </code></pre>
 <p>Since this is very small, deployment will be fast, but you can follow
 the progress here:</p>
-<p><a href="https://github.com/foreach-across/foreach-across.github.io/actions">https://github.com/foreach-across/foreach-across.github.io/actions</a></p><ul class="pa0">
+<p><a href="https://github.com/foreach-across/foreach-across.github.io/actions">https://github.com/foreach-across/foreach-across.github.io/actions</a></p>
+<h2 id="reset-versions-to---snapshot">Reset versions to &ndash;SNAPSHOT</h2>
+<ol>
+<li>
+<p>Make sure you are still in the same <code>across-development</code> repository
+as the one where you performed the release, and that the 7
+repositories are still on the same branch as used for the release.</p>
+</li>
+<li>
+<p>Ensure you have the latest commit for the release branch of each
+repository (See the <a href="https://foreach-across.github.io/maintenance/tips-and-tricks/">Tips and tricks</a> for details about these commands:</p>
+<pre><code> ax-exec.sh git fetch -p
+ ax-exec.sh git pull --ff-only
+</code></pre>
+</li>
+<li>
+<p>Next:</p>
+<pre><code> ax-set-snapshot-versions.py
+</code></pre>
+</li>
+<li>
+<p>Lastly, you&rsquo;ll need to commit and push each repository separately
+again (TODO: Automate this).</p>
+</li>
+</ol><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -517,6 +541,7 @@ the progress here:</p>
     <li><a href="#deploy-to-maven-central">Deploy to Maven Central</a></li>
     <li><a href="#deploy-javadocs-to-the-website">Deploy Javadocs to the website</a></li>
     <li><a href="#write-and-deploy-release-notes">Write and deploy release notes</a></li>
+    <li><a href="#reset-versions-to---snapshot">Reset versions to &ndash;SNAPSHOT</a></li>
   </ul>
 </nav>
 </div>
