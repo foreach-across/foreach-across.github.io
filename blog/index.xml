@@ -83,7 +83,7 @@
       <link>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       <guid>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</guid>
-      <description>&lt;p&gt;Across Platform 2.0.1 has been released, including several new versions&#xA;of standard modules. Some new libraries (and the first public version&#xA;of WebCmsModule) have been added as well.See&#xA;the &lt;!-- raw HTML omitted --&gt;&#xA;reference documentation&lt;!-- raw HTML omitted --&gt; for&#xA;all details. As usual, it is advised for anyone using&#xA;the &lt;code&gt;2.0.1-SNAPSHOT&lt;/code&gt; to switch to the release version(&lt;code&gt;2.0.1.RELEASE&lt;/code&gt;).&lt;/p&gt;</description>
+      <description>&lt;p&gt;Across Platform 2.0.1 has been released, including several new versions&#xA;of standard modules. Some new libraries (and the first public version&#xA;of WebCmsModule) have been added as well.See&#xA;the &lt;a href=&#34;http://across-docs.foreach.be/across-platform/2.0.1.RELEASE/reference/#_2_0_1_release&#34; class=&#34;external-link&#34;&gt;&#xA;reference documentation&lt;/a&gt; for&#xA;all details. As usual, it is advised for anyone using&#xA;the &lt;code&gt;2.0.1-SNAPSHOT&lt;/code&gt; to switch to the release version(&lt;code&gt;2.0.1.RELEASE&lt;/code&gt;).&lt;/p&gt;</description>
     </item>
     <item>
       <title>This week in Across - June 2nd 2017</title>

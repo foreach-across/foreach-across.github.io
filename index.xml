@@ -6,7 +6,7 @@
     <description>Recent content on Foreach Across</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Mar 2024 12:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2024 15:00:00 +0100</lastBuildDate>
     <atom:link href="https://foreach-across.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>General</title>
@@ -212,6 +212,13 @@
       <description>&lt;p&gt;&lt;code&gt;WebCmsModule&lt;/code&gt; provides some basic web content management features for&#xA;your Across application.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Across 5.4.2 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.4.2/</link>
+      <pubDate>Wed, 13 Mar 2024 15:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.4.2/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;5.4.2&lt;/code&gt; release has only a single fix: a forgotten &lt;code&gt;2.4.13&lt;/code&gt; Spring&#xA;Boot version in &lt;code&gt;across-application-parent&lt;/code&gt; has been replaced with the&#xA;correct &lt;code&gt;2.6.15&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Across 5.4.1 Release notes</title>
       <link>https://foreach-across.github.io/release-notes/5.4.1/</link>
       <pubDate>Wed, 06 Mar 2024 12:00:00 +0100</pubDate>
@@ -321,7 +328,7 @@
       <link>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       <guid>https://foreach-across.github.io/blog/2017/09/across-platform-2.0.1-released/</guid>
-      <description>&lt;p&gt;Across Platform 2.0.1 has been released, including several new versions&#xA;of standard modules. Some new libraries (and the first public version&#xA;of WebCmsModule) have been added as well.See&#xA;the &lt;!-- raw HTML omitted --&gt;&#xA;reference documentation&lt;!-- raw HTML omitted --&gt; for&#xA;all details. As usual, it is advised for anyone using&#xA;the &lt;code&gt;2.0.1-SNAPSHOT&lt;/code&gt; to switch to the release version(&lt;code&gt;2.0.1.RELEASE&lt;/code&gt;).&lt;/p&gt;</description>
+      <description>&lt;p&gt;Across Platform 2.0.1 has been released, including several new versions&#xA;of standard modules. Some new libraries (and the first public version&#xA;of WebCmsModule) have been added as well.See&#xA;the &lt;a href=&#34;http://across-docs.foreach.be/across-platform/2.0.1.RELEASE/reference/#_2_0_1_release&#34; class=&#34;external-link&#34;&gt;&#xA;reference documentation&lt;/a&gt; for&#xA;all details. As usual, it is advised for anyone using&#xA;the &lt;code&gt;2.0.1-SNAPSHOT&lt;/code&gt; to switch to the release version(&lt;code&gt;2.0.1.RELEASE&lt;/code&gt;).&lt;/p&gt;</description>
     </item>
     <item>
       <title>This week in Across - June 2nd 2017</title>

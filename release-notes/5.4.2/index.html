@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Across Platform 2.1.1 released | Foreach Across</title>
+    <title>Across 5.4.2 Release notes | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="This release upgrades several modules and related dependencies. Mostly
-bugfixes and security patches, with the addition of some minor features.">
+    <meta name="description" content="The 5.4.2 release has only a single fix: a forgotten 2.4.13 Spring
+Boot version in across-application-parent has been replaced with the
+correct 2.6.15.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -33,25 +34,28 @@ bugfixes and security patches, with the addition of some minor features.">
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/blog/2018/07/across-platform-2.1.1-released/">
+      <link rel="canonical" href="https://foreach-across.github.io/release-notes/5.4.2/">
     
 
-    <meta property="og:title" content="Across Platform 2.1.1 released" />
-<meta property="og:description" content="This release upgrades several modules and related dependencies. Mostly
-bugfixes and security patches, with the addition of some minor features." />
+    <meta property="og:title" content="Across 5.4.2 Release notes" />
+<meta property="og:description" content="The 5.4.2 release has only a single fix: a forgotten 2.4.13 Spring
+Boot version in across-application-parent has been replaced with the
+correct 2.6.15." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/blog/2018/07/across-platform-2.1.1-released/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2018-07-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-07-24T00:00:00+00:00" />
+<meta property="og:url" content="https://foreach-across.github.io/release-notes/5.4.2/" /><meta property="article:section" content="release-notes" />
+<meta property="article:published_time" content="2024-03-13T15:00:00+01:00" />
+<meta property="article:modified_time" content="2024-03-13T15:00:00+01:00" />
 
-<meta itemprop="name" content="Across Platform 2.1.1 released">
-<meta itemprop="description" content="This release upgrades several modules and related dependencies. Mostly
-bugfixes and security patches, with the addition of some minor features."><meta itemprop="datePublished" content="2018-07-24T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-07-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="326">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Across Platform 2.1.1 released"/>
-<meta name="twitter:description" content="This release upgrades several modules and related dependencies. Mostly
-bugfixes and security patches, with the addition of some minor features."/>
+<meta itemprop="name" content="Across 5.4.2 Release notes">
+<meta itemprop="description" content="The 5.4.2 release has only a single fix: a forgotten 2.4.13 Spring
+Boot version in across-application-parent has been replaced with the
+correct 2.6.15."><meta itemprop="datePublished" content="2024-03-13T15:00:00+01:00" />
+<meta itemprop="dateModified" content="2024-03-13T15:00:00+01:00" />
+<meta itemprop="wordCount" content="110">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Across 5.4.2 Release notes"/>
+<meta name="twitter:description" content="The 5.4.2 release has only a single fix: a forgotten 2.4.13 Spring
+Boot version in across-application-parent has been replaced with the
+correct 2.6.15."/>
 
       
     
@@ -190,7 +194,7 @@ bugfixes and security patches, with the addition of some minor features."/>
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        Blog
+        Release Notes
       </aside>
       
 
@@ -208,118 +212,40 @@ bugfixes and security patches, with the addition of some minor features."/>
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Across Platform 2.1.1 released</h1>
+      <h1 class="f1 athelas mt3 mb1">Across 5.4.2 Release notes</h1>
       
       <p class="tracked">
-        By <strong>The Across Team</strong>
+        By <strong>Davy</strong>
       </p>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2018-07-24T00:00:00Z">July 24, 2018</time>
+      <time class="f6 mv4 dib tracked" datetime="2024-03-13T15:00:00+01:00">March 13, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>This release upgrades several modules and related dependencies. Mostly
-bugfixes and security patches, with the addition of some minor features.</p>
-<h2 id="upgrading">Upgrading</h2>
-<p>Upgrading from 2.1.0 should be seamless, and we advise developers to do
-so when possible.</p>
-<h2 id="whats-new">What&rsquo;s new</h2>
-<p>This section lists some of the more notable changes included in this
-release. Full details can be found in the <a href="across-platform-2-1-1-released.html#whats-new-sections">release
-notes</a> of the
-corresponding modules.</p>
-<h3 id="spring-platform-brussels-sr11">Spring Platform Brussels-SR11</h3>
-<p>Across Platform 2.1.1 upgrades the Spring Platform dependency
-to <a href="https://docs.spring.io/platform/docs/Brussels-SR11/reference/htmlsingle/">Brussels-SR11</a>
-which includes several security patches and third-party dependency
-updates.</p>
-<h3 id="auto-configuration-support">Auto-configuration support</h3>
-<p>Auto-configuration support has been added for <a href="https://foreach-across.github.io/ref-docs-5/across-autoconfigure/1.0.1/starters/spring-cloud.html#_spring_cloud_openfeign">Spring Cloud
-OpenFeign</a>
-and
-<a href="https://foreach-across.github.io/ref-docs-5/across-autoconfigure/1.0.1/starters/contributed-starters.html#_spring_boot_graphql">GraphQL</a>
-starters.</p>
-<h3 id="bootstrapuimodule-210">BootstrapUiModule 2.1.0</h3>
-<p>New component has been added to make it easier to <a href="https://foreach-across.github.io/ref-docs-5/bootstrap-ui-module/2.1.0/guides/prefixing-control-names.html">change the control
-names of generated form
-controls</a>.</p>
-<h3 id="webcmsmodule-005">WebCmsModule 0.0.5</h3>
-<p>Fixes a bug where the use of double square brackets in text components
-got evaluated as Thymeleaf expressions.</p>
-<h3 id="oauth2module-201">OAuth2Module 2.0.1</h3>
-<p>Fixes a performance issue with the Hibernate mapping of the
-<code>OAuth2Client</code> entity. In a setup without caching performance would
-deteriorate exponentially for every client added.</p>
-<h3 id="entitymodule-310">EntityModule 3.1.0</h3>
-<ul>
-<li>EntityModule now uses <code>evo-inflector</code> to auto-generate plural forms,
-this should yield better results in English</li>
-<li>it is now possible to customize the format of <code>Auditable</code> properties
-using message codes</li>
-<li>several bugfixes and improvements related to <code>EntityQuery</code> and EQL
-filtering</li>
-</ul>
-<h3 id="dynamicformsmodule-001">DynamicFormsModule 0.0.1</h3>
-<p>Across Platform 2.1.1 is the first iteration that contains
-the <a href="../modules/documents-and-forms.html">Documents &amp; Forms module</a>.
-This is a new standard module that provides some services to define a
-custom document and have data entry/retrieval for those documents. It
-can be used as the basis for dynamic forms and simple data entry.</p>
-<p>Version 0.0.1 is the first development version published. See the
-separate documentation section (work in progress) for more information
-on what you can do with it and how to use.</p>
-<h2 id="span-idwhats-new-sectionsspanrelease-notes"><span id="whats-new-sections"></span>Release notes</h2>
-<p>Links to the different what&rsquo;s new sections of the updated modules:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/across/2.1.1/releases/platform/2.1.1.html">Across Platform</a></td>
-<td><code>2.1.1.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/across/2.1.1/releases/core-artifacts/releases-3.x.html#3-1-0">Across Core &amp; Web</a></td>
-<td><code>3.1.0.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/across-autoconfigure/1.0.1/index.html">Auto-configuration Support</a></td>
-<td><code>1.0.1.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/bootstrap-ui-module/2.1.0/releases/2.x.html#2-1-0">BootstrapUiModule</a></td>
-<td><code>2.1.0.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/web-cms-module/0.0.5/releases/0.0.x.html#0-0-5">WebCmsModule</a></td>
-<td><code>0.0.5.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/spring-security-module/3.0.2/releases/3.x.html#3-0-2">SpringSecurityModule</a></td>
-<td><code>3.0.2.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/oauth2-module/2.0.1/releases/2.x.html#2-0-1">OAuth2Module</a></td>
-<td><code>2.0.1.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/entity-module/3.1.0/releases/3.x.html#3-1-0">EntityModule</a></td>
-<td><code>3.1.0.RELEASE</code></td>
-</tr>
-<tr>
-<td><a href="https://foreach-across.github.io/ref-docs-5/dynamic-forms-module/0.0.1/releases/0.0.x.html#0-0-1">DynamicFormsModule</a></td>
-<td><code>0.0.1.RELEASE</code></td>
-</tr>
-</tbody>
-</table><ul class="pa0">
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The <code>5.4.2</code> release has only a single fix: a forgotten <code>2.4.13</code> Spring
+Boot version in <code>across-application-parent</code> has been replaced with the
+correct <code>2.6.15</code>.</p>
+<h2 id="impact">Impact</h2>
+<p>This bug affects all applications which are using
+<code>across-application-parent</code> as their parent POM, and that are probably
+all of them, except one (See <a href="/release-notes/5.2.2/">the reason behind the 5.2.2 release</a>).</p>
+<p>The impact is that all of those applications were actually still using
+Spring Boot 2.4.13 (and the dependencies that go with that).</p>
+<p>Applications that already &ldquo;upgraded&rdquo; will have to upgrade to Across
+Platform 5.4.2, and will need to be retested.</p>
+<h2 id="across-frameworkmodulesplatform-versions">Across Framework/Modules/Platform Versions</h2>
+<pre><code>across-framework:            5.4.2
+across-autoconfigure:        2.4.2
+across-base-modules:         4.4.2
+across-entity-admin-modules: 4.4.2
+across-user-auth-modules:    4.4.2
+across-media-modules:        6.4.2
+across-platform:             5.4.2
+</code></pre><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -331,22 +257,11 @@ on what you can do with it and how to use.</p>
     <aside class="w-30-l mt6-l"> 
 
 <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">What&#39;s in this blog</p>
+    <p class="f5 b mb3">What&#39;s in this release-notes</p>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#upgrading">Upgrading</a></li>
-    <li><a href="#whats-new">What&rsquo;s new</a>
-      <ul>
-        <li><a href="#spring-platform-brussels-sr11">Spring Platform Brussels-SR11</a></li>
-        <li><a href="#auto-configuration-support">Auto-configuration support</a></li>
-        <li><a href="#bootstrapuimodule-210">BootstrapUiModule 2.1.0</a></li>
-        <li><a href="#webcmsmodule-005">WebCmsModule 0.0.5</a></li>
-        <li><a href="#oauth2module-201">OAuth2Module 2.0.1</a></li>
-        <li><a href="#entitymodule-310">EntityModule 3.1.0</a></li>
-        <li><a href="#dynamicformsmodule-001">DynamicFormsModule 0.0.1</a></li>
-      </ul>
-    </li>
-    <li><a href="#span-idwhats-new-sectionsspanrelease-notes"><span id="whats-new-sections"></span>Release notes</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#across-frameworkmodulesplatform-versions">Across Framework/Modules/Platform Versions</a></li>
   </ul>
 </nav>
 </div>
