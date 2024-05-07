@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>OAuth 2 Module | Foreach Across</title>
+    <title>Across 5.5.0 Release notes | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Provides OAuth 2 related domain model and
-infrastructure using the deprecated Spring Security OAuth
-2 project and
-the UserModule domain model.">
+    <meta name="description" content="Despite being a minor release, 5.5 is definitely not backward
+compatible. You will almost certainly have to make adaptations
+w.r.t. Spring Security, and thoroughly test that.
+On the bright side, the upgrade to Spring Boot 2.7 means you can
+upgrade to Java
+21 (at
+least in theory, it has not been tested yet).">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -35,31 +38,40 @@ the UserModule domain model.">
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/modules/oauth2-module/">
+      <link rel="canonical" href="https://foreach-across.github.io/release-notes/5.5.0/">
     
 
-    <meta property="og:title" content="OAuth 2 Module" />
-<meta property="og:description" content="Provides OAuth 2 related domain model and
-infrastructure using the deprecated Spring Security OAuth
-2 project and
-the UserModule domain model." />
+    <meta property="og:title" content="Across 5.5.0 Release notes" />
+<meta property="og:description" content="Despite being a minor release, 5.5 is definitely not backward
+compatible. You will almost certainly have to make adaptations
+w.r.t. Spring Security, and thoroughly test that.
+On the bright side, the upgrade to Spring Boot 2.7 means you can
+upgrade to Java
+21 (at
+least in theory, it has not been tested yet)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/modules/oauth2-module/" /><meta property="article:section" content="modules" />
+<meta property="og:url" content="https://foreach-across.github.io/release-notes/5.5.0/" /><meta property="article:section" content="release-notes" />
+<meta property="article:published_time" content="2024-05-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-07T00:00:00+00:00" />
 
-
-
-<meta itemprop="name" content="OAuth 2 Module">
-<meta itemprop="description" content="Provides OAuth 2 related domain model and
-infrastructure using the deprecated Spring Security OAuth
-2 project and
-the UserModule domain model.">
-
-<meta itemprop="wordCount" content="34">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="OAuth 2 Module"/>
-<meta name="twitter:description" content="Provides OAuth 2 related domain model and
-infrastructure using the deprecated Spring Security OAuth
-2 project and
-the UserModule domain model."/>
+<meta itemprop="name" content="Across 5.5.0 Release notes">
+<meta itemprop="description" content="Despite being a minor release, 5.5 is definitely not backward
+compatible. You will almost certainly have to make adaptations
+w.r.t. Spring Security, and thoroughly test that.
+On the bright side, the upgrade to Spring Boot 2.7 means you can
+upgrade to Java
+21 (at
+least in theory, it has not been tested yet)."><meta itemprop="datePublished" content="2024-05-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-05-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="865">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Across 5.5.0 Release notes"/>
+<meta name="twitter:description" content="Despite being a minor release, 5.5 is definitely not backward
+compatible. You will almost certainly have to make adaptations
+w.r.t. Spring Security, and thoroughly test that.
+On the bright side, the upgrade to Spring Boot 2.7 means you can
+upgrade to Java
+21 (at
+least in theory, it has not been tested yet)."/>
 
       
     
@@ -198,7 +210,7 @@ the UserModule domain model."/>
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        Modules
+        Release Notes
       </aside>
       
 
@@ -216,25 +228,232 @@ the UserModule domain model."/>
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">OAuth 2 Module</h1>
+      <h1 class="f1 athelas mt3 mb1">Across 5.5.0 Release notes</h1>
+      
+      <p class="tracked">
+        By <strong>Davy</strong>
+      </p>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-05-07T00:00:00Z">May 7, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Provides <a href="https://oauth.net/2/">OAuth 2</a> related domain model and
-infrastructure using the deprecated <a href="https://github.com/spring-attic/spring-security-oauth">Spring Security OAuth
-2</a> project and
-the <a href="/modules/user-module/">UserModule</a> domain model.</p>
-<p>This module has been removed from <a href="/release-notes/5.5.0/#removed-modules">Across 5.5</a>.</p>
-<h3 id="artifacts">Artifacts</h3>
-<pre><code>&lt;dependency&gt;
-     &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
-     &lt;artifactId&gt;oauth2-module&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre><ul class="pa0">
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Despite being a minor release, 5.5 is definitely <em>not</em> backward
+compatible. You will almost certainly have to make adaptations
+w.r.t. Spring Security, and thoroughly test that.</p>
+<p>On the bright side, the upgrade to Spring Boot 2.7 means you can
+upgrade to <a href="https://blogs.oracle.com/java/post/the-arrival-of-java-21">Java
+21</a> (at
+least in theory, it has not been tested yet).</p>
+<h2 id="spring-security">Spring Security</h2>
+<p>By far the biggest impact in Across 5.5 is in the integration with
+<a href="https://spring.io/projects/spring-security">Spring Security</a> in the
+
+<a href="/modules/spring-security-module/"><code>spring-security-module</code></a>
+. This also affects all
+modules that do anything with Spring Security (configuration). It also
+affects <em>ALL</em> applications, and at a very minimum, you will need to do
+some serious testing whether authentication and authorization of HTTP
+requests works correctly.</p>
+<h3 id="creating-securityfilterchain-beans">Creating SecurityFilterChain beans</h3>
+<p>The first major change is that the <code>AcrossWebSecurityConfigurer</code>
+interface (introduced in SpringSecurityModule 4.0.0, with Across
+Platform 5.0) and related classes have been <em>deleted</em>. Spring Security
+must be configured by creating <code>SecurityFilterChain</code> <code>@Bean</code>s, using
+the instructions from the documentation:</p>
+<p><a href="https://docs.spring.io/spring-security/reference/5.8/migration/servlet/config.html">https://docs.spring.io/spring-security/reference/5.8/migration/servlet/config.html</a></p>
+<p>or from the original blog:</p>
+<p><a href="https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter">https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter</a></p>
+<p>The manual is more recent, so I recommend that.</p>
+<p>Of course there is also an Across gotcha: this only works when the
+<code>SecurityFilterChain</code> beans are all located in the Across
+SpringSecurityModule. You need to ensure that everything which creates
+a <code>SecurityFilterChain</code>, <code>UserDetailsService</code>, <code>WebSecurityCustomizer</code>
+or basically any Spring Security related bean is in an
+<code>@ModuleConfiguration</code>-annotated class that extends the <code>SpringSecurityModule</code> like this:</p>
+<pre><code>@ModuleConfiguration(SpringSecurityModule.NAME)
+</code></pre>
+<p>Keep in mind that such an <code>@ModuleConfiguration</code> bean needs to be in a
+module/application <code>extensions</code> package <a href="https://foreach-across.github.io/ref-docs-5/across/developing-applications/extend-module-configuration.html#_module_extensions_with_moduleconfiguration">to be picked up
+automatically</a>. Make
+sure to do this, otherwise you&rsquo;ll get into a very confusing situation!</p>
+<p>For examples, you can check the following classes in Across:</p>
+<pre><code>DebugWebSecurityConfiguration
+AdminWebSecurityConfiguration
+</code></pre>
+<h3 id="securityfilterchain-order">SecurityFilterChain order</h3>
+<p>If you are defining your own <code>SecurityFilterChain</code>s, you probably need
+to control in which order the <code>SecurityFilterChain</code> are tried. You
+will need to put an <code>@Order</code> on the <code>SecurityFilterChain</code> bean (not on
+the <code>@ModuleConfiguration</code> annotated class!).</p>
+<p>You can check the order of the <code>SecurityFilterBean</code>s using the 
+<a href="/modules/debug-web-module/"><code>debug-web-module</code></a>
+.</p>
+<h3 id="spring-security-58-instead-of-57">Spring Security 5.8 instead of 5.7</h3>
+<p>We went straight to <a href="https://spring.io/blog/2022/11/21/spring-security-5-8-and-6-0-are-now-ga">Spring Security
+5.8</a>,
+whose main purpose is to provide a intermediate migration step to 6.0:</p>
+<ul>
+<li>
+<p><a href="https://docs.spring.io/spring-security/reference/5.8/whats-new.html">https://docs.spring.io/spring-security/reference/5.8/whats-new.html</a></p>
+</li>
+<li>
+<p><a href="https://docs.spring.io/spring-security/reference/5.8/migration/servlet/index.html">https://docs.spring.io/spring-security/reference/5.8/migration/servlet/index.html</a></p>
+</li>
+</ul>
+<p>Note also that <a href="https://spring.io/projects/spring-security#support">Spring Security
+5.8</a> (and <a href="https://spring.io/projects/spring-framework#support">Spring
+Framework 5.3</a>)
+will receive updates until the end of August 2024.</p>
+<h3 id="spring-security-lambda-dsl">Spring Security Lambda DSL</h3>
+<p>Lastly, when adapting your security configuration, consider switching
+immediately to the Lambda DSL (which will be the only one supported in
+Spring Security 7):</p>
+<ul>
+<li>
+<p><a href="https://spring.io/blog/2019/11/21/spring-security-lambda-dsl">https://spring.io/blog/2019/11/21/spring-security-lambda-dsl</a></p>
+</li>
+<li>
+<p><a href="https://docs.spring.io/spring-security/reference/migration-7/configuration.html">https://docs.spring.io/spring-security/reference/migration-7/configuration.html</a></p>
+</li>
+</ul>
+<h2 id="lombok-upgrade">Lombok upgrade</h2>
+<p>Spring Boot 2.7 has upgraded to <a href="https://github.com/projectlombok/lombok/blob/master/doc/changelog.markdown#v11830-september-20th-2023">Lombok
+1.18.30</a>
+from 1.18.26.</p>
+<p>In one of the client projects, we gotten bitten by the &ldquo;IMPROBABLE
+BREAKING CHANGE&rdquo; in <a href="https://github.com/projectlombok/lombok/blob/master/doc/changelog.markdown#v11824-april-18th-2022">Lombok
+1.18.24</a>. Note
+that it&rsquo;s not just &ldquo;copy some of these new annotations&rdquo;, but also
+actually introduces null checks. This includes for instance
+<code>javax.annotation.Nonnull</code>.</p>
+<p>What&rsquo;s even weirder: Spring Boot 2.6 (Across 5.4) actually already
+used
+<a href="https://github.com/projectlombok/lombok/blob/master/doc/changelog.markdown#v11826-feb-3rd-2023">1.18.26</a>
+(e.g. a (newer) release). I&rsquo;ve tracked that the behaviour change is
+indeed in
+<a href="https://github.com/projectlombok/lombok/blob/master/doc/changelog.markdown#v11828-may-24th-2023">1.18.28</a>,
+not in 1.18.24: so the release notes seem wrong. But it may be rather
+that change that triggered it, despite that that ticket is about
+<code>jakarta.annotation.Nonnull</code>, not <code>javax.annotation.Nonnull</code>.</p>
+<p>Anyway, be advised: Lombok might now generate null-checks which you
+had not before.</p>
+<h2 id="upgrades">Upgrades</h2>
+<p>With the upgrade to Spring Boot 2.7.18, Java 21 is supported according
+to the <a href="https://docs.spring.io/spring-boot/docs/2.7.x/reference/html/getting-started.html#getting-started.system-requirements">2.7 System
+requirements</a>,
+but we have not yet tested this.</p>
+<p>Most important upgrades (compared to 5.4.2):</p>
+<ul>
+<li>
+<p>Spring Boot: from 2.6.15 to 2.7.18: <a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes">2.7 Release notes</a>.</p>
+</li>
+<li>
+<p>Spring Framework: from 5.3.32 to 5.3.34, including CVE fixes:</p>
+<ul>
+<li>
+<p><a href="https://spring.io/blog/2024/03/14/spring-framework-6-1-5-6-0-18-and-5-3-33-available-now-including-fixes-for">5.3.33 Announcement</a></p>
+</li>
+<li>
+<p><a href="https://spring.io/blog/2024/04/11/spring-framework-6-1-6-6-0-19-and-5-3-34-available-now-including-fixes-for">5.3.34 Announcement</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Spring Security: from 5.6.12 to 5.8.12:</p>
+<ul>
+<li>
+<p><a href="https://docs.spring.io/spring-security/reference/5.7/whats-new.html">5.7 What&rsquo;s new</a></p>
+</li>
+<li>
+<p><a href="https://docs.spring.io/spring-security/reference/5.8/whats-new.html">5.8 What&rsquo;s new</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Hibernate is still at 5.6.15, since that&rsquo;s the very last 5.x release.</p>
+</li>
+<li>
+<p>Jackson is still at 2.13.5.</p>
+</li>
+<li>
+<p>Liquibase: from 4.17.0 to 4.27.0</p>
+</li>
+</ul>
+<h2 id="removed-modules">Removed modules</h2>
+<p>Two security related modules have been removed, to avoid unnecessary
+effort adapting them to the Spring Security changes:</p>
+<ul>
+<li>
+<p>
+<a href="/modules/spring-security-acl-module/"><code>spring-security-acl-module</code></a>
+ was removed because it
+is only used (very sparingly) in one project. Previously 
+<a href="/modules/user-module/"><code>user-module</code></a>
+ integrated with Spring Security ACL
+module, but that integration is obviously also removed now.</p>
+</li>
+<li>
+<p>
+<a href="/modules/oauth2-module/"><code>oauth2-module</code></a>
+: also used in only one
+project. This is also based on the old <a href="https://spring.io/projects/spring-security-oauth#learn">Spring Security
+OAuth</a>
+project, which has been unsupported for almost two years already.</p>
+</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>The next release of Across will be 6.0, and will be based on Spring
+Boot 3.x. Here are a few things that you can do to prepare for that:</p>
+<p>Once you&rsquo;ve migrated to Across 5.5, your next steps should be:</p>
+<ul>
+<li>
+<p>Upgrade your application(s) to JDK17 (minimum version for Spring Boot
+3) or JDK21.</p>
+</li>
+<li>
+<p>Switch your Maven project setup from &ldquo;Across as a platform&rdquo; to
+&ldquo;Across as just another library&rdquo;, since that will be the only option
+left in Across 6. See <a href="/release-notes/5.2.2/">the Across 5.2.2 release notes</a> for details how to do this.</p>
+</li>
+<li>
+<p>Take a look at the various migration guides, and check if there&rsquo;s
+anything else that you can already do:</p>
+<ul>
+<li>
+<p><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide">Spring Boot 3 Migration
+Guide</a></p>
+</li>
+<li>
+<p><a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x">Spring Framework 6 Upgrade
+instructions</a></p>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-security/wiki/Spring-Security-6.0-Migration-Guide">Spring Security 6.0 Migration Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="thanks">Thanks</h2>
+<p>Many thanks to:</p>
+<ul>
+<li>
+<p>Steven, for some suggestions on how we could solve the Spring
+Security changes (even though we took another approach).</p>
+</li>
+<li>
+<p>Jesse, for providing valuable insights into how Across is used in
+our largest project, and what we could drop from this release.</p>
+</li>
+<li>
+<p>Marlies, Arno and Branko for testing early versions of Across 5.5
+with various client applications.</p>
+</li>
+</ul><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -243,120 +462,30 @@ the <a href="/modules/user-module/">UserModule</a> domain model.</p>
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this release-notes</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spring-security">Spring Security</a>
+      <ul>
+        <li><a href="#creating-securityfilterchain-beans">Creating SecurityFilterChain beans</a></li>
+        <li><a href="#securityfilterchain-order">SecurityFilterChain order</a></li>
+        <li><a href="#spring-security-58-instead-of-57">Spring Security 5.8 instead of 5.7</a></li>
+        <li><a href="#spring-security-lambda-dsl">Spring Security Lambda DSL</a></li>
+      </ul>
+    </li>
+    <li><a href="#lombok-upgrade">Lombok upgrade</a></li>
+    <li><a href="#upgrades">Upgrades</a></li>
+    <li><a href="#removed-modules">Removed modules</a></li>
+    <li><a href="#next-steps">Next steps</a></li>
+    <li><a href="#thanks">Thanks</a></li>
+  </ul>
+</nav>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-<h3>Quick links</h3>
-
-
-<style>
-    a.m-quick__link {
-        display: block;
-        margin: .6rem 0rem;
-        padding: 10px;
-        border: 1px solid #DBE0E1;
-        background-color: #f9f9fA;
-        text-decoration: none;
-        font-size: 1rem;
-        color: #1F3141;
-        font-weight: 600;
-    }
-</style>
-
-<table width="100%">
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://github.com/foreach-across/across-user-auth-modules"
-               target="github-across-user-auth-modules">
-                GitHub
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://gitlab.isaac.nl/antwerpen/across/across-user-auth-modules"
-               target="gitlab-across-user-auth-modules">
-                GitLab
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/ref-docs-5/"
-               target="refdoc-"
-            >
-                Documentation
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/api-docs-5/com.foreach.across.modules/%25!s%28%3cnil%3e%29/current/"
-               target="javadoc-"
-            >
-                Javadoc API
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://central.sonatype.com/artifact/com.foreach.across.modules/"
-               target="maven-central-"
-            >
-                <img style="vertical-align: middle"
-                     src="https://img.shields.io/maven-central/v/com.foreach.across.modules/"
-                     alt="Maven central link for "/>
-            </a>
-        </td>
-    </tr>
-</table>
-
-<h3>Legacy links</h3>
-
-<table width="100%">
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://bitbucket.org/beforeach/"
-               target="bitbucket-">
-                Bitbucket
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            
-        </td>
-    </tr>
-</table>
 
 
 
