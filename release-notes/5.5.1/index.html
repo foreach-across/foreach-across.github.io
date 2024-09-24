@@ -4,15 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Image Server Admin UI | Foreach Across</title>
+    <title>Across 5.5.1 Release notes | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-">
+    <meta name="description" content="5.5.1 upgrades Spring Framework and Spring Security to the very last
+(public) 5.y.z releases. The Foreach Common Java Libraries are
+upgraded to 2.0.0.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -38,40 +34,28 @@ viewing an image by its unique key
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/modules/imageserver-admin/">
+      <link rel="canonical" href="https://foreach-across.github.io/release-notes/5.5.1/">
     
 
-    <meta property="og:title" content="Image Server Admin UI" />
-<meta property="og:description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-" />
+    <meta property="og:title" content="Across 5.5.1 Release notes" />
+<meta property="og:description" content="5.5.1 upgrades Spring Framework and Spring Security to the very last
+(public) 5.y.z releases. The Foreach Common Java Libraries are
+upgraded to 2.0.0." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/modules/imageserver-admin/" /><meta property="article:section" content="modules" />
+<meta property="og:url" content="https://foreach-across.github.io/release-notes/5.5.1/" /><meta property="article:section" content="release-notes" />
+<meta property="article:published_time" content="2024-09-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-09-24T00:00:00+00:00" />
 
-
-
-<meta itemprop="name" content="Image Server Admin UI">
-<meta itemprop="description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-">
-
-<meta itemprop="wordCount" content="49">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Image Server Admin UI"/>
-<meta name="twitter:description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-"/>
+<meta itemprop="name" content="Across 5.5.1 Release notes">
+<meta itemprop="description" content="5.5.1 upgrades Spring Framework and Spring Security to the very last
+(public) 5.y.z releases. The Foreach Common Java Libraries are
+upgraded to 2.0.0."><meta itemprop="datePublished" content="2024-09-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-09-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="188">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Across 5.5.1 Release notes"/>
+<meta name="twitter:description" content="5.5.1 upgrades Spring Framework and Spring Security to the very last
+(public) 5.y.z releases. The Foreach Common Java Libraries are
+upgraded to 2.0.0."/>
 
       
     
@@ -210,7 +194,7 @@ viewing an image by its unique key
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        Modules
+        Release Notes
       </aside>
       
 
@@ -228,29 +212,69 @@ viewing an image by its unique key
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Image Server Admin UI</h1>
+      <h1 class="f1 athelas mt3 mb1">Across 5.5.1 Release notes</h1>
+      
+      <p class="tracked">
+        By <strong>Davy</strong>
+      </p>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-09-24T00:00:00Z">September 24, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><code>ImageServerAdminWebModule</code> adds some Admin Web controllers for managing
-basic things of your ImageServer:</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>5.5.1 upgrades Spring Framework and Spring Security to the very last
+(public) 5.y.z releases. The Foreach Common Java Libraries are
+upgraded to 2.0.0.</p>
+<h2 id="upgrades">Upgrades</h2>
+<p>Spring Framework: from 5.3.34 to 5.3.39.</p>
+<p>Spring Security: from 5.8.12 to 5.8.14</p>
+<p>These are the very last (OSS) 5.x releases:</p>
 <ul>
-<li>managing resolutions</li>
-<li>uploading an image</li>
-<li>viewing an image by its unique key</li>
+<li>
+<p><a href="https://spring.io/blog/2024/08/14/spring-framework-6-1-12-6-0-23-and-5-3-39-available-now">https://spring.io/blog/2024/08/14/spring-framework-6-1-12-6-0-23-and-5-3-39-available-now</a></p>
+</li>
+<li>
+<p><a href="https://spring.io/blog/2024/08/20/spring-security-5-8-14-6-2-6-and-6-3-2-are-available-now">https://spring.io/blog/2024/08/20/spring-security-5-8-14-6-2-6-and-6-3-2-are-available-now</a></p>
+</li>
 </ul>
-<p>Apart from AdminWebModule, an ImageServer client instance is required.</p>
-<h3 id="artifacts">Artifacts</h3>
-<p>The ImageServer Admin UI dependency is present in Across Platform.</p>
-<pre><code>&lt;dependency&gt;
-  &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
-  &lt;artifactId&gt;imageserver-admin&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre><ul class="pa0">
+<p>Tomcat: from 9.0.87 to 9.0.94.</p>
+<p>The <a href="https://github.com/ForeachOS/foreach-common-java-libraries">Foreach Common Java Libraries
+(FCJL)</a>
+have been upgraded from 1.1 to 2.0.0. All details about that upgrade,
+including the rationale behind the 2.0.0, can be found in the <a href="/release-notes/fcjl-2.0.0/">2.0.0
+release notes</a>. Despite the major
+version change, there should be no impact on Across nor on any Across
+applications.</p>
+<h2 id="no-repositories-anymore-in-the-across-pomxml-files">No <code>&lt;repositories&gt;</code> anymore in the Across pom.xml files</h2>
+<p>Previously the Across pom.xml files that were published to the
+internal Nexus and to Maven Central contained repositories that
+pointed to our internal Nexus server like this:</p>
+<pre><code>&lt;repositories&gt;
+	&lt;repository&gt;
+		&lt;id&gt;across&lt;/id&gt;
+		&lt;name&gt;Across Repository&lt;/name&gt;
+		&lt;url&gt;https://repository.antwerpen.io-external.com/nexus/repository/public/&lt;/url&gt;
+	&lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre>
+<p>This inadvertently caused application builds to also consult those
+internal repositories, which sometimes causes very hard to debug build
+issues. This has been considered a bad practice for over 15 years:</p>
+<p><a href="https://www.sonatype.com/blog/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea">https://www.sonatype.com/blog/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea</a></p>
+<p>Also consider the following documentation when setting up your
+repository configuration:</p>
+<ul>
+<li>
+<p><a href="https://maven.apache.org/guides/mini/guide-multiple-repositories.html">https://maven.apache.org/guides/mini/guide-multiple-repositories.html</a></p>
+</li>
+<li>
+<p><a href="https://maven.apache.org/guides/mini/guide-mirror-settings.html">https://maven.apache.org/guides/mini/guide-mirror-settings.html</a></p>
+</li>
+</ul><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -259,122 +283,19 @@ basic things of your ImageServer:</p>
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this release-notes</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#upgrades">Upgrades</a></li>
+    <li><a href="#no-repositories-anymore-in-the-across-pomxml-files">No <code>&lt;repositories&gt;</code> anymore in the Across pom.xml files</a></li>
+  </ul>
+</nav>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-<h3>Quick links</h3>
-
-
-<style>
-    a.m-quick__link {
-        display: block;
-        margin: .6rem 0rem;
-        padding: 10px;
-        border: 1px solid #DBE0E1;
-        background-color: #f9f9fA;
-        text-decoration: none;
-        font-size: 1rem;
-        color: #1F3141;
-        font-weight: 600;
-    }
-</style>
-
-<table width="100%">
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://github.com/foreach-across/across-media-modules"
-               target="github-across-media-modules">
-                GitHub
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://gitlab.eindhoven.io-internal.dev/antwerpen/across/across-media-modules"
-               target="gitlab-across-media-modules">
-                GitLab
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/ref-docs-5/imageserver-admin/"
-               target="refdoc-imageserver-admin"
-            >
-                Documentation
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/api-docs-5/com.foreach.across.modules/imageserver-admin/current/"
-               target="javadoc-imageserver-admin"
-            >
-                Javadoc API
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://central.sonatype.com/artifact/com.foreach.across.modules/imageserver-admin"
-               target="maven-central-imageserver-admin"
-            >
-                <img style="vertical-align: middle"
-                     src="https://img.shields.io/maven-central/v/com.foreach.across.modules/imageserver-admin"
-                     alt="Maven central link for imageserver-admin"/>
-            </a>
-        </td>
-    </tr>
-</table>
-
-<h3>Legacy links</h3>
-
-<table width="100%">
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://bitbucket.org/beforeach/across-imageserver-modules"
-               target="bitbucket-imageserver-admin">
-                Bitbucket
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            
-        </td>
-    </tr>
-</table>
 
 
 

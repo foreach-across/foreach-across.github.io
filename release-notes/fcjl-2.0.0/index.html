@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Image Server Admin UI | Foreach Across</title>
+    <title>Foreach Common Java Libraries 2.0.0 Release Notes | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-">
+    <meta name="description" content="The Foreach Common Java Libraries
+(FCJL)
+are a set of small libraries, with limited dependencies and limited
+scope. Some of these libraries are used by Across, and had to be
+updated for Jakarta EE (a requirement for Spring Boot 3 and thus for
+Across 6). We made 2.0 and 3.0 releases, and a new module
+common-file-manager was added.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -38,40 +38,40 @@ viewing an image by its unique key
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/modules/imageserver-admin/">
+      <link rel="canonical" href="https://foreach-across.github.io/release-notes/fcjl-2.0.0/">
     
 
-    <meta property="og:title" content="Image Server Admin UI" />
-<meta property="og:description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-" />
+    <meta property="og:title" content="Foreach Common Java Libraries 2.0.0 Release Notes" />
+<meta property="og:description" content="The Foreach Common Java Libraries
+(FCJL)
+are a set of small libraries, with limited dependencies and limited
+scope. Some of these libraries are used by Across, and had to be
+updated for Jakarta EE (a requirement for Spring Boot 3 and thus for
+Across 6). We made 2.0 and 3.0 releases, and a new module
+common-file-manager was added." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/modules/imageserver-admin/" /><meta property="article:section" content="modules" />
+<meta property="og:url" content="https://foreach-across.github.io/release-notes/fcjl-2.0.0/" /><meta property="article:section" content="release-notes" />
+<meta property="article:published_time" content="2024-09-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-09-12T00:00:00+00:00" />
 
-
-
-<meta itemprop="name" content="Image Server Admin UI">
-<meta itemprop="description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-">
-
-<meta itemprop="wordCount" content="49">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Image Server Admin UI"/>
-<meta name="twitter:description" content="ImageServerAdminWebModule adds some Admin Web controllers for managing
-basic things of your ImageServer:
-
-managing resolutions
-uploading an image
-viewing an image by its unique key
-"/>
+<meta itemprop="name" content="Foreach Common Java Libraries 2.0.0 Release Notes">
+<meta itemprop="description" content="The Foreach Common Java Libraries
+(FCJL)
+are a set of small libraries, with limited dependencies and limited
+scope. Some of these libraries are used by Across, and had to be
+updated for Jakarta EE (a requirement for Spring Boot 3 and thus for
+Across 6). We made 2.0 and 3.0 releases, and a new module
+common-file-manager was added."><meta itemprop="datePublished" content="2024-09-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-09-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="843">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Foreach Common Java Libraries 2.0.0 Release Notes"/>
+<meta name="twitter:description" content="The Foreach Common Java Libraries
+(FCJL)
+are a set of small libraries, with limited dependencies and limited
+scope. Some of these libraries are used by Across, and had to be
+updated for Jakarta EE (a requirement for Spring Boot 3 and thus for
+Across 6). We made 2.0 and 3.0 releases, and a new module
+common-file-manager was added."/>
 
       
     
@@ -210,7 +210,7 @@ viewing an image by its unique key
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        Modules
+        Release Notes
       </aside>
       
 
@@ -228,29 +228,195 @@ viewing an image by its unique key
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Image Server Admin UI</h1>
+      <h1 class="f1 athelas mt3 mb1">Foreach Common Java Libraries 2.0.0 Release Notes</h1>
+      
+      <p class="tracked">
+        By <strong>Davy</strong>
+      </p>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-09-12T00:00:00Z">September 12, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><code>ImageServerAdminWebModule</code> adds some Admin Web controllers for managing
-basic things of your ImageServer:</p>
-<ul>
-<li>managing resolutions</li>
-<li>uploading an image</li>
-<li>viewing an image by its unique key</li>
-</ul>
-<p>Apart from AdminWebModule, an ImageServer client instance is required.</p>
-<h3 id="artifacts">Artifacts</h3>
-<p>The ImageServer Admin UI dependency is present in Across Platform.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The <a href="https://github.com/ForeachOS/foreach-common-java-libraries">Foreach Common Java Libraries
+(FCJL)</a>
+are a set of small libraries, with limited dependencies and limited
+scope. Some of these libraries are used by Across, and had to be
+updated for Jakarta EE (a requirement for Spring Boot 3 and thus for
+Across 6). We made 2.0 and 3.0 releases, and a new module
+<code>common-file-manager</code> was added.</p>
+<h2 id="overview">Overview</h2>
+<p>The last (public) release of these libraries was
+<a href="https://bitbucket.org/beforeach/common-java-libraries/src/common-projects-1.1/">1.1</a>. There
+was also an internal-only
+<a href="https://bitbucket.org/beforeach/common-java-libraries/src/common-projects-1.2/">1.2</a>
+release (for MF), that was not published to Maven Central. The 1.x
+branch was still based on Spring Framework 4 and Hibernate 4, but was
+compatible with Across 5 (Spring Boot 2, with Spring Framework 5 and
+Hibernate 5).</p>
+<p>We made a 2.0 branch where all dependencies are aligned with Spring
+Boot 2.7.18 (the last (public) Spring Boot 2 release) and a 3.0 branch
+where all dependencies are aligned with Spring Boot 3.2. Note that
+FCJL itself does <em>not</em> depend on Spring Boot: the
+<code>spring-boot-starter-parent</code> is simply and only used to get a
+consistent set of dependency versions.</p>
+<p>In both the 2.0 and 3.0 branches, a new module is introduced:
+<code>common-file-manager</code>: This is an evolution of the Across
+<code>file-manager-module</code>, where all dependencies on Across have been
+removed.</p>
+<p>Across 5.5.1 will update the dependencies on FCJL from 1.1 to 2.0.0,
+but that should have zero impact.</p>
+<p>FCJL releases can be found on Maven Central:</p>
+<p><a href="https://central.sonatype.com/search?q=g:com.foreach.libs">https://central.sonatype.com/search?q=g:com.foreach.libs</a></p>
+<p>Lastly, a <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#bill-of-materials-bom-poms">Bill-of-Materials (BOM)
+<code>pom.xml</code></a>
+was introduced, so that other libraries and applications can easily
+import a consist set of libraries. The next section explains how use
+the
+<a href="https://central.sonatype.com/artifact/com.foreach.libs/common-bom"><code>commons-bom</code></a>.</p>
+<h2 id="using-fcjl-as-dependencies-in-maven">Using FCJL as dependencies in Maven</h2>
+<p>You will need to add a version property in the <code>&lt;properties&gt;</code> of your
+root <code>pom.xml</code> (typically in the top-level directory). If you are
+using Spring Boot 2 (Across 5):</p>
+<pre><code>&lt;foreach-common-bom.version&gt;2.0.0&lt;/foreach-common-bom.version&gt;
+</code></pre>
+<p>or for Spring Boot 3 (Across 6):</p>
+<pre><code>&lt;foreach-common-bom.version&gt;3.0.0&lt;/foreach-common-bom.version&gt;
+</code></pre>
+<p>Then in the <code>&lt;dependencyManagement&gt;</code> section under <code>&lt;dependencies&gt;</code>,
+add:</p>
 <pre><code>&lt;dependency&gt;
-  &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
-  &lt;artifactId&gt;imageserver-admin&lt;/artifactId&gt;
+	&lt;groupId&gt;com.foreach.libs&lt;/groupId&gt;
+	&lt;artifactId&gt;common-bom&lt;/artifactId&gt;
+	&lt;version&gt;${foreach-common-bom.version}&lt;/version&gt;
+	&lt;type&gt;pom&lt;/type&gt;
+	&lt;scope&gt;import&lt;/scope&gt;
 &lt;/dependency&gt;
-</code></pre><ul class="pa0">
+</code></pre>
+<p>Adding a dependency is then as simple as adding:</p>
+<pre><code>&lt;dependency&gt;
+	&lt;groupId&gt;com.foreach.libs&lt;/groupId&gt;
+	&lt;artifactId&gt;common-file-manager&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="removed-modules">Removed modules</h2>
+<p>The <code>common-test</code> module was removed in 2.0.0: It provides only one
+class and that did not compile with the version of Mockito from Spring
+Boot 2.7.18. Across 5.5.0 had a dependency on this module, but it was
+not actually used. If it turns out that somebody still needs this, we
+can take another look at what the best option forward is.</p>
+<h2 id="common-file-manager">common-file-manager</h2>
+<p>The Across 
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+ actually consisted
+of three layers:</p>
+<ol>
+<li>
+<p>The lowest layer consists of the <code>FileManager</code> and <code>FileRepository</code>
+interfaces and all the implementations (local files, (S)FTP, Amazon
+S3 and Azure Blob storage).</p>
+</li>
+<li>
+<p>The middle layer depends on the <code>FileManager</code> etc, and introduces
+the <code>FileReference</code> JPA entity. Unfortunately, it is hard to factor
+out because of all the dependencies it has on the 
+<a href="/modules/across-hibernate-module/"><code>across-hibernate-module</code></a>
+ and the 
+<a href="/modules/properties-module/"><code>properties-module</code></a>
+. This isn&rsquo;t used by projects C nor G, but it
+is used by project MI. <code>FileReferenceProperties</code> does not appear to
+be used anywhere.</p>
+</li>
+<li>
+<p>The top layer consists of the admin UI, based on <code>entity-module</code>
+and <code>admin-web-module</code>, which allows for browsing the file
+repositories. Obviously we won&rsquo;t migrate this as is: in fact we
+won&rsquo;t provide a web UI at all. You have many alternatives:</p>
+<ul>
+<li>
+<p>You can just use the native tools, such as the <a href="https://azure.microsoft.com/en-us/products/storage/storage-explorer">Azure Storage
+Exporer</a>.</p>
+</li>
+<li>
+<p>Use the <a href="https://plugins.jetbrains.com/plugin/21706-remote-file-systems">IntelliJ Remote File Systems
+plugin</a>,
+which supports local files, SFTP, and object storage for all
+major providers.</p>
+</li>
+<li>
+<p>That plugin does not appear to support plain FTP, but there are
+many browsers for that, such as
+<a href="https://filezilla-project.org/">FileZilla</a> (which supports FTP,
+FTP over TLS (FTPS) and SFTP)</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>So for now, we factored out only layer 1, into the
+<code>common-file-manager</code> module. Layer 2 could become
+<code>common-file-manager-jpa</code>, and as mentioned before, layer 3 will not
+be migrated.</p>
+<p>Why are we keeping this?</p>
+<ul>
+<li>
+<p>This module provides a nice abstraction over file-systems, with some
+fairly specific semantics, such as the caching repository that
+delegates to an actual repository.</p>
+</li>
+<li>
+<p>It is needed for some projects, when they remove their dependency on
+Across.</p>
+</li>
+</ul>
+<p>Migration steps:</p>
+<ol>
+<li>
+<p>Start by configuring maven with the right dependencies as above,
+and don&rsquo;t forget to remove the dependency on the old
+
+   <a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+.</p>
+</li>
+<li>
+<p>The Java package name for the classes has been changed, so replace:</p>
+<pre><code> com.foreach.across.modules.filemanager
+</code></pre>
+<p>with:</p>
+<pre><code> com.foreach.common.filemanager
+</code></pre>
+<p>You obviously need to do this in all <code>.java</code> files, but there might
+be configuration files that might contain this package name, and
+that need to be adapted as well.</p>
+</li>
+<li>
+<p>
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+ created a <code>FileManager</code> bean
+automatically, but now you will need to create your own instance of
+<code>FileManager(Impl)</code> and add your repositories to that. Or you might
+use the <code>FileRepository</code>s directly if you don&rsquo;t need the
+<code>FileManager/FileRepositoryRegistry</code> functionality.</p>
+</li>
+<li>
+<p>Remove the <code>fileManagerModule</code> entry from your <code>application.yml</code>
+files (and/or <code>-dev</code> variants etc), as it will not be picked up
+anymore. You will need to replace this with your own configuration.</p>
+</li>
+</ol>
+<h2 id="git-repository-is-moved">Git repository is moved</h2>
+<p>The legacy repository for FCJL is at Bitbucket:
+<a href="https://bitbucket.org/beforeach/common-java-libraries">https://bitbucket.org/beforeach/common-java-libraries</a>. This will not
+be updated anymore.</p>
+<p>The internal repository where development happens is at:
+<a href="https://gitlab.eindhoven.io-internal.dev/antwerpen/common/foreach-common-java-libraries">https://gitlab.eindhoven.io-internal.dev/antwerpen/common/foreach-common-java-libraries</a></p>
+<p>And that is mirrored to the public GitHub repository at:
+<a href="https://github.com/ForeachOS/foreach-common-java-libraries">https://github.com/ForeachOS/foreach-common-java-libraries</a></p>
+<p>There is also an old Jira project, but that is not used anymore:
+<a href="https://foreach.atlassian.net/browse/FJCL">https://foreach.atlassian.net/browse/FJCL</a></p><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -259,122 +425,22 @@ basic things of your ImageServer:</p>
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this release-notes</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#using-fcjl-as-dependencies-in-maven">Using FCJL as dependencies in Maven</a></li>
+    <li><a href="#removed-modules">Removed modules</a></li>
+    <li><a href="#common-file-manager">common-file-manager</a></li>
+    <li><a href="#git-repository-is-moved">Git repository is moved</a></li>
+  </ul>
+</nav>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-<h3>Quick links</h3>
-
-
-<style>
-    a.m-quick__link {
-        display: block;
-        margin: .6rem 0rem;
-        padding: 10px;
-        border: 1px solid #DBE0E1;
-        background-color: #f9f9fA;
-        text-decoration: none;
-        font-size: 1rem;
-        color: #1F3141;
-        font-weight: 600;
-    }
-</style>
-
-<table width="100%">
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://github.com/foreach-across/across-media-modules"
-               target="github-across-media-modules">
-                GitHub
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://gitlab.eindhoven.io-internal.dev/antwerpen/across/across-media-modules"
-               target="gitlab-across-media-modules">
-                GitLab
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/ref-docs-5/imageserver-admin/"
-               target="refdoc-imageserver-admin"
-            >
-                Documentation
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/api-docs-5/com.foreach.across.modules/imageserver-admin/current/"
-               target="javadoc-imageserver-admin"
-            >
-                Javadoc API
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://central.sonatype.com/artifact/com.foreach.across.modules/imageserver-admin"
-               target="maven-central-imageserver-admin"
-            >
-                <img style="vertical-align: middle"
-                     src="https://img.shields.io/maven-central/v/com.foreach.across.modules/imageserver-admin"
-                     alt="Maven central link for imageserver-admin"/>
-            </a>
-        </td>
-    </tr>
-</table>
-
-<h3>Legacy links</h3>
-
-<table width="100%">
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://bitbucket.org/beforeach/across-imageserver-modules"
-               target="bitbucket-imageserver-admin">
-                Bitbucket
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            
-        </td>
-    </tr>
-</table>
 
 
 

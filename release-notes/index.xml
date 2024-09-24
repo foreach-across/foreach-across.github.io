@@ -6,8 +6,22 @@
     <description>Recent content in Release Notes on Foreach Across</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://foreach-across.github.io/release-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Across 5.5.1 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/5.5.1/</link>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/5.5.1/</guid>
+      <description>&lt;p&gt;5.5.1 upgrades Spring Framework and Spring Security to the very last&#xA;(public) 5.y.z releases. The Foreach Common Java Libraries are&#xA;upgraded to 2.0.0.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Foreach Common Java Libraries 2.0.0 Release Notes</title>
+      <link>https://foreach-across.github.io/release-notes/fcjl-2.0.0/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/fcjl-2.0.0/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ForeachOS/foreach-common-java-libraries&#34;&gt;Foreach Common Java Libraries&#xA;(FCJL)&lt;/a&gt;&#xA;are a set of small libraries, with limited dependencies and limited&#xA;scope. Some of these libraries are used by Across, and had to be&#xA;updated for Jakarta EE (a requirement for Spring Boot 3 and thus for&#xA;Across 6). We made 2.0 and 3.0 releases, and a new module&#xA;&lt;code&gt;common-file-manager&lt;/code&gt; was added.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Across 5.5.0 Release notes</title>
       <link>https://foreach-across.github.io/release-notes/5.5.0/</link>
