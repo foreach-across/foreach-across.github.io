@@ -244,7 +244,7 @@
       <link>https://foreach-across.github.io/release-notes/5.3.0/</link>
       <pubDate>Fri, 12 Jan 2024 12:00:00 +0100</pubDate>
       <guid>https://foreach-across.github.io/release-notes/5.3.0/</guid>
-      <description>&lt;p&gt;The one big change in &lt;code&gt;5.3&lt;/code&gt; is that Across development has moved to an&#xA;&lt;a href=&#34;https://gitlab.isaac.nl/antwerpen/across/&#34;&gt;internal GitLab server&lt;/a&gt;,&#xA;with the repositories also mirrored (publicly) to&#xA;&lt;a href=&#34;https://github.com/ForeachOS&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Across modules have been reorganized into a much smaller number of&#xA;git repositories, to speed up the release process. As a result of&#xA;this, there are a few small changes you need in your application.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The one big change in &lt;code&gt;5.3&lt;/code&gt; is that Across development has moved to an&#xA;&lt;a href=&#34;https://gitlab.eindhoven.io-internal.dev/antwerpen/across/&#34;&gt;internal GitLab server&lt;/a&gt;,&#xA;with the repositories also mirrored (publicly) to&#xA;&lt;a href=&#34;https://github.com/ForeachOS&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Across modules have been reorganized into a much smaller number of&#xA;git repositories, to speed up the release process. As a result of&#xA;this, there are a few small changes you need in your application.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Across 5.2.2 Release notes</title>
