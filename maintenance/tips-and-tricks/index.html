@@ -45,7 +45,7 @@
 <meta itemprop="name" content="Tips and tricks">
 <meta itemprop="description" content="Some tips and tricks for maintaining Across.">
 
-<meta itemprop="wordCount" content="157">
+<meta itemprop="wordCount" content="228">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Tips and tricks"/>
 <meta name="twitter:description" content="Some tips and tricks for maintaining Across."/>
 
@@ -213,6 +213,15 @@
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Some tips and tricks for maintaining Across.</p>
+<h2 id="maven-problems-with-across-snapshots">Maven problems with Across snapshots</h2>
+<p>If you run into more (seemingly unexplainable) errors with Maven and
+Across snapshots, a good option is to brute-force clean your local
+Maven repository of all artifacts in any <code>com.foreach.*</code> group:</p>
+<pre><code>rm -rf ~/.m2/repository/com/foreach
+</code></pre>
+<p>I assume you are a power user, and are smart enough to not wipe out
+your entire home directory, by accidentally putting a space after the
+<code>~/</code> in that previous command :-)</p>
 <h2 id="ax-execsh">ax-exec.sh</h2>
 <p>You can use this script to run a command in each of the 7
 repositories, for instance:</p>
@@ -270,6 +279,7 @@ to &ndash;SNAPSHOT</a>.</p>
     <p class="f5 b mb3">What&#39;s in this maintenance</p>
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#maven-problems-with-across-snapshots">Maven problems with Across snapshots</a></li>
     <li><a href="#ax-execsh">ax-exec.sh</a></li>
     <li><a href="#ax-set-snapshot-versionspy">ax-set-snapshot-versions.py</a></li>
   </ul>

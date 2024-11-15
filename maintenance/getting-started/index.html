@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Spring Security module | Foreach Across</title>
+    <title>Getting started with development on Across | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The SpringSecurityModule activates Spring security in the Across context and allows other modules to make use of the security infrastructure, as well as to make security configuration changes (eg. register additional security filters).
-It also provides some additional infrastructure for custom security principals.
-This module is required to work with Spring security in an Across application. It is a replacement for the Spring Boot security starter in an Across setup.">
+    <meta name="description" content="These instructions are for setting up your development environment on
+your laptop, in order to efficiently work on the Across framework,
+modules and platform.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -34,28 +34,28 @@ This module is required to work with Spring security in an Across application. I
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/modules/spring-security-module/">
+      <link rel="canonical" href="https://foreach-across.github.io/maintenance/getting-started/">
     
 
-    <meta property="og:title" content="Spring Security module" />
-<meta property="og:description" content="The SpringSecurityModule activates Spring security in the Across context and allows other modules to make use of the security infrastructure, as well as to make security configuration changes (eg. register additional security filters).
-It also provides some additional infrastructure for custom security principals.
-This module is required to work with Spring security in an Across application. It is a replacement for the Spring Boot security starter in an Across setup." />
+    <meta property="og:title" content="Getting started with development on Across" />
+<meta property="og:description" content="These instructions are for setting up your development environment on
+your laptop, in order to efficiently work on the Across framework,
+modules and platform." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/modules/spring-security-module/" /><meta property="article:section" content="modules" />
+<meta property="og:url" content="https://foreach-across.github.io/maintenance/getting-started/" /><meta property="article:section" content="maintenance" />
 
 
 
-<meta itemprop="name" content="Spring Security module">
-<meta itemprop="description" content="The SpringSecurityModule activates Spring security in the Across context and allows other modules to make use of the security infrastructure, as well as to make security configuration changes (eg. register additional security filters).
-It also provides some additional infrastructure for custom security principals.
-This module is required to work with Spring security in an Across application. It is a replacement for the Spring Boot security starter in an Across setup.">
+<meta itemprop="name" content="Getting started with development on Across">
+<meta itemprop="description" content="These instructions are for setting up your development environment on
+your laptop, in order to efficiently work on the Across framework,
+modules and platform.">
 
-<meta itemprop="wordCount" content="83">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Spring Security module"/>
-<meta name="twitter:description" content="The SpringSecurityModule activates Spring security in the Across context and allows other modules to make use of the security infrastructure, as well as to make security configuration changes (eg. register additional security filters).
-It also provides some additional infrastructure for custom security principals.
-This module is required to work with Spring security in an Across application. It is a replacement for the Spring Boot security starter in an Across setup."/>
+<meta itemprop="wordCount" content="1326">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Getting started with development on Across"/>
+<meta name="twitter:description" content="These instructions are for setting up your development environment on
+your laptop, in order to efficiently work on the Across framework,
+modules and platform."/>
 
       
     
@@ -194,7 +194,7 @@ This module is required to work with Spring security in an Across application. I
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        Modules
+        Maintenance
       </aside>
       
 
@@ -212,7 +212,7 @@ This module is required to work with Spring security in an Across application. I
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Spring Security module</h1>
+      <h1 class="f1 athelas mt3 mb1">Getting started with development on Across</h1>
       
       
       
@@ -220,23 +220,252 @@ This module is required to work with Spring security in an Across application. I
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The <code>SpringSecurityModule</code> activates Spring security in the Across
-context and allows other modules to make use of the security
-infrastructure, as well as to make security configuration changes (eg.
-register additional security filters).</p>
-<p>It also provides some additional infrastructure for custom security
-principals.</p>
-<p>This module is required to work with Spring security in an Across
-application. It is a replacement for the Spring Boot security starter in
-an Across setup.</p>
-<h3 id="artifacts">Artifacts</h3>
-<p>The SpringSecurityModule dependency is present in Across Platform.</p>
-<pre><code>&lt;dependency&gt;
-     &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
-     &lt;artifactId&gt;spring-security-module&lt;/artifactId&gt;
-&lt;/dependency&gt;
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>These instructions are for setting up your development environment on
+your laptop, in order to efficiently work on the Across framework,
+modules and platform.</p>
+<h2 id="use-the-cli-not-intellij">Use the CLI, not IntelliJ</h2>
+<p>Title says it all, the initial instructions here <em>MUST</em> be done in a
+terminal, preferably using the <code>bash</code> shell (<code>zsh</code> might work, but I
+make no guarantees).</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>On macOS, most of these can be installed using Homebrew. On Windows,
+you can often use Chocolatey.</p>
+<ul>
+<li>
+<p><code>bash</code></p>
+</li>
+<li>
+<p>Python: minimum 3.10</p>
+</li>
+<li>
+<p>Java: 8 for Across 5.x, 17 for Across 6.x, see further for the
+specific installation instructions that are <em>required</em> to make the
+scripts work. Do <em>NOT</em> skip this step.</p>
+</li>
+<li>
+<p>Maven: Latest 3.9</p>
+</li>
+<li>
+<p><a href="https://graphviz.org/download/">GraphViz</a></p>
+</li>
+<li>
+<p><a href="https://gohugo.io/">Hugo</a> static site generator: use the extended
+version.</p>
+</li>
+<li>
+<p>Go (if using a Hugo theme which requires Go modules)</p>
+</li>
+</ul>
+<p>IntelliJ: install the <a href="https://plugins.jetbrains.com/plugin/13215-hugo-integration">Hugo
+plugin</a></p>
+<h2 id="jdk-installation-instructions">JDK installation instructions</h2>
+<p>Install both a JDK 1.8 and a JDK 17 in <code>~/.jdks</code>. The easiest way to
+do this is:</p>
+<ul>
+<li>
+<p>Download the latest Eclipse Temurin 1.8 and 17 JDK using the Project
+Structure dialog in IntelliJ, which will put this in the <code>~/.jdks</code>
+directory.</p>
+</li>
+<li>
+<p>Then create symlinks so the <code>~/.jdks/1.8</code> and <code>~/.jdks/17</code> point to
+the latest 1.8 and 17 in the <code>~/.jdks</code> directory.</p>
+</li>
+</ul>
+<h2 id="clone-the-repositories">Clone the repositories</h2>
+<h3 id="clone-the-across-development-repository">Clone the across-development repository:</h3>
+<p>First of all, make a directory where you will work on Across:</p>
+<pre><code>mkdir -p ~/git/across
+cd ~/git/across
 </code></pre>
-<ul class="pa0">
+<p>And then clone the across-development repository:</p>
+<pre><code>git clone https://gitlab.eindhoven.io-internal.dev/antwerpen/across/across-development.git
+</code></pre>
+<p>The (default) <code>main</code> branch is for Across 6.x. Switch to the <code>5.x</code>
+branch for maintenance on older releases, but hopefully that will not
+be needed. I highly recommend using separate local repositories for
+5.x and 6.x development. At the time of writing, 6.0 is the version in
+development, so you probably want to do something like this:</p>
+<pre><code>mv across-development 6.0
+</code></pre>
+<h3 id="setup-the-python-virtualenv">Setup the Python virtualenv</h3>
+<p><code>across-development</code> comes with a lot of <code>bash</code> and <code>python</code> scripts
+for automation. There is also an <code>across.yml</code> file in the top-level
+directory, that is used by the python scripts, but also by the
+<a href="https://gohugo.io/">Hugo</a>-based Across website.</p>
+<p>We need to set up a Python
+<a href="https://docs.python.org/3/library/venv.html"><code>virtualenv</code></a> to make
+these scripts work. Personally, I prefer to keep my virtualenvs
+outside the git repository, otherwise it sometimes causes trouble with
+IntelliJ:</p>
+<pre><code>python3 -m venv ../venv-6
+</code></pre>
+<p>Next you have to activate the <code>venv-6</code> environment in your current
+shell (and any other terminal that you open), by sourcing the
+<code>activate</code> script, which should work for both <code>bash</code> and <code>zsh</code> (there
+is a separate <code>activate.fish</code> script if you like <code>fish</code>):</p>
+<pre><code>source ../venv-6/bin/activate
+</code></pre>
+<p>Or, more idiomatically:</p>
+<pre><code>. ../venv-6/bin/activate
+</code></pre>
+<p>If you now run:</p>
+<pre><code>which python3
+</code></pre>
+<p>you should see that your shell picks up <code>python3</code> from the
+<code>../venv-6/bin</code> directory.</p>
+<p>Next we need to install the required Python packages into your
+<code>virtualenv</code>:</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+<p>Now source the <code>env.sh</code> to add the local <code>bin</code> with the Across scripts
+to your <code>PATH</code>:</p>
+<pre><code>. env.sh
+</code></pre>
+<p>Try the following commands:</p>
+<pre><code>ax-list.py modules
+ax-list.py modules --with-repo
+ax-list.py repositories
+</code></pre>
+<p>These commands should list the modules and repositories, in the order
+that they are build (and are <a href="https://foreach-across.github.io/modules/">listed on the website</a>).</p>
+<p>The order of the repositories is something you need to know by heart,
+if you want to efficiently work on Across. It&rsquo;s not a long list, and
+the order is pretty logical, so this shouldn&rsquo;t be a problem.</p>
+<h3 id="clone-the-framework-modules-and-platform-repositories">Clone the Framework, modules and Platform repositories</h3>
+<p>Next, we will use the <code>ax-list.py</code> script in combination with <code>xargs</code>
+to clone all the repositories:</p>
+<pre><code>ax-list.py repositories | xargs -I '{}' git clone https://gitlab.eindhoven.io-internal.dev/antwerpen/across/{}.git
+</code></pre>
+<p>The initial branch in each of those repositories will be whatever
+happens to be the current default branch, so lets check what branch
+this is, using, you guessed it, yet another script:</p>
+<pre><code>ax-exec.sh git status
+</code></pre>
+<p>This simply executes <code>git status</code> in each of the child repositories.</p>
+<p>Tip: If you want to run a command with <code>ax-exec.sh</code>, first start
+typing that command itself, using standard shell completion. Then use
+<code>ctrl-a</code> to go to the beginning of the command, and add <code>ax-exec.sh</code>
+followed by a space, and <code>enter</code>.</p>
+<p>Since we want to work on 6.0, and the 6.0 branches already exist, you
+can now do:</p>
+<pre><code>ax-exec.sh git checkout 6.0
+</code></pre>
+<h3 id="clone-the-website-repository">Clone the website repository</h3>
+<p>The <a href="https://foreach-across.github.io">Across website</a> is actually
+just a <a href="https://github.com/foreach-across/foreach-across.github.io">GitHub
+repository</a>):
+which contains the HTML/CSS/&hellip; files of the website. That repository
+must be cloned in a specific directory:</p>
+<pre><code>cd website
+git clone git@github.com:foreach-across/foreach-across.github.io.git public
+</code></pre>
+<p>Publishing the website is one of the last steps of the <a href="/maintenance/release-procedure/">Release
+procedure</a>, so that&rsquo;s documented there.</p>
+<h2 id="initial-maven-build">Initial Maven build</h2>
+<p>Assuming you followed the specific JDK installation instructions, you
+can now source the <code>env.sh</code> file:</p>
+<pre><code>. env.sh
+</code></pre>
+<p>Then use the alias <code>mciwt</code> (use <code>alias mciwt</code> to see what it does)
+from the top-level directory:</p>
+<pre><code>mciwt
+</code></pre>
+<p>This will likely fail with an error about some missing artifacts with
+version <code>dev-SNAPSHOT</code>. This is due to the very specific structure of
+the (parent) modules in Across, for which there is no easy
+solution. The workaround is to first build in <code>across-framework</code>, and
+then build everything:</p>
+<pre><code>cd across-framework
+mciwt
+cd -
+mciwt
+</code></pre>
+<p>Remember this, because you will likely run into this more than once.</p>
+<p>Tip: If you ever run into trouble with Across snapshots and Maven
+and/or IntelliJ, then check out the <a href="/maintenance/tips-and-tricks/">Tips and tricks</a>.</p>
+<h2 id="intellij">IntelliJ</h2>
+<p>Now that you have build everything using Maven, you can open the
+top-level <code>pom.xml</code> in the <code>across-development</code> repository. This opens
+<em>all</em> of Across in one single IntelliJ project, which any modern
+laptop can easily handle. This is the only way to be able to work
+efficiently on Across, allowing you to easily follow all references,
+open call/class hierarchy, etc.</p>
+<p>This is in fact the reason why the <code>dev-SNAPSHOT</code> version exists: the
+IntelliJ support for Maven cannot handle different versions in the
+various child projects, or at least not when they are defined using
+the <a href="https://maven.apache.org/maven-ci-friendly.html"><code>revision</code></a>
+property. And in Across 5.x, the various modules (or, since 5.3, the
+repositories) have different versions. This obviously meant quite a
+bit of work for GitLab CI/CD, and for the release procedure.</p>
+<p>In Across 6.x, we have lined up all versions of Across Framework, all
+modules/repository and Across Platform to 6.x. This is one of the
+reasons why the <code>across-media-modules</code> repository (with 
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+, 
+<a href="/modules/imageserver-core/"><code>imageserver-core</code></a>
+ and
+
+<a href="/modules/web-cms-module/"><code>web-cms-module</code></a>
+) <em>had</em> to be removed from Across
+
+<a href="/release-notes/6.0.0/"><code>6.0.0</code></a>
+: they were already at 6.x in Across
+5.x. And I did not want to jump to Across 7, because it&rsquo;s nice to have
+Across 6 with Spring 6, Spring Security 6 and Hibernate 6, and easier
+to remember especially.</p>
+<p>We could simplify the build process for Across 6.x, but I would not
+recommend that for the CI process, until 5.x is really end of life
+(meaning no applications left to upgrade).</p>
+<h2 id="running-tests-with-maven">Running tests with Maven</h2>
+<h3 id="setup-dev-configs-for-across-development">Setup ~/dev-configs for Across development</h3>
+<p>This allows you to easily run integration tests from both Maven and
+IntelliJ.</p>
+<p>Symlink the <code>across-test.properties</code>. From the top-level directory, run:</p>
+<pre><code>mkdir -p ~/dev-configs
+(cd ~/dev-configs/ &amp;&amp; ln -s $OLDPWD/across-test.properties across-test.properties)
+</code></pre>
+<p>Note that the only difference with the <code>across-test.properties</code> from
+the <code>across-framework</code> repository should be the hostnames: they are
+all <code>127.0.0.1</code>, as opposed to the GitLab service <code>alias</code>.</p>
+<h3 id="docker-compose-for-databases">docker-compose for databases</h3>
+<p>The instructions here do not use <code>testcontainers</code> for the relational
+databases, because:</p>
+<ul>
+<li>
+<p>The tests in GitLab CI/CD don&rsquo;t use <code>testcontainers</code> either for
+relational databases.</p>
+</li>
+<li>
+<p>It is much faster to start a database server once in the background,
+and then reuse it all the time, than to start one for each test case
+(or at least every time there is a <code>@DirtiesContext</code>, and there are
+a lot of those!)</p>
+</li>
+</ul>
+<p>Other <code>testcontainers</code> are still used, since they are used only very
+occasionally.</p>
+<p>To start all database servers, simply run:</p>
+<pre><code>docker-compose up
+</code></pre>
+<p>Or each one individually:</p>
+<pre><code>docker-compose up mssql
+docker-compose up mysql
+docker-compose up oracle
+docker-compose up postgres
+</code></pre>
+<h3 id="maven-integration-tests">Maven integration tests</h3>
+<p>To run the integration tests locally, run either of:</p>
+<pre><code>axitest -DacrossTest.datasource=h2
+axitest -DacrossTest.datasource=mssql
+axitest -DacrossTest.datasource=mysql
+axitest -DacrossTest.datasource=oracle
+axitest -DacrossTest.datasource=postgres
+</code></pre>
+<h1 id="running-tests-in-intellij">Running tests in IntelliJ</h1>
+<p>Many Across repositories have an IntelliJ run configuration for each
+database to run all integration tests. Obviously you need to have the
+database(s) running using <code>docker-compose</code> (see above).</p><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -245,126 +474,37 @@ an Across setup.</p>
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this maintenance</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#use-the-cli-not-intellij">Use the CLI, not IntelliJ</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#jdk-installation-instructions">JDK installation instructions</a></li>
+    <li><a href="#clone-the-repositories">Clone the repositories</a>
+      <ul>
+        <li><a href="#clone-the-across-development-repository">Clone the across-development repository:</a></li>
+        <li><a href="#setup-the-python-virtualenv">Setup the Python virtualenv</a></li>
+        <li><a href="#clone-the-framework-modules-and-platform-repositories">Clone the Framework, modules and Platform repositories</a></li>
+        <li><a href="#clone-the-website-repository">Clone the website repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial-maven-build">Initial Maven build</a></li>
+    <li><a href="#intellij">IntelliJ</a></li>
+    <li><a href="#running-tests-with-maven">Running tests with Maven</a>
+      <ul>
+        <li><a href="#setup-dev-configs-for-across-development">Setup ~/dev-configs for Across development</a></li>
+        <li><a href="#docker-compose-for-databases">docker-compose for databases</a></li>
+        <li><a href="#maven-integration-tests">Maven integration tests</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-<h3>Quick links</h3>
-
-
-<style>
-    a.m-quick__link {
-        display: block;
-        margin: .6rem 0rem;
-        padding: 10px;
-        border: 1px solid #DBE0E1;
-        background-color: #f9f9fA;
-        text-decoration: none;
-        font-size: 1rem;
-        color: #1F3141;
-        font-weight: 600;
-    }
-</style>
-
-<table width="100%">
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://github.com/foreach-across/across-base-modules"
-               target="github-across-base-modules">
-                GitHub
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://gitlab.eindhoven.io-internal.dev/antwerpen/across/across-base-modules"
-               target="gitlab-across-base-modules">
-                GitLab
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/ref-docs-5/spring-security-module/"
-               target="refdoc-spring-security-module"
-            >
-                Documentation
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://foreach-across.github.io/api-docs-5/com.foreach.across.modules/spring-security-module/current/"
-               target="javadoc-spring-security-module"
-            >
-                Javadoc API
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://central.sonatype.com/artifact/com.foreach.across.modules/spring-security-module"
-               target="maven-central-spring-security-module"
-            >
-                <img style="vertical-align: middle"
-                     src="https://img.shields.io/maven-central/v/com.foreach.across.modules/spring-security-module"
-                     alt="Maven central link for spring-security-module"/>
-            </a>
-        </td>
-    </tr>
-</table>
-
-<h3>Legacy links</h3>
-
-<table width="100%">
-    <tr>
-        <td>
-            <a class="m-quick__link"
-               href="https://bitbucket.org/beforeach/spring-security-module"
-               target="bitbucket-spring-security-module">
-                Bitbucket
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            
-            <a class="m-quick__link"
-               href="https://foreach.atlassian.net/browse/AXSSM"
-               target="jira-spring-security-module">
-                Jira
-            </a>
-            
-        </td>
-    </tr>
-</table>
 
 
 

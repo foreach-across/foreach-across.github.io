@@ -8,18 +8,18 @@
     <language>en-us</language>
     <atom:link href="https://foreach-across.github.io/maintenance/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Prerequisites</title>
-      <link>https://foreach-across.github.io/maintenance/prerequisites/</link>
+      <title>Getting started with development on Across</title>
+      <link>https://foreach-across.github.io/maintenance/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://foreach-across.github.io/maintenance/prerequisites/</guid>
-      <description>&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GraphViz&lt;/li&gt;&#xA;&lt;li&gt;Python: minimum 3.10&lt;/li&gt;&#xA;&lt;li&gt;Java: 8 for Across 5, 17 for Across 6&lt;/li&gt;&#xA;&lt;li&gt;Maven: Latest 3.9&lt;/li&gt;&#xA;&lt;li&gt;Hugo: extended version&lt;/li&gt;&#xA;&lt;li&gt;Go (if using a Hugo theme which requires Go modules)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;IntelliJ: install the &lt;a href=&#34;https://plugins.jetbrains.com/plugin/13215-hugo-integration&#34;&gt;Hugo plugin&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>https://foreach-across.github.io/maintenance/getting-started/</guid>
+      <description>&lt;p&gt;These instructions are for setting up your development environment on&#xA;your laptop, in order to efficiently work on the Across framework,&#xA;modules and platform.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Tips and tricks</title>
-      <link>https://foreach-across.github.io/maintenance/tips-and-tricks/</link>
+      <title>Starting a new release</title>
+      <link>https://foreach-across.github.io/maintenance/starting-a-new-release/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://foreach-across.github.io/maintenance/tips-and-tricks/</guid>
-      <description>&lt;p&gt;Some tips and tricks for maintaining Across.&lt;/p&gt;</description>
+      <guid>https://foreach-across.github.io/maintenance/starting-a-new-release/</guid>
+      <description>&lt;p&gt;This page describes the various steps that are usually required to&#xA;start a new X.Y version.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Release procedure</title>
@@ -27,6 +27,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://foreach-across.github.io/maintenance/release-procedure/</guid>
       <description>&lt;p&gt;The release procedure consists of:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Making a release plan file.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Running a script for each repository you are releasing.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;And a few post-release steps.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Tips and tricks</title>
+      <link>https://foreach-across.github.io/maintenance/tips-and-tricks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/maintenance/tips-and-tricks/</guid>
+      <description>&lt;p&gt;Some tips and tricks for maintaining Across.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Regular maintenance</title>

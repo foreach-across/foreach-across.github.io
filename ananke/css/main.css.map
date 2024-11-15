@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/dvsp/git/across/5.5/website",
+	"sourceRoot": "/home/dvsp/git/across/6.0/website",
 	"sources": [
 		"ananke/css/main.css"
 	],
