@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Developing Across applications | Foreach Across</title>
+    <title>Replacing the Across Application Parent POM with the Across Platform BOM | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="What is the meaning of the project structure created by Across Initializr? Update 2024-02-11: Across Initializr is no longer available.
-Across Initializr generates a typical project structure for an Across application. Which structure gets created exactly depends on the options you checked when generating the project.
-It will create both a Java package structure and a structure for the embedded resources. At first glance some part of it might seem bloated (especially the resources).">
+    <meta name="description" content="This blog introduces the across-platform-bom, and explains why it
+should be used instead of the across-application-parent.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -34,28 +33,25 @@ It will create both a Java package structure and a structure for the embedded re
     
 
     
-      <link rel="canonical" href="https://foreach-across.github.io/faq/developing-applications/">
+      <link rel="canonical" href="https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/">
     
 
-    <meta property="og:title" content="Developing Across applications" />
-<meta property="og:description" content="What is the meaning of the project structure created by Across Initializr? Update 2024-02-11: Across Initializr is no longer available.
-Across Initializr generates a typical project structure for an Across application. Which structure gets created exactly depends on the options you checked when generating the project.
-It will create both a Java package structure and a structure for the embedded resources. At first glance some part of it might seem bloated (especially the resources)." />
+    <meta property="og:title" content="Replacing the Across Application Parent POM with the Across Platform BOM" />
+<meta property="og:description" content="This blog introduces the across-platform-bom, and explains why it
+should be used instead of the across-application-parent." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foreach-across.github.io/faq/developing-applications/" /><meta property="article:section" content="faq" />
+<meta property="og:url" content="https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-12-17T12:00:00+01:00" />
+<meta property="article:modified_time" content="2024-12-17T12:00:00+01:00" />
 
-
-
-<meta itemprop="name" content="Developing Across applications">
-<meta itemprop="description" content="What is the meaning of the project structure created by Across Initializr? Update 2024-02-11: Across Initializr is no longer available.
-Across Initializr generates a typical project structure for an Across application. Which structure gets created exactly depends on the options you checked when generating the project.
-It will create both a Java package structure and a structure for the embedded resources. At first glance some part of it might seem bloated (especially the resources).">
-
-<meta itemprop="wordCount" content="833">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Developing Across applications"/>
-<meta name="twitter:description" content="What is the meaning of the project structure created by Across Initializr? Update 2024-02-11: Across Initializr is no longer available.
-Across Initializr generates a typical project structure for an Across application. Which structure gets created exactly depends on the options you checked when generating the project.
-It will create both a Java package structure and a structure for the embedded resources. At first glance some part of it might seem bloated (especially the resources)."/>
+<meta itemprop="name" content="Replacing the Across Application Parent POM with the Across Platform BOM">
+<meta itemprop="description" content="This blog introduces the across-platform-bom, and explains why it
+should be used instead of the across-application-parent."><meta itemprop="datePublished" content="2024-12-17T12:00:00+01:00" />
+<meta itemprop="dateModified" content="2024-12-17T12:00:00+01:00" />
+<meta itemprop="wordCount" content="713">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Replacing the Across Application Parent POM with the Across Platform BOM"/>
+<meta name="twitter:description" content="This blog introduces the across-platform-bom, and explains why it
+should be used instead of the across-application-parent."/>
 
       
     
@@ -194,7 +190,7 @@ It will create both a Java package structure and a structure for the embedded re
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
-        FAQ
+        Blog
       </aside>
       
 
@@ -212,128 +208,172 @@ It will create both a Java package structure and a structure for the embedded re
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Developing Across applications</h1>
+      <h1 class="f1 athelas mt3 mb1">Replacing the Across Application Parent POM with the Across Platform BOM</h1>
+      
+      <p class="tracked">
+        By <strong>Davy</strong>
+      </p>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-12-17T12:00:00+01:00">December 17, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="what-is-the-meaning-of-the-project-structure-created-by-across-initializr">What is the meaning of the project structure created by Across Initializr?</h3>
-<blockquote>
-<p>Update 2024-02-11: Across Initializr is no longer available.</p>
-</blockquote>
-<p><a href="http://start-across.foreach.be">Across Initializr</a> generates a typical
-project structure for an Across application. Which structure gets
-created exactly depends on the options you checked when generating the
-project.</p>
-<p>It will create both a Java package structure and a structure for the
-embedded resources. At first glance some part of it might seem bloated
-(especially the resources). The main reason for this is that Across
-really likes your code to be bundled inside a module and uses module
-specific paths for both its packages and resource locations. As such,
-the unique module resources key will always be part of a resource path.
-This ensures that there are no resource location conflicts between
-modules, as many modules embed (the same type of) resources.</p>
-<p>In addition, the default resource locations are setup in such a way that
-they enable development mode (automatic resource reloading) and static
-resource versioning.</p>
-<h4 id="related-questions">Related questions</h4>
-<p>To get a better idea of the purpose of this structure, please see the
-following questions:</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>This blog introduces the <code>across-platform-bom</code>, and explains why it
+should be used instead of the <code>across-application-parent</code>.</p>
+<h2 id="current-situation">Current situation</h2>
+<p>Currently, Across 5 applications typically use the Across
+<code>across-application-parent</code> POM like this:</p>
+<pre><code>&lt;parent&gt;
+    &lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+    &lt;artifactId&gt;across-application-parent&lt;/artifactId&gt;
+    &lt;version&gt;5.5.1&lt;/version&gt;
+ &lt;/parent&gt;
+</code></pre>
+<p>This has some advantages, but also a very big drawback: an application
+cannot by itself upgrade to a new Spring Boot release: this would
+require a new release of Across first. That is not the days-long
+procedure it was before, but it&rsquo;s still too heavy to do every month.
+(which is the cycle of maintenance releases of Spring Boot).  If you
+want to support the previous minor release as well (which is what
+Spring Boot does), it&rsquo;s two Across release per month. Clearly this is
+not sustainable.</p>
+<p>Also keep in mind critical security issues could come at any
+moment. As an example,
+<a href="https://en.wikipedia.org/wiki/Log4Shell">Log4Shell</a> could still be
+handled, because you can update the <code>log4j2.version</code> property, and
+more or less be done. But you <em>cannot do that</em> for Spring Boot itself.</p>
+<p>Note also that Across is <a href="/blog/2024/01/across-deprecation/">deprecated</a>, and the only maintenance that it
+receives are Spring Boot upgrades.</p>
+<h2 id="goal">Goal</h2>
+<p>We want to move to a situation where:</p>
 <ul>
-<li><a href="what-is-an-across-context.html">What is an Across context?</a></li>
-<li><a href="what-is-a-good-project-structure-for-an-across-module.html">What is a good project structure for an Across
-module?</a></li>
-<li><a href="how-is-the-across-application-different-from-the-across-application-module.html">How is the Across application different from the Across application
-module?</a></li>
-<li><a href="what-is-development-mode.html">What is &ldquo;development mode&rdquo;?</a></li>
+<li>
+<p>We minimize the number of Across releases.</p>
+</li>
+<li>
+<p>But still upgrade on a regular basis (e.g. each minor release of
+Spring Boot).</p>
+</li>
+<li>
+<p>And allow applications to upgrade to the latest patch release (the
+<code>z</code> in <code>x.y.z</code>) of Spring Boot by themselves. In fact this might
+even work with minor Spring Boot upgrade (where the <code>y</code> in <code>x.y.z</code>
+goes up), and that has in fact been done in Project C.</p>
+</li>
 </ul>
-<h3 id="do-i-need-a-rdbms-for-building-an-across-application">Do I need a RDBMS for building an Across application?</h3>
-<p>Although a RDBMS is not strictly required by Across Framework, you will
-need one if you are going to use installers. The RDBMS is necessary for
-Across to be able to track the the installer state between application
-starts.</p>
-<p>Across itself creates only a minimal set of tables and will do so only
-when required, that is when installers need executing.</p>
-<p>See the <a href="../reference-docs-section-installers.html">reference documentation section on
-Installers</a> for more
-details.</p>
-<h3 id="what-are-the-dynamicapplication-modules">What are the dynamic/application modules?</h3>
-<p>See the question <a href="how-is-the-across-application-different-from-the-across-application-module.html">How is the Across application different from the
-Across application
-module?</a></p>
-<h3 id="how-is-the-across-application-different-from-the-across-application-module">How is the Across application different from the Across application module?</h3>
-<p>To understand the answer to this question, it is important you first
-understand the answer to the question <a href="what-is-an-across-context.html">What is an Across
-context?</a></p>
-<p>The <strong>Across application</strong> is the combination of all modules configured
-in your application. The <strong>Across application module</strong> is a single
-module in your application, it is the one containing your application
-specific logic. The application module is always considered to depend on
-all other “shared” modules, and as such is started as the last module
-(with the exception of possible specialized postprocessor modules).</p>
-<p>Shared modules have an explicit module descriptor, whereas the
-application module has an implicit one that is derived from the name and
-package of the <code>@AcrossApplication</code> annotated class. The application
-module is determined using a convention-over-configuration approach. The
-content of the application module is all content present in the
-<code>application</code> package that is a child of the package holding the
-<code>@AcrossApplication</code> class. The key for resources of this module will be
-derived from the <code>@AcrossApplication</code> class name.</p>
-<p>An example:</p>
+<h2 id="solution">Solution</h2>
+<p>The best solution for this, is to treat Across as just another
+library, not as a platform that prevents even patch upgrades.</p>
+<p>This is widely done by many projects using a <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Bill_of_Materials_.28BOM.29_POMs">Bill-of-Materials
+POM</a>,
+for instance:</p>
 <ul>
-<li>your <code>@AcrossApplication</code> class is <code>com.foo.MyApplication</code></li>
-<li>your application module would be named <code>MyApplicationModule</code></li>
-<li>the module configuration would be all components scanned from the
-child packages of <code>com.foo.application</code></li>
-<li>The resources key of your application module would be <code>my</code></li>
+<li><a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven-bom">JUnit BOM</a>.</li>
+<li><a href="https://github.com/FasterXML/jackson-bom">Jackson BOM</a></li>
+<li><a href="https://central.sonatype.com/artifact/org.springframework/spring-framework-bom">Spring Framework BOM</a></li>
+<li><a href="https://central.sonatype.com/artifact/org.springframework.security/spring-security-bom">Spring Security BOM</a></li>
+<li><a href="https://central.sonatype.com/artifact/org.springframework.data/spring-data-bom">Spring Data BOM</a></li>
+<li>&hellip;</li>
 </ul>
-<p>An application module will only be created if there is a package named
-<code>application</code>. You can have an Across application built using only
-shared modules.</p>
-<p>The <code>@AcrossApplication</code> class is part of the root
-Spring <code>ApplicationContext</code>. That class should typically only contain
-application setup and configuration code. Anything declared in that
-<code>ApplicationContext</code> will be available to all modules. The other way
-around - accessing module components on the <code>@AcrossApplication</code> level
-directly - should be avoided.</p>
-<p>Across prefers all business logic to be packaged in modules. Having your
-application-specific logic bundled inside an application module allows
-you to use any of the exposed beans from other modules, as the bootstrap
-order can be guaranteed. Conditions on the existence of components will
-work as expected and it also makes it easier to convert the application
-module to a shared module at any point in time (by simply providing a
-module descriptor).</p>
-<h3 id="where-can-i-find-the-documentation-for-module-x">Where can I find the documentation for module X?</h3>
-<p>Links to the available documentation are present on the <a href="../modules.html">module detail
-page</a>.</p>
-<p>Documentation is an ongoing effort for every team responsible, so
-contributions are very welcome. See our <a href="../contributing.html">contributor
-guidelines</a> if you have an interest in
-contributing.</p>
-<h3 id="where-can-i-report-issues-or-request-features">Where can I report issues or request features?</h3>
-<p>Most modules have their own issue tracker that is listed on the <a href="../modules.html">module
-detail page</a>.<br>
-Please see the question <a href="i-have-a-question-how-can-i-get-in-touch.html">How can i get in
-touch?</a> for more
-information.</p>
-<h3 id="how-can-i-handle-events-published-by-other-modules">How can I handle events published by other modules?</h3>
-<p>Across uses its own event bus for publishing events. Any module can
-define multiple event handlers. An event handler is a single parameter
-method:</p>
+<h2 id="across-release-schedule-proposal">Across Release Schedule Proposal</h2>
+<p>A concrete proposal for an Across release schedule could be as
+follows:</p>
 <ul>
-<li>The parameter type implements <code>AcrossEvent</code> and defines the type of
-event the method handles.</li>
-<li>The method is annotated with <code>@Event</code>, indicating it is an event
-handler.</li>
+<li>One <code>x.y.0</code> release, as soon as a minor new version of Spring Boot
+is released.</li>
+<li>One <code>x.y.1</code> release, when the last maintenance release of the
+corresponding Spring Boot is released.</li>
 </ul>
-<p>All created components will automatically be scanned for event handler
-methods.</p>
-<p>See the <a href="../reference-docs-section-events.html">reference documentation section on
-Events</a> for more details.</p>
-<ul class="pa0">
+<p>If necessary, there could be maintenance releases in between of
+course, but that should be rare.</p>
+<p>Applications can then upgrade every month to the latest patch release
+of Spring Boot, by themselves, without the need for an Across
+release. This is as simple as incrementing the version number in the
+<code>parent</code> of the root <code>pom.xml</code> of the application.</p>
+<p>Doing this every month means:</p>
+<ul>
+<li>That the delta is always small.</li>
+<li>You are always ready for a sudden out-of-band fix for an important
+vulnerability.</li>
+</ul>
+<h2 id="migrating">Migrating</h2>
+<p>First run:</p>
+<pre><code>mvn org.apache.maven.plugins:maven-dependency-plugin:3.8.1:list -DoutputFile=dependency-old.list.txt
+mvn org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree -DoutputFile=dependency-old.tree.txt
+</code></pre>
+<p>You could for instance also commit those files Git (but without the
+<code>-old</code> suffix then).</p>
+<p>Replace the parent in your root <code>pom.xml</code>:</p>
+<pre><code>&lt;parent&gt;
+	&lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+	&lt;artifactId&gt;across-application-parent&lt;/artifactId&gt;
+	&lt;version&gt;5.5.1&lt;/version&gt;
+&lt;/parent&gt;
+</code></pre>
+<p>with:</p>
+<pre><code>&lt;parent&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+	&lt;version&gt;2.7.18&lt;/version&gt;
+&lt;/parent&gt;
+</code></pre>
+<p>Add the following properties:</p>
+<pre><code>&lt;foreach-common-bom.version&gt;2.0.0&lt;/foreach-common-bom.version&gt;
+&lt;across-framework.version&gt;5.5.1&lt;/across-framework.version&gt;
+&lt;across-platform.version&gt;5.5.1&lt;/across-platform.version&gt;
+</code></pre>
+<p>And under <code>dependencyManagement/dependencies</code> add:</p>
+<pre><code>&lt;dependency&gt;
+	&lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+	&lt;artifactId&gt;across-platform-bom&lt;/artifactId&gt;
+	&lt;version&gt;${across-platform.version}&lt;/version&gt;
+	&lt;type&gt;pom&lt;/type&gt;
+	&lt;scope&gt;import&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;com.foreach.libs&lt;/groupId&gt;
+	&lt;artifactId&gt;common-bom&lt;/artifactId&gt;
+	&lt;version&gt;${foreach-common-bom.version}&lt;/version&gt;
+	&lt;type&gt;pom&lt;/type&gt;
+	&lt;scope&gt;import&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>Now build everything again: in principle this should not give any issues.</p>
+<p>You should now check if there are any dependencies whose version have
+changed. Run these commands again, but with a <code>-new</code> suffix:</p>
+<pre><code>mvn org.apache.maven.plugins:maven-dependency-plugin:3.8.1:list -DoutputFile=dependency-new.list.txt
+mvn org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree -DoutputFile=dependency-new.tree.txt
+</code></pre>
+<p>Then diff them using your preferred diff tool (<code>kdiff3</code>, <code>meld</code>,
+WinMerge, &hellip;), for instance:</p>
+<pre><code>kdiff3 dependency-old.list.txt dependency-new.list.txt
+</code></pre>
+<p><em>Study those differences carefully</em>: there will likely be differences,
+and it&rsquo;s now your responsibility to manage that. You will likely need
+to upgrade at least Spring Framework 5.3 and Spring Security 5.8,
+because they still had important releases (up to August 2024) after
+the last Spring Boot 2.7 release (November 2023). Add the following
+properties:</p>
+<pre><code>&lt;spring-framework.version&gt;5.3.39&lt;/spring-framework.version&gt;
+&lt;spring-security.version&gt;5.8.14&lt;/spring-security.version&gt;
+</code></pre>
+<p>You may also want to take particular care of Liquibase, since upgrades
+or downgrades of Liquibase may have quite a bit of impact.</p>
+<h2 id="disadvantages">Disadvantages</h2>
+<p>Note this has disadvantages too: the tradeoff is: you are in control,
+but you will have more work. It&rsquo;s analogous to the tradeoff between
+inheriting from <code>spring-boot-starter-parent</code> vs importing
+<code>spring-boot-dependencies</code>, which is discussed succinctly here:</p>
+<p><a href="https://www.baeldung.com/spring-boot-dependency-management-custom-parent">https://www.baeldung.com/spring-boot-dependency-management-custom-parent</a></p>
+<h2 id="522">5.2.2</h2>
+<p>Note: The <code>across-platform-bom</code> was introduced in the <a href="https://foreach-across.github.io/release-notes/5.2.2/#using-522-with-spring-boot-25-or-26">5.2.2
+Release notes</a>,
+but it was still somewhat experimental then. It&rsquo;s been in use in a
+very active project for over a year now, so it&rsquo;s definitely stable.</p><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -345,20 +385,16 @@ Events</a> for more details.</p>
     <aside class="w-30-l mt6-l"> 
 
 <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">What&#39;s in this faq</p>
+    <p class="f5 b mb3">What&#39;s in this blog</p>
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#what-is-the-meaning-of-the-project-structure-created-by-across-initializr">What is the meaning of the project structure created by Across Initializr?</a></li>
-        <li><a href="#do-i-need-a-rdbms-for-building-an-across-application">Do I need a RDBMS for building an Across application?</a></li>
-        <li><a href="#what-are-the-dynamicapplication-modules">What are the dynamic/application modules?</a></li>
-        <li><a href="#how-is-the-across-application-different-from-the-across-application-module">How is the Across application different from the Across application module?</a></li>
-        <li><a href="#where-can-i-find-the-documentation-for-module-x">Where can I find the documentation for module X?</a></li>
-        <li><a href="#where-can-i-report-issues-or-request-features">Where can I report issues or request features?</a></li>
-        <li><a href="#how-can-i-handle-events-published-by-other-modules">How can I handle events published by other modules?</a></li>
-      </ul>
-    </li>
+    <li><a href="#current-situation">Current situation</a></li>
+    <li><a href="#goal">Goal</a></li>
+    <li><a href="#solution">Solution</a></li>
+    <li><a href="#across-release-schedule-proposal">Across Release Schedule Proposal</a></li>
+    <li><a href="#migrating">Migrating</a></li>
+    <li><a href="#disadvantages">Disadvantages</a></li>
+    <li><a href="#522">5.2.2</a></li>
   </ul>
 </nav>
 </div>

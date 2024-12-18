@@ -6,7 +6,7 @@
     <description>Recent content on Foreach Across</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://foreach-across.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>General</title>
@@ -219,6 +219,20 @@
       <description>&lt;p&gt;&lt;code&gt;WebCmsModule&lt;/code&gt; provides some basic web content management features for&#xA;your Across application.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Across 6.0.0 Release notes</title>
+      <link>https://foreach-across.github.io/release-notes/6.0.0/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://foreach-across.github.io/release-notes/6.0.0/</guid>
+      <description>&lt;p&gt;Across 6.0 upgrades to Spring Boot 3.2, which includes many upgrades:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Minimum Java 17; 21 is supported too.&lt;/li&gt;&#xA;&lt;li&gt;Spring Framework 6.1&lt;/li&gt;&#xA;&lt;li&gt;Spring Security 6.2&lt;/li&gt;&#xA;&lt;li&gt;Hibernate 6.4&lt;/li&gt;&#xA;&lt;li&gt;Tomcat 10.1&lt;/li&gt;&#xA;&lt;li&gt;And of course Jakarta EE, which renames many packages from &lt;code&gt;javax.*&lt;/code&gt;&#xA;to &lt;code&gt;jakarta.*&lt;/code&gt; (but not all!)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Changes in Across itself are relatively limited, except for a number&#xA;of modules that have been removed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Replacing the Across Application Parent POM with the Across Platform BOM</title>
+      <link>https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/</link>
+      <pubDate>Tue, 17 Dec 2024 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/</guid>
+      <description>&lt;p&gt;This blog introduces the &lt;code&gt;across-platform-bom&lt;/code&gt;, and explains why it&#xA;should be used instead of the &lt;code&gt;across-application-parent&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Across 5.5.1 Release notes</title>
       <link>https://foreach-across.github.io/release-notes/5.5.1/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
@@ -226,7 +240,7 @@
       <description>&lt;p&gt;5.5.1 upgrades Spring Framework and Spring Security to the very last&#xA;(public) 5.y.z releases. The Foreach Common Java Libraries are&#xA;upgraded to 2.0.0.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Foreach Common Java Libraries 2.0.0 Release Notes</title>
+      <title>Foreach Common Java Libraries 2.0.0/3.0.0 Release Notes</title>
       <link>https://foreach-across.github.io/release-notes/fcjl-2.0.0/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://foreach-across.github.io/release-notes/fcjl-2.0.0/</guid>
@@ -266,6 +280,13 @@
       <pubDate>Fri, 12 Jan 2024 12:00:00 +0100</pubDate>
       <guid>https://foreach-across.github.io/release-notes/5.3.0/</guid>
       <description>&lt;p&gt;The one big change in &lt;code&gt;5.3&lt;/code&gt; is that Across development has moved to an&#xA;&lt;a href=&#34;https://gitlab.eindhoven.io-internal.dev/antwerpen/across/&#34;&gt;internal GitLab server&lt;/a&gt;,&#xA;with the repositories also mirrored (publicly) to&#xA;&lt;a href=&#34;https://github.com/ForeachOS&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The Across modules have been reorganized into a much smaller number of&#xA;git repositories, to speed up the release process. As a result of&#xA;this, there are a few small changes you need in your application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across deprecation</title>
+      <link>https://foreach-across.github.io/blog/2024/01/across-deprecation/</link>
+      <pubDate>Thu, 11 Jan 2024 13:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/blog/2024/01/across-deprecation/</guid>
+      <description>&lt;p&gt;Across development will be very limited from now on, basically only&#xA;upgrading to newer Spring Boot versions. Modules that are not used&#xA;anymore, will be gradually removed as applications will migrate away&#xA;from Across.&lt;/p&gt;&#xA;&lt;p&gt;You should definitely not start any new projects with Across.&lt;/p&gt;&#xA;&lt;p&gt;A more lightweight alternative is &lt;a href=&#34;https://spring.io/projects/spring-modulith&#34;&gt;Spring&#xA;Modulith&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Across 5.2.2 Release notes</title>

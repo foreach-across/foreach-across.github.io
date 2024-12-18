@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Foreach Common Java Libraries 2.0.0 Release Notes | Foreach Across</title>
+    <title>Foreach Common Java Libraries 2.0.0/3.0.0 Release Notes | Foreach Across</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="The Foreach Common Java Libraries
 (FCJL)
@@ -41,7 +41,7 @@ common-file-manager was added.">
       <link rel="canonical" href="https://foreach-across.github.io/release-notes/fcjl-2.0.0/">
     
 
-    <meta property="og:title" content="Foreach Common Java Libraries 2.0.0 Release Notes" />
+    <meta property="og:title" content="Foreach Common Java Libraries 2.0.0/3.0.0 Release Notes" />
 <meta property="og:description" content="The Foreach Common Java Libraries
 (FCJL)
 are a set of small libraries, with limited dependencies and limited
@@ -52,9 +52,9 @@ common-file-manager was added." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://foreach-across.github.io/release-notes/fcjl-2.0.0/" /><meta property="article:section" content="release-notes" />
 <meta property="article:published_time" content="2024-09-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-09-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-12-17T00:00:00+00:00" />
 
-<meta itemprop="name" content="Foreach Common Java Libraries 2.0.0 Release Notes">
+<meta itemprop="name" content="Foreach Common Java Libraries 2.0.0/3.0.0 Release Notes">
 <meta itemprop="description" content="The Foreach Common Java Libraries
 (FCJL)
 are a set of small libraries, with limited dependencies and limited
@@ -62,9 +62,9 @@ scope. Some of these libraries are used by Across, and had to be
 updated for Jakarta EE (a requirement for Spring Boot 3 and thus for
 Across 6). We made 2.0 and 3.0 releases, and a new module
 common-file-manager was added."><meta itemprop="datePublished" content="2024-09-12T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-09-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="843">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Foreach Common Java Libraries 2.0.0 Release Notes"/>
+<meta itemprop="dateModified" content="2024-12-17T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1001">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Foreach Common Java Libraries 2.0.0/3.0.0 Release Notes"/>
 <meta name="twitter:description" content="The Foreach Common Java Libraries
 (FCJL)
 are a set of small libraries, with limited dependencies and limited
@@ -228,7 +228,7 @@ common-file-manager was added."/>
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Foreach Common Java Libraries 2.0.0 Release Notes</h1>
+      <h1 class="f1 athelas mt3 mb1">Foreach Common Java Libraries 2.0.0/3.0.0 Release Notes</h1>
       
       <p class="tracked">
         By <strong>Davy</strong>
@@ -334,25 +334,25 @@ be used anywhere.</p>
 <li>
 <p>The top layer consists of the admin UI, based on <code>entity-module</code>
 and <code>admin-web-module</code>, which allows for browsing the file
-repositories. Obviously we won&rsquo;t migrate this as is: in fact we
-won&rsquo;t provide a web UI at all. You have many alternatives:</p>
+repositories. The
+<a href="https://foreach-across.github.io/ref-docs-5/file-manager-module/developer-tools.html">documentation</a>
+has an explicitly warning about this: &ldquo;Only use the development
+browser for developer testing as it is neither optimized for
+performance, nor secured against illegal access&rdquo;.</p>
+<p>Obviously we won&rsquo;t migrate this as is: in fact we won&rsquo;t provide a
+web UI at all. You have many alternatives:</p>
 <ul>
-<li>
-<p>You can just use the native tools, such as the <a href="https://azure.microsoft.com/en-us/products/storage/storage-explorer">Azure Storage
-Exporer</a>.</p>
-</li>
-<li>
-<p>Use the <a href="https://plugins.jetbrains.com/plugin/21706-remote-file-systems">IntelliJ Remote File Systems
+<li>You can just use the native tools, such as the <a href="https://azure.microsoft.com/en-us/products/storage/storage-explorer">Azure Storage
+Exporer</a>.</li>
+<li>Use the <a href="https://plugins.jetbrains.com/plugin/21706-remote-file-systems">IntelliJ Remote File Systems
 plugin</a>,
 which supports local files, SFTP, and object storage for all
-major providers.</p>
-</li>
-<li>
-<p>That plugin does not appear to support plain FTP, but there are
+major providers.</li>
+<li>That plugin does not appear to support plain FTP, but there are
 many browsers for that, such as
 <a href="https://filezilla-project.org/">FileZilla</a> (which supports FTP,
-FTP over TLS (FTPS) and SFTP)</p>
-</li>
+FTP over TLS (FTPS) and SFTP). And of course, you should not be
+using plain insecured FTP at all anymore.</li>
 </ul>
 </li>
 </ol>
@@ -407,6 +407,23 @@ files (and/or <code>-dev</code> variants etc), as it will not be picked up
 anymore. You will need to replace this with your own configuration.</p>
 </li>
 </ol>
+<h2 id="differences-between-200-and-300">Differences between 2.0.0 and 3.0.0</h2>
+<p>These are limited to changes that are required because all
+dependencies are upgraded to line up with Spring Boot 3.2:</p>
+<ul>
+<li>
+<p>Some tests are changed due to Mockito API changes.</p>
+</li>
+<li>
+<p>The Amazon and Azure SDK&rsquo;s are upgraded to the latest versions.</p>
+</li>
+<li>
+<p>The biggest impact is on the SFTP support in the
+<code>common-file-manager</code> module, because <a href="https://github.com/spring-projects/spring-integration/wiki/Spring-Integration-5.x-to-6.0-Migration-Guide#migrate-sftp-module-from-jsch-to-apache-mina">Spring Integration 6 migrated
+from JSch to Apache Mina for
+SFTP</a></p>
+</li>
+</ul>
 <h2 id="git-repository-is-moved">Git repository is moved</h2>
 <p>The legacy repository for FCJL is at Bitbucket:
 <a href="https://bitbucket.org/beforeach/common-java-libraries">https://bitbucket.org/beforeach/common-java-libraries</a>. This will not
@@ -416,7 +433,25 @@ be updated anymore.</p>
 <p>And that is mirrored to the public GitHub repository at:
 <a href="https://github.com/ForeachOS/foreach-common-java-libraries">https://github.com/ForeachOS/foreach-common-java-libraries</a></p>
 <p>There is also an old Jira project, but that is not used anymore:
-<a href="https://foreach.atlassian.net/browse/FJCL">https://foreach.atlassian.net/browse/FJCL</a></p><ul class="pa0">
+<a href="https://foreach.atlassian.net/browse/FJCL">https://foreach.atlassian.net/browse/FJCL</a></p>
+<h2 id="documentation">Documentation</h2>
+<p>Most of the documentation of the Across 
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+ still applies, and is still available at:</p>
+<p><a href="https://foreach-across.github.io/ref-docs-5/file-manager-module/">https://foreach-across.github.io/ref-docs-5/file-manager-module/</a></p>
+<p>The main parts that no longer apply are:</p>
+<ul>
+<li>
+<p><a href="https://foreach-across.github.io/ref-docs-5/file-manager-module/file-reference/">Linking to files using
+<code>FileReference</code></a>,
+aka, the &ldquo;middle layer&rdquo; mentioned before.</p>
+</li>
+<li>
+<p><a href="https://foreach-across.github.io/ref-docs-5/file-manager-module/developer-tools.html">Developer
+tools</a>,
+which is the UI in the &ldquo;top layer&rdquo; above.</p>
+</li>
+</ul><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -435,7 +470,9 @@ be updated anymore.</p>
     <li><a href="#using-fcjl-as-dependencies-in-maven">Using FCJL as dependencies in Maven</a></li>
     <li><a href="#removed-modules">Removed modules</a></li>
     <li><a href="#common-file-manager">common-file-manager</a></li>
+    <li><a href="#differences-between-200-and-300">Differences between 2.0.0 and 3.0.0</a></li>
     <li><a href="#git-repository-is-moved">Git repository is moved</a></li>
+    <li><a href="#documentation">Documentation</a></li>
   </ul>
 </nav>
 </div>

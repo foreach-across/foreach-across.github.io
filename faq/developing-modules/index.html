@@ -221,7 +221,7 @@ See the reference documentation section on Development Across modules for genera
 descriptor. To be able to share it across multiple projects, simply move
 all components and the descriptor to a shared JAR. A module usually
 corresponds to a single JAR, but this is not a requirement.</p>
-<p>See the <a href="../reference-docs%3Fsection=developing-across-modules.html">reference documentation section on Development Across
+<p>See the <a href="../reference-docs-section-developing-across-modules.html">reference documentation section on Development Across
 modules</a> for
 general information on developing modules.<br>
 See also the question <a href="what-is-a-good-project-structure-for-an-across-module.html">What is a good project structure for an Across
@@ -290,7 +290,7 @@ module <code>ApplicationContext</code>, and to interact with their components.</
 <h3 id="how-can-i-test-my-shared-module">How can I test my shared module?</h3>
 <p>There is a separate artifact called <strong>across-test</strong> that contains
 several utility classes for integration testing your module.<br>
-See the <a href="../reference-docs%3Fsection=across-test.html">reference documentation on
+See the <a href="../reference-docs-section-across-test.html">reference documentation on
 Testing</a> for more details.</p>
 <h3 id="can-my-module-extend-another-modules-configuration">Can my module extend another module&rsquo;s configuration?</h3>
 <p>Yes.</p>
@@ -300,7 +300,7 @@ before it gets started:</p>
 <li>Your module can provide a <code>@ModuleConfiguration</code> class in its
 extension packages. A <code>@ModuleConfiguration</code> is like a regular
 <code>@Configuration</code> which will be added to the target module instead of
-the module that declares it.  See the <a href="../reference-docs%3Fsection=moduleconfiguration.html">reference documentation on
+the module that declares it.  See the <a href="../reference-docs-section-moduleconfiguration.html">reference documentation on
 <code>@ModuleConfiguration</code></a>
 for more information.</li>
 <li>Your module descriptor can implement the <code>prepareForBootstrap()</code>

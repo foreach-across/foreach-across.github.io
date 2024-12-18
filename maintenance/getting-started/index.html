@@ -51,7 +51,7 @@ modules and platform." />
 your laptop, in order to efficiently work on the Across framework,
 modules and platform.">
 
-<meta itemprop="wordCount" content="1326">
+<meta itemprop="wordCount" content="1379">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Getting started with development on Across"/>
 <meta name="twitter:description" content="These instructions are for setting up your development environment on
 your laptop, in order to efficiently work on the Across framework,
@@ -302,12 +302,20 @@ IntelliJ:</p>
 </code></pre>
 <p>Next you have to activate the <code>venv-6</code> environment in your current
 shell (and any other terminal that you open), by sourcing the
-<code>activate</code> script, which should work for both <code>bash</code> and <code>zsh</code> (there
-is a separate <code>activate.fish</code> script if you like <code>fish</code>):</p>
+<code>activate</code> script, which should work for both <code>bash</code> and <code>zsh</code> on
+Linux and macOS (there is a separate <code>activate.fish</code> script if you
+like the <code>fish</code> shell):</p>
 <pre><code>source ../venv-6/bin/activate
 </code></pre>
 <p>Or, more idiomatically:</p>
 <pre><code>. ../venv-6/bin/activate
+</code></pre>
+<p>On Windows, the activate script is in the Scripts/ directory:</p>
+<pre><code>source ../venv-6/Scripts/activate
+</code></pre>
+<p>Note that on some installations there is no python3 executable in the virtual environment.
+If this is the case, make a symbolic link in the directory of the virtual environment:</p>
+<pre><code>ln-s python.exe python3.exe
 </code></pre>
 <p>If you now run:</p>
 <pre><code>which python3
@@ -455,7 +463,7 @@ docker-compose up oracle
 docker-compose up postgres
 </code></pre>
 <h3 id="maven-integration-tests">Maven integration tests</h3>
-<p>To run the integration tests locally, run either of:</p>
+<p>To run the integration tests locally, run either (or all) of:</p>
 <pre><code>axitest -DacrossTest.datasource=h2
 axitest -DacrossTest.datasource=mssql
 axitest -DacrossTest.datasource=mysql

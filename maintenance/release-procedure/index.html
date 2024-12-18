@@ -438,7 +438,7 @@ available at Maven Central:</p>
 <p><a href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/</a></p>
 <h2 id="deploy-javadocs-to-the-website">Deploy Javadocs to the website</h2>
 <p>The API Javadocs are hosted using GitHub Pages, using this repository:</p>
-<p><a href="https://github.com/foreach-across/api-docs-5">https://github.com/foreach-across/api-docs-5</a></p>
+<p><a href="https://github.com/foreach-across/api-docs-6">https://github.com/foreach-across/api-docs-6</a></p>
 <p>Run the equivalent of:</p>
 <pre><code>ax-release.py javadoc release-plans/5.4.1.yml
 </code></pre>
@@ -467,10 +467,10 @@ was already released, the &ldquo;current&rdquo; version will still be <code>5.5.
 </ul>
 <p>When the changes are pushed, GitHub Pages will automatically
 re-deploy the site to:</p>
-<p><a href="https://foreach-across.github.io/api-docs-5/">https://foreach-across.github.io/api-docs-5/</a></p>
+<p><a href="https://foreach-across.github.io/api-docs-6/">https://foreach-across.github.io/api-docs-6/</a></p>
 <p>This may take a minute or two. With the right permissions, you can
 check when the site was last deployed at:</p>
-<p><a href="https://github.com/foreach-across/api-docs-5/actions">https://github.com/foreach-across/api-docs-5/actions</a></p>
+<p><a href="https://github.com/foreach-across/api-docs-6/actions">https://github.com/foreach-across/api-docs-6/actions</a></p>
 <h2 id="write-and-deploy-release-notes">Write and deploy release notes</h2>
 <p>Create the release notes under the <code>releases-notes</code> directory, for
 instance by starting from an older release note:</p>
@@ -491,7 +491,7 @@ file (in your editor), it will immediately be rerendered in the
 browser.</p>
 <p>If this is an X.Y.0 release, do not forget to add a new X.Y column in
 the table at the start of the <a href="/release-notes/">Release notes</a> page.</p>
-<p>Once your releases notes are finished you can deploy the changes to
+<p>Once your release notes are finished you can deploy the changes to
 the website (you will need write access to the <a href="https://github.com/foreach-across/foreach-across.github.io">website
 repository</a>):</p>
 <pre><code>cd website
@@ -509,7 +509,7 @@ repositories are still on the same branch as used for the release.</p>
 </li>
 <li>
 <p>Ensure you have the latest commit for the release branch of each
-repository (See the <a href="https://foreach-across.github.io/maintenance/tips-and-tricks/">Tips and tricks</a> for details about these commands:</p>
+repository (See the <a href="https://foreach-across.github.io/maintenance/tips-and-tricks/">Tips and tricks</a> for details about these commands):</p>
 <pre><code> ax-exec.sh git fetch -p
  ax-exec.sh git pull --ff-only
 </code></pre>

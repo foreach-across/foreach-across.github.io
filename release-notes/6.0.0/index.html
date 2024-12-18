@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Across 6.0.0 Release notes | Foreach Across</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Across 6.0 upgrades to Spring Boot 3.2, which includes many upgrades:
+
+Minimum Java 17; 21 is supported too.
+Spring Framework 6.1
+Spring Security 6.2
+Hibernate 6.4
+Tomcat 10.1
+And of course Jakarta EE, which renames many packages from javax.*
+to jakarta.* (but not all!)
+
+Changes in Across itself are relatively limited, except for a number
+of modules that have been removed.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.f96b61024fa9430d3974da887e046433b2e934adb2f7c0fd2259cd989344350b.css" >
+
+
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/img/favicon-32x32.ico" type="image/x-icon" />
+
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://foreach-across.github.io/release-notes/6.0.0/">
+    
+
+    <meta property="og:title" content="Across 6.0.0 Release notes" />
+<meta property="og:description" content="Across 6.0 upgrades to Spring Boot 3.2, which includes many upgrades:
+
+Minimum Java 17; 21 is supported too.
+Spring Framework 6.1
+Spring Security 6.2
+Hibernate 6.4
+Tomcat 10.1
+And of course Jakarta EE, which renames many packages from javax.*
+to jakarta.* (but not all!)
+
+Changes in Across itself are relatively limited, except for a number
+of modules that have been removed." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foreach-across.github.io/release-notes/6.0.0/" /><meta property="article:section" content="release-notes" />
+<meta property="article:published_time" content="2024-12-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-12-18T00:00:00+00:00" />
+
+<meta itemprop="name" content="Across 6.0.0 Release notes">
+<meta itemprop="description" content="Across 6.0 upgrades to Spring Boot 3.2, which includes many upgrades:
+
+Minimum Java 17; 21 is supported too.
+Spring Framework 6.1
+Spring Security 6.2
+Hibernate 6.4
+Tomcat 10.1
+And of course Jakarta EE, which renames many packages from javax.*
+to jakarta.* (but not all!)
+
+Changes in Across itself are relatively limited, except for a number
+of modules that have been removed."><meta itemprop="datePublished" content="2024-12-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-12-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2178">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Across 6.0.0 Release notes"/>
+<meta name="twitter:description" content="Across 6.0 upgrades to Spring Boot 3.2, which includes many upgrades:
+
+Minimum Java 17; 21 is supported too.
+Spring Framework 6.1
+Spring Security 6.2
+Hibernate 6.4
+Tomcat 10.1
+And of course Jakarta EE, which renames many packages from javax.*
+to jakarta.* (but not all!)
+
+Changes in Across itself are relatively limited, except for a number
+of modules that have been removed."/>
+
+      
+    
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Foreach Across
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home page">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/overview/" title="Overview page">
+              Overview
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/modules/" title="Modules page">
+              Modules
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/docs/" title="Docs page">
+              Docs
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/release-notes/" title="Release Notes page">
+              Release Notes
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/blog/" title="Blog page">
+              Blog
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/maintenance/" title="Maintenance page">
+              Maintenance
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/faq/" title="FAQ page">
+              FAQ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/old" title="Old page">
+              Old
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://foreach.be/" target="_blank" rel="noopener" class="Foreach ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Foreach link" aria-label="follow on Foreach——Opens in a new window">
+      
+        Foreach
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://www.youtube.com/watch?v=00Jn3d12L2M" target="_blank" rel="noopener" class="youtube ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="YouTube link" aria-label="follow on YouTube——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.527,41.34c-0.278,0-0.478,0.078-0.6,0.244  c-0.121,0.156-0.18,0.424-0.18,0.796v0.896h1.543V42.38c0-0.372-0.062-0.64-0.185-0.796C42.989,41.418,42.792,41.34,42.527,41.34z   M36.509,41.309c0.234,0,0.417,0.076,0.544,0.23c0.123,0.155,0.185,0.383,0.185,0.682v4.584c0,0.286-0.053,0.487-0.153,0.611  c-0.1,0.127-0.256,0.189-0.47,0.189c-0.148,0-0.287-0.033-0.421-0.096c-0.135-0.062-0.274-0.171-0.415-0.313v-5.531  c0.119-0.122,0.239-0.213,0.36-0.271C36.26,41.335,36.383,41.309,36.509,41.309z M41.748,44.658v1.672  c0,0.468,0.057,0.792,0.17,0.974c0.118,0.181,0.313,0.269,0.592,0.269c0.289,0,0.491-0.076,0.606-0.229  c0.114-0.153,0.175-0.489,0.175-1.013v-0.405h1.795v0.456c0,0.911-0.217,1.596-0.657,2.059c-0.435,0.459-1.089,0.687-1.958,0.687  c-0.781,0-1.398-0.242-1.847-0.731c-0.448-0.486-0.676-1.157-0.676-2.014v-3.986c0-0.768,0.249-1.398,0.742-1.882  c0.493-0.484,1.128-0.727,1.911-0.727c0.799,0,1.413,0.225,1.843,0.674c0.429,0.448,0.642,1.093,0.642,1.935v2.264H41.748z   M38.623,48.495c-0.271,0.336-0.669,0.501-1.187,0.501c-0.343,0-0.646-0.062-0.912-0.192c-0.267-0.129-0.519-0.327-0.746-0.601  v0.681h-1.764V36.852h1.764v3.875c0.237-0.27,0.485-0.478,0.748-0.616c0.267-0.143,0.534-0.212,0.805-0.212  c0.554,0,0.975,0.189,1.265,0.565c0.294,0.379,0.438,0.933,0.438,1.66v4.926C39.034,47.678,38.897,48.159,38.623,48.495z   M30.958,48.884v-0.976c-0.325,0.361-0.658,0.636-1.009,0.822c-0.349,0.191-0.686,0.282-1.014,0.282  c-0.405,0-0.705-0.129-0.913-0.396c-0.201-0.266-0.305-0.658-0.305-1.189v-7.422h1.744v6.809c0,0.211,0.037,0.362,0.107,0.457  c0.077,0.095,0.196,0.141,0.358,0.141c0.128,0,0.292-0.062,0.488-0.188c0.197-0.125,0.375-0.283,0.542-0.475v-6.744h1.744v8.878  H30.958z M24.916,38.6v10.284h-1.968V38.6h-2.034v-1.748h6.036V38.6H24.916z M32.994,32.978c0-0.001,12.08,0.018,13.514,1.45  c1.439,1.435,1.455,8.514,1.455,8.555c0,0-0.012,7.117-1.455,8.556C45.074,52.969,32.994,53,32.994,53s-12.079-0.031-13.516-1.462  c-1.438-1.435-1.441-8.502-1.441-8.556c0-0.041,0.004-7.12,1.441-8.555C20.916,32.996,32.994,32.977,32.994,32.978z M42.52,29.255  h-1.966v-1.08c-0.358,0.397-0.736,0.703-1.13,0.909c-0.392,0.208-0.771,0.312-1.14,0.312c-0.458,0-0.797-0.146-1.027-0.437  c-0.229-0.291-0.345-0.727-0.345-1.311v-8.172h1.962v7.497c0,0.231,0.045,0.399,0.127,0.502c0.08,0.104,0.216,0.156,0.399,0.156  c0.143,0,0.327-0.069,0.548-0.206c0.22-0.137,0.423-0.312,0.605-0.527v-7.422h1.966V29.255z M31.847,27.588  c0.139,0.147,0.339,0.219,0.6,0.219c0.266,0,0.476-0.075,0.634-0.223c0.157-0.152,0.235-0.358,0.235-0.618v-5.327  c0-0.214-0.08-0.387-0.241-0.519c-0.16-0.131-0.37-0.196-0.628-0.196c-0.241,0-0.435,0.065-0.586,0.196  c-0.148,0.132-0.225,0.305-0.225,0.519v5.327C31.636,27.233,31.708,27.439,31.847,27.588z M30.408,19.903  c0.528-0.449,1.241-0.674,2.132-0.674c0.812,0,1.48,0.237,2.001,0.711c0.517,0.473,0.777,1.083,0.777,1.828v5.051  c0,0.836-0.255,1.491-0.762,1.968c-0.513,0.476-1.212,0.714-2.106,0.714c-0.858,0-1.547-0.246-2.064-0.736  c-0.513-0.492-0.772-1.152-0.772-1.983v-5.068C29.613,20.954,29.877,20.351,30.408,19.903z M24.262,16h-2.229l2.634,8.003v5.252  h2.213v-5.5L29.454,16h-2.25l-1.366,5.298h-0.139L24.262,16z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30  S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/foreach-across/" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Release Notes
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Across 6.0.0 Release notes</h1>
+      
+      <p class="tracked">
+        By <strong>Davy</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-12-18T00:00:00Z">December 18, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Across 6.0 upgrades to Spring Boot 3.2, which includes many upgrades:</p>
+<ul>
+<li>Minimum Java 17; 21 is supported too.</li>
+<li>Spring Framework 6.1</li>
+<li>Spring Security 6.2</li>
+<li>Hibernate 6.4</li>
+<li>Tomcat 10.1</li>
+<li>And of course Jakarta EE, which renames many packages from <code>javax.*</code>
+to <code>jakarta.*</code> (but not all!)</li>
+</ul>
+<p>Changes in Across itself are relatively limited, except for a number
+of modules that have been removed.</p>
+<h2 id="release-notes">Release notes</h2>
+<p>First of all, please read these release notes entirely, before you
+start anything.</p>
+<p>It&rsquo;s also a good idea to read the various Spring release notes:</p>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Release-Notes">Spring Boot 3.0 release notes</a></li>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.1-Release-Notes">Spring Boot 3.1 release notes</a></li>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.2-Release-Notes">Spring Boot 3.2 release notes</a></li>
+</ul>
+<p>and:</p>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.0-Release-Notes">Spring Framework 6.0 release notes</a></li>
+<li><a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes">Spring Framework 6.1 release notes</a></li>
+</ul>
+<p>Hibernate:</p>
+<ul>
+<li><a href="https://docs.jboss.org/hibernate/orm/6.0/migration-guide/migration-guide.html">Hibernate 6.0</a></li>
+<li><a href="https://docs.jboss.org/hibernate/orm/6.1/migration-guide/migration-guide.html">Hibernate 6.1</a></li>
+<li><a href="https://docs.jboss.org/hibernate/orm/6.2/migration-guide/migration-guide.html">Hibernate 6.2</a></li>
+<li><a href="https://docs.jboss.org/hibernate/orm/6.3/migration-guide/migration-guide.html">Hibernate 6.3</a></li>
+<li><a href="https://docs.jboss.org/hibernate/orm/6.4/migration-guide/migration-guide.html">Hibernate 6.4</a></li>
+</ul>
+<p><a href="https://github.com/FasterXML/jackson/wiki/Jackson-Releases">Jackson release
+notes</a>. Spring
+Boot 3.2 uses Jackson 2.15.</p>
+<h2 id="version-numbers-lined-up-to-60-for-all-modules">Version numbers lined up to 6.0 for all modules</h2>
+<p>All modules now have the same 6.y.z version number as Across Framework
+and Across Platform, which is a lot easier to manage. This means it is
+no longer possible to release a module by itself, but that&rsquo;s ok:</p>
+<ul>
+<li>Pretty much the only changes in Across nowadays are for Spring Boot
+upgrades, and you want to test all modules with each upgrade anyway.</li>
+<li>In practice, we haven&rsquo;t done a per-module release in years anyway.</li>
+<li>And a per-module release hasn&rsquo;t been possible since <a href="/release-notes/5.3.0/#git-repositories">we merged a
+series of Git repositories in Across 5.3.0</a></li>
+</ul>
+<p>Note that this was only possible, because the <code>across-media-modules</code>
+repository (whose modules were already numbered 6.y.z) was removed,
+which is explained in the next section.</p>
+<h2 id="across-media-modules-repository-and-modules-have-been-removed">across-media-modules repository and modules have been removed</h2>
+<p>The biggest change in Across 6 itself is that the
+<a href="https://github.com/foreach-across/across-media-modules">across-media-modules</a>
+repository with the following modules has been removed:</p>
+<ul>
+<li>
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+</li>
+<li>
+<a href="/modules/web-cms-module/"><code>web-cms-module</code></a>
+</li>
+<li>
+<a href="/modules/imageserver-admin/"><code>imageserver-admin</code></a>
+</li>
+</ul>
+<p>The reason is that 
+<a href="/modules/web-cms-module/"><code>web-cms-module</code></a>
+ is a very large
+and complicated module, which was only used for a single project
+anymore, where it can be replaced with a much simpler
+solution. <code>web-cms-module</code> has dependencies on <code>image-server</code> and
+<code>file-manager-module</code>, but nothing in Across (Platform) itself has any
+dependencies on those.</p>
+<ul>
+<li>We have no active projects that need <code>image-server</code> anymore, so that
+could easily be removed.</li>
+<li><code>file-manager-module</code> has been removed as well, but an alternative
+is provided for that, which is described in the next section.</li>
+</ul>
+<p>Update: By the time Across 6 is being released, the last project that
+used <code>web-cms-module</code> has been decided to end, so the replacement with
+a simpler solution is not even needed there.</p>
+<h2 id="fcjl-common-file-manager">FCJL common-file-manager</h2>
+<p>So the 
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+ has been removed in
+6.0.0.  We have however extracted part of it in the <a href="/release-notes/fcjl-2.0.0/#common-file-manager">Foreach Common
+Java Libraries (FCJL)</a></p>
+<p>If you depend on the <code>file-manager-module</code>, we recommend that you
+first replace the Across <code>file-manager-module</code> with the
+<code>common-file-manager</code> from FCJL 2.0 (details are in those release
+notes), <em>before</em> upgrading to Across 6.</p>
+<p>See those <a href="/release-notes/fcjl-2.0.0/#common-file-manager">FCJL 2.0.0/3.0.0 Release notes</a> for detailed instructions to
+switch.</p>
+<p>However, you can only do these steps if you are <em>not</em> depending on 
+<a href="/modules/web-cms-module/"><code>web-cms-module</code></a>
+ or 
+<a href="/modules/imageserver-admin/"><code>imageserver-admin</code></a>
+.</p>
+<h2 id="ehcache-module-changes">ehcache-module changes</h2>
+<p>The migration to EHCache 3 is probably the biggest dependency upgrade
+in the context of Spring Boot 3: EHCache 3 is essentially a full rewrite
+of EHCache 2.</p>
+<p>One of the major changes in EHCache 3 is that there are now three
+possible layers of caching:</p>
+<ul>
+<li>
+<p>Java Heap</p>
+</li>
+<li>
+<p>In process memory, but outside the Java Heap (&ldquo;off-heap&rdquo;). If you
+use this with Kubernetes, make sure that the memory limits are
+adjusted appropriately!</p>
+</li>
+<li>
+<p>Disk, which you probably don&rsquo;t want to use. In fact, the Hibernate
+6.4 User Guide warns <a href="https://docs.jboss.org/hibernate/orm/6.4/userguide/html_single/Hibernate_User_Guide.html#caching-provider-jcache">at the end of the JCache
+section</a>
+that this is enabled by default, and you should probably disable it.</p>
+</li>
+</ul>
+<p>Sticking with EHCache 2 is not an option:</p>
+<ul>
+<li>EHCache 2 uses Java EE API&rsquo;s
+(<a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.0-Release-Notes#removed-apis">source</a>),
+so it is fundamentally incompatible with Spring Framework 6, which
+requires Jakarta EE (e.g. the whole <code>javax</code> -&gt; <code>jakarta</code> migration).</li>
+<li>It is also <a href="https://github.com/ehcache/ehcache2">EOL since September 2023</a>.</li>
+<li>The first version of EHCache 3 was already released in 2016, so it&rsquo;s
+pretty reasonable that the EHCache developers expect you to upgrade.</li>
+<li>It would be a negative investment of time anyway: better bite the
+bullet and learn EHCache 3.</li>
+</ul>
+<p>The migration guide for EHCache 3 can be found here:</p>
+<p><a href="https://www.ehcache.org/documentation/3.10/migration-guide.html">https://www.ehcache.org/documentation/3.10/migration-guide.html</a></p>
+<p>but it&rsquo;s very minimal.</p>
+<p>One of the major changes is that EHCache is now an
+<a href="https://www.ehcache.org/documentation/3.10/107.html">implementation</a>
+of the <a href="https://www.jcp.org/en/jsr/detail?id=107">JSR-107 &ldquo;JCache&rdquo;</a>
+standard. This opened up some options for other projects:</p>
+<ul>
+<li>
+<p><a href="https://github.com/spring-projects/spring-framework/issues/30641">Direct EHCache support was removed from Spring Framework
+6</a>. The
+
+  <a href="/modules/ehcache-module/"><code>ehcache-module</code></a>
+ in Across 6 works with EHCache
+3.10 (upgraded from 2.10 in Across 5.5). Integrating Spring with
+EHCache is now <a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.0-Release-Notes#removed-apis">supposed to go via the JSR-107
+JCache</a>.</p>
+</li>
+<li>
+<p>Hibernate has in fact done the exact same thing: the
+<code>hibernate-ehcache</code> module does not exist anymore in
+Hibernate 6. This is not explicitly mentioned in the <a href="https://docs.jboss.org/hibernate/orm/6.0/migration-guide/migration-guide.html">6.0 migration
+guide</a>
+though, it is sort of implied in the <a href="https://docs.jboss.org/hibernate/orm/6.4/userguide/html_single/Hibernate_User_Guide.html#caching-provider-jcache-cache-manager">6.4 User
+Guide</a>,
+which shows how to integrate via EHCache using the
+<code>hibernate-jcache</code> module.  In the 5.6, there there used to be <a href="https://docs.jboss.org/hibernate/orm/5.6/userguide/html_single/Hibernate_User_Guide.html#caching-provider-ehcache">a
+dedicated EHCache
+section</a>.</p>
+</li>
+</ul>
+<p>It is no longer possible to define caches programmatically in the
+Across <code>ehcache-module</code>: this was deemed to much effort, and most
+(all?) applications probably configure it through the <code>ehcache.xml</code>
+file. Note that the <a href="https://www.ehcache.org/documentation/3.10/xml.html">format of that
+file</a> has been
+completely changed as well in EHCache 3.</p>
+<p>Support for EHCache in the 
+<a href="/modules/debug-web-module/"><code>debug-web-module</code></a>
+ has
+been reduced as well:</p>
+<ul>
+<li>
+<p>The <code>DebugEhcacheController</code> from 
+<a href="/modules/ehcache-module/"><code>ehcache-module</code></a>
+
+has been disabled, because most of the info that was shown there, is
+simply not available anymore in EHCache 3.</p>
+</li>
+<li>
+<p>The <code>CacheController</code> (the <a href="http://localhost:8080/debug/cache/cacheManagers">Cache managers
+page</a>) in 
+<a href="/modules/debug-web-module/"><code>debug-web-module</code></a>
+ itself is still there, and also
+allows clearing the cache(s). The per-cache detail page however does
+no longer show any details about the entries, because that info is
+no longer available in the EHCache 3 API.</p>
+</li>
+</ul>
+<p>The Cache statistics that are now shown are coming mainly from the JMX
+support for JCache, using the
+<a href="https://www.javadoc.io/static/javax.cache/cache-api/1.0.0/javax/cache/management/CacheStatisticsMXBean.html">CacheStatisticsMXBean</a>
+Note in particular that this does <em>not</em> include the number of elements
+in a cache, and that field is blank in the 
+<a href="/modules/debug-web-module/"><code>debug-web-module</code></a>
+ UI.</p>
+<p>There are two new <code>boolean</code> configuration options (both defaulting to
+<code>false</code>):</p>
+<ul>
+<li>
+<p><code>ehcache-module.always-determine-cache-size</code>: This does allow
+showing the number of entries in the cache, by iterating over the
+the entire cache. Besides the obvious cost of that, there is another
+hidden cost: iterating through all entries counts as a cache hit
+<em>for each entry</em>! So every time you visit a Cache page in the
+<code>/debug/cache/</code> page it affects the hit count and the hit ratio (hit
+%).</p>
+</li>
+<li>
+<p><code>ehcache-module.show-cache-entries</code>: By default, the cache entries
+are no longer shown when you visit the detail page of a specific
+cache. Again, because this affects the hit count and the hit ratio.</p>
+</li>
+</ul>
+<p>So by default, the debug support in 
+<a href="/modules/ehcache-module/"><code>ehcache-module</code></a>
+
+does the right thing (not affect the hit count/ratio), but you have an
+opt-in option if you&rsquo;re willing to bear the cost.</p>
+<p>Clearing caches is still supported of course.</p>
+<h2 id="jakarta-ee">Jakarta EE</h2>
+<p>The introduction of Jakarta EE renames many packages from <code>javax.*</code> to
+<code>jakarta.*</code>, but not all (not <code>javax.sql</code> for instance, because that&rsquo;s
+part of the regular JDK, which is still under control of Oracle).
+For background, see:</p>
+<p><a href="https://www.google.com/search?q=jakarta+package+rename">https://www.google.com/search?q=jakarta+package+rename</a></p>
+<p>Luckily there are tools that greatly help with this (see the <a href="#recommended-upgrade-steps">last
+section about the recommended migration steps</a>).</p>
+<p>Tip: Watch especially out for configuration files such as:</p>
+<ul>
+<li>Across Autoconfigure config files: <code>across-configuration.yml</code>.</li>
+<li>SPI configuration files under the <code>/META-INF/services/</code> directory.</li>
+</ul>
+<p>Tip: If you get this compiler error:</p>
+<pre><code>Fatal error compiling: java.lang.NoClassDefFoundError: javax/persistence/Entity: javax.persistence.Entity
+</code></pre>
+<p>and you have no references anywhere to <code>javax.persistence</code>, make sure
+you&rsquo;re using QueryDSL jars with the <code>jakarta</code> classifier. For
+instance:</p>
+<pre><code>&lt;dependency&gt;
+	&lt;groupId&gt;com.querydsl&lt;/groupId&gt;
+	&lt;artifactId&gt;querydsl-apt&lt;/artifactId&gt;
+	&lt;classifier&gt;jakarta&lt;/classifier&gt;
+	&lt;scope&gt;provided&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>The only dependencies in Across 6 that require the <code>jakarta</code>
+classifier are QueryDSL and EHCache, but your project may have other
+dependencies that also require the <code>jakarta</code> classifier. All other
+dependencies (such as Hibernate etc) are directly dependent on the
+Jakarta API&rsquo;s.</p>
+<p>I would have expected that the <code>pom.xml</code> of <code>spring-boot-dependencies</code>
+would configure this correctly, but unfortunately it does not seem
+consistent: for instance, it mentions the <code>jakarta</code> classifier for
+EHCache, but not for QueryDSL.</p>
+<h2 id="liquibase-427">Liquibase 4.27</h2>
+<p>Spring Boot 3.2 comes with Liquibase 4.24, but Across requires at least 4.27.</p>
+<h2 id="hibernate">Hibernate</h2>
+<p>In many cases, it&rsquo;s no longer necessary to explicitly set the
+Hibernate SQL dialect, so if you see a warning like this:</p>
+<pre><code>HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+</code></pre>
+<p>it&rsquo;s safe to remove this setting:</p>
+<pre><code>acrossHibernate:
+  hibernate-properties:
+    hibernate.dialect: &quot;org.hibernate.dialect.MySQL8Dialect&quot;
+</code></pre>
+<h2 id="thymeleaf-31">Thymeleaf 3.1</h2>
+<p>Thymeleaf 3.1 is a lot stricter, for security reasons:</p>
+<p><a href="https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html">https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html</a></p>
+<p>in particular:</p>
+<ul>
+<li>
+<p><a href="https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html#removal-of-web-api-based-expression-utility-objects">https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html#removal-of-web-api-based-expression-utility-objects</a></p>
+</li>
+<li>
+<p><a href="https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html#tighter-restrictions-on-the-use-of-classes-in-expressions">https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html#tighter-restrictions-on-the-use-of-classes-in-expressions</a></p>
+</li>
+</ul>
+<p>How to deal with this is explained further in the What&rsquo;s new:</p>
+<p><a href="https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html#expression-restrictions">https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html#expression-restrictions</a></p>
+<h2 id="spring-mvc">Spring MVC</h2>
+<h3 id="controller-is-required">@Controller is required</h3>
+<p><code>@Controller</code> is now required on a controller, in the past
+<code>@RequestMapping</code> was sufficient (if the bean was somehow picked up
+through component scanning or an <code>@Bean</code>).</p>
+<h3 id="multivaluemap-for-applicationx-www-form-urlencoded">MultiValueMap for application/x-www-form-urlencoded</h3>
+<p>In a @Controller, it does not appear to work anymore to decode form
+data into a <code>MultiValueMap</code> parameter:</p>
+<pre><code>@RequestBody MultiValueMap&lt;String, String&gt; data
+</code></pre>
+<p>Using <code>@RequestParam</code> does work:</p>
+<pre><code>@RequestParam MultiValueMap&lt;String, String&gt; data
+</code></pre>
+<p>but that will contain all other (regular) request parameters as well.</p>
+<h2 id="date-and-time-formatting-changes-because-of-cldr">Date and time formatting changes because of CLDR</h2>
+<p>Date and time formatting has changed because of <a href="https://openjdk.org/jeps/252">JEP252: Use CLDR
+Locale Data by Default</a>.</p>
+<h2 id="logback-and-thymeleaf">Logback and Thymeleaf</h2>
+<p>Check whether you have this in your <code>logback-spring.xml</code> or
+<code>logback.xml</code> (or any other variant) file(s):</p>
+<pre><code>org.thymeleaf.spring5.messageresolver.SpringMessageResolver
+</code></pre>
+<p>Replace that with the Spring 6 version:</p>
+<pre><code>org.thymeleaf.spring6.messageresolver.SpringMessageResolver
+</code></pre>
+<h2 id="logback-logs-disappearing">Logback logs disappearing</h2>
+<p>If your logs are disappearing after the Spring Boot / Across banner,
+and you are using this ElasticSearch appender:</p>
+<p><a href="https://github.com/internetitem/logback-elasticsearch-appender">https://github.com/internetitem/logback-elasticsearch-appender</a></p>
+<p>then your problem is <em>NOT</em> that that is not compatible with Logback
+1.4 that comes with Spring Boot 3.2. That appender project seems
+indeed unmaintained, and there are <a href="https://central.sonatype.com/search?q=logback-elasticsearch-appender">several
+forks</a>. I
+tried this one, but was not entirely able to get that to work either:</p>
+<p><a href="https://github.com/agido-malter/logback-elasticsearch-appender/">https://github.com/agido-malter/logback-elasticsearch-appender/</a></p>
+<p>In fact, the <em>real</em> problem is likely a major change in Spring Boot 3,
+that comes with the upgrade to Logback 1.4: In Spring Boot 2, you
+could use <code>&lt;springProfile</code> at any level of the <code>logback-spring.xml</code>
+file, whereas in Spring Boot 3, it can only be used directly under the
+top-level <code>&lt;configuration&gt;</code> element, not inside the <code>&lt;appender&gt;</code>,
+<code>&lt;logger&gt;</code> nor <code>&lt;root&gt;</code> elements (etc).</p>
+<h2 id="recommended-upgrade-steps">Recommended upgrade steps</h2>
+<p>We recommend that you do the migration to Across 6.0 with the
+following steps:</p>
+<ol>
+<li>
+<p>Use the <a href="https://docs.openrewrite.org/recipes/java/spring/boot2/upgradespringboot_2_7">OpenRewrite Spring Boot 2.7 recipe</a>
+to automatically do the upgrade your Spring Boot 2.7.</p>
+<p>Tip: Use the &ldquo;Maven Command Line&rdquo; option to run OpenRewrite: it
+does not involve installing anything yourself, nor does it require
+modifying your <code>pom.xml</code>. It&rsquo;s just the easiest option.</p>
+<p>Your code might not compile or run at this point, but you should
+commit it anyway, so you have a clear difference between what was
+automatically changed, and what was manually changed.</p>
+</li>
+<li>
+<p>Then manually upgrade to <a href="/release-notes/5.5.0/">Across 5.5</a>: The
+Spring Security adaptations that you need to make there, are also
+needed in 6.0, but it will be much easier to do that step
+separately.</p>
+</li>
+<li>
+<p>Switch from using the <code>across-application-parent</code> to using the
+<code>across-platform-bom</code>. Why and how is explained in detail in the
+<a href="https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/">Replacing the Across Application Parent POM with the Across
+Platform BOM post</a>.</p>
+</li>
+<li>
+<p>If you are using the 
+<a href="/modules/file-manager-module/"><code>file-manager-module</code></a>
+,
+replace it with the <code>common-file-manager</code> module from the Foreach
+Common Java Libraries. See <a href="#fcjl-common-file-manager">above</a> for details and restrictions.</p>
+</li>
+<li>
+<p>Use the <a href="https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21">OpenRewrite Java 21
+recipe</a>
+to upgrade to Java 21. This boils down to running a single Maven
+command, and probably manually fixing a few issues. You may also
+need to upgrade some libraries for compatibility with Java 21. It
+might also not be possible to go to 21 at once, but only to 17.</p>
+<p>The reason to do this as a separate step, is that the OpenRewrite
+for Spring Boot 3 will of course do the Java 17 upgrade as well:
+this way, that&rsquo;s a separate step, outside the Across upgrade, that
+you can test separately. It&rsquo;s also a separate commit in your
+history, which means the Spring Boot upgrade commit (see further)
+is smaller and more to the point.</p>
+</li>
+<li>
+<p>It&rsquo;s implied that you test your application after each of the
+previous (and next) steps, but now is a good moment to do a bigger
+test, possibly involving QA. Make sure everything is OK in
+acceptance, and ideally you should put it in production after this
+step. This ensures at least that your application works with Spring
+Boot 2.7 and Java 21.</p>
+</li>
+<li>
+<p>Use the <a href="https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_2">OpenRewrite Spring Boot 3.2 recipe</a>
+to automatically do the upgrade to Spring Boot 3.2. Since this is a
+compound recipe, this will do a whole bunch of other upgrades,
+including <a href="https://docs.openrewrite.org/recipes/java/migrate/upgradetojava17">upgrading to Java
+17</a>,
+but that should have no effect since you&rsquo;ve already upgraded to
+Java 21. Your code will obviously not compile at this point, but
+you should commit it anyway: this way, the gigantic amount of
+<code>import javax.</code> -&gt; <code>import.jakarta.</code> changes are in a separate
+commit, so they don&rsquo;t pollute the rest of the Across 6 upgrade.</p>
+</li>
+<li>
+<p>Change the top-level Maven <code>pom.xml</code> file to point to Across 6.0.0:</p>
+<pre><code> &lt;foreach-common-bom.version&gt;3.0.0&lt;/foreach-common-bom.version&gt;
+ &lt;across-framework.version&gt;6.0.0&lt;/across-framework.version&gt;
+ &lt;across-platform.version&gt;6.0.0&lt;/across-platform.version&gt;
+</code></pre>
+<p>Then fix any compilation problems, based on the information above,
+and the release notes and migration guides of all the third-party
+libraries.</p>
+</li>
+</ol><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l"> 
+
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this release-notes</p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#release-notes">Release notes</a></li>
+    <li><a href="#version-numbers-lined-up-to-60-for-all-modules">Version numbers lined up to 6.0 for all modules</a></li>
+    <li><a href="#across-media-modules-repository-and-modules-have-been-removed">across-media-modules repository and modules have been removed</a></li>
+    <li><a href="#fcjl-common-file-manager">FCJL common-file-manager</a></li>
+    <li><a href="#ehcache-module-changes">ehcache-module changes</a></li>
+    <li><a href="#jakarta-ee">Jakarta EE</a></li>
+    <li><a href="#liquibase-427">Liquibase 4.27</a></li>
+    <li><a href="#hibernate">Hibernate</a></li>
+    <li><a href="#thymeleaf-31">Thymeleaf 3.1</a></li>
+    <li><a href="#spring-mvc">Spring MVC</a>
+      <ul>
+        <li><a href="#controller-is-required">@Controller is required</a></li>
+        <li><a href="#multivaluemap-for-applicationx-www-form-urlencoded">MultiValueMap for application/x-www-form-urlencoded</a></li>
+      </ul>
+    </li>
+    <li><a href="#date-and-time-formatting-changes-because-of-cldr">Date and time formatting changes because of CLDR</a></li>
+    <li><a href="#logback-and-thymeleaf">Logback and Thymeleaf</a></li>
+    <li><a href="#logback-logs-disappearing">Logback logs disappearing</a></li>
+    <li><a href="#recommended-upgrade-steps">Recommended upgrade steps</a></li>
+  </ul>
+</nav>
+</div>
+
+
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://foreach-across.github.io/" >
+    &copy;  Foreach Across 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://foreach.be/" target="_blank" rel="noopener" class="Foreach ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Foreach link" aria-label="follow on Foreach——Opens in a new window">
+      
+        Foreach
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://www.youtube.com/watch?v=00Jn3d12L2M" target="_blank" rel="noopener" class="youtube ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="YouTube link" aria-label="follow on YouTube——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.527,41.34c-0.278,0-0.478,0.078-0.6,0.244  c-0.121,0.156-0.18,0.424-0.18,0.796v0.896h1.543V42.38c0-0.372-0.062-0.64-0.185-0.796C42.989,41.418,42.792,41.34,42.527,41.34z   M36.509,41.309c0.234,0,0.417,0.076,0.544,0.23c0.123,0.155,0.185,0.383,0.185,0.682v4.584c0,0.286-0.053,0.487-0.153,0.611  c-0.1,0.127-0.256,0.189-0.47,0.189c-0.148,0-0.287-0.033-0.421-0.096c-0.135-0.062-0.274-0.171-0.415-0.313v-5.531  c0.119-0.122,0.239-0.213,0.36-0.271C36.26,41.335,36.383,41.309,36.509,41.309z M41.748,44.658v1.672  c0,0.468,0.057,0.792,0.17,0.974c0.118,0.181,0.313,0.269,0.592,0.269c0.289,0,0.491-0.076,0.606-0.229  c0.114-0.153,0.175-0.489,0.175-1.013v-0.405h1.795v0.456c0,0.911-0.217,1.596-0.657,2.059c-0.435,0.459-1.089,0.687-1.958,0.687  c-0.781,0-1.398-0.242-1.847-0.731c-0.448-0.486-0.676-1.157-0.676-2.014v-3.986c0-0.768,0.249-1.398,0.742-1.882  c0.493-0.484,1.128-0.727,1.911-0.727c0.799,0,1.413,0.225,1.843,0.674c0.429,0.448,0.642,1.093,0.642,1.935v2.264H41.748z   M38.623,48.495c-0.271,0.336-0.669,0.501-1.187,0.501c-0.343,0-0.646-0.062-0.912-0.192c-0.267-0.129-0.519-0.327-0.746-0.601  v0.681h-1.764V36.852h1.764v3.875c0.237-0.27,0.485-0.478,0.748-0.616c0.267-0.143,0.534-0.212,0.805-0.212  c0.554,0,0.975,0.189,1.265,0.565c0.294,0.379,0.438,0.933,0.438,1.66v4.926C39.034,47.678,38.897,48.159,38.623,48.495z   M30.958,48.884v-0.976c-0.325,0.361-0.658,0.636-1.009,0.822c-0.349,0.191-0.686,0.282-1.014,0.282  c-0.405,0-0.705-0.129-0.913-0.396c-0.201-0.266-0.305-0.658-0.305-1.189v-7.422h1.744v6.809c0,0.211,0.037,0.362,0.107,0.457  c0.077,0.095,0.196,0.141,0.358,0.141c0.128,0,0.292-0.062,0.488-0.188c0.197-0.125,0.375-0.283,0.542-0.475v-6.744h1.744v8.878  H30.958z M24.916,38.6v10.284h-1.968V38.6h-2.034v-1.748h6.036V38.6H24.916z M32.994,32.978c0-0.001,12.08,0.018,13.514,1.45  c1.439,1.435,1.455,8.514,1.455,8.555c0,0-0.012,7.117-1.455,8.556C45.074,52.969,32.994,53,32.994,53s-12.079-0.031-13.516-1.462  c-1.438-1.435-1.441-8.502-1.441-8.556c0-0.041,0.004-7.12,1.441-8.555C20.916,32.996,32.994,32.977,32.994,32.978z M42.52,29.255  h-1.966v-1.08c-0.358,0.397-0.736,0.703-1.13,0.909c-0.392,0.208-0.771,0.312-1.14,0.312c-0.458,0-0.797-0.146-1.027-0.437  c-0.229-0.291-0.345-0.727-0.345-1.311v-8.172h1.962v7.497c0,0.231,0.045,0.399,0.127,0.502c0.08,0.104,0.216,0.156,0.399,0.156  c0.143,0,0.327-0.069,0.548-0.206c0.22-0.137,0.423-0.312,0.605-0.527v-7.422h1.966V29.255z M31.847,27.588  c0.139,0.147,0.339,0.219,0.6,0.219c0.266,0,0.476-0.075,0.634-0.223c0.157-0.152,0.235-0.358,0.235-0.618v-5.327  c0-0.214-0.08-0.387-0.241-0.519c-0.16-0.131-0.37-0.196-0.628-0.196c-0.241,0-0.435,0.065-0.586,0.196  c-0.148,0.132-0.225,0.305-0.225,0.519v5.327C31.636,27.233,31.708,27.439,31.847,27.588z M30.408,19.903  c0.528-0.449,1.241-0.674,2.132-0.674c0.812,0,1.48,0.237,2.001,0.711c0.517,0.473,0.777,1.083,0.777,1.828v5.051  c0,0.836-0.255,1.491-0.762,1.968c-0.513,0.476-1.212,0.714-2.106,0.714c-0.858,0-1.547-0.246-2.064-0.736  c-0.513-0.492-0.772-1.152-0.772-1.983v-5.068C29.613,20.954,29.877,20.351,30.408,19.903z M24.262,16h-2.229l2.634,8.003v5.252  h2.213v-5.5L29.454,16h-2.25l-1.366,5.298h-0.139L24.262,16z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30  S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/foreach-across/" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -6,8 +6,22 @@
     <description>Recent content in Blog on Foreach Across</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Aug 2023 12:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2024 12:00:00 +0100</lastBuildDate>
     <atom:link href="https://foreach-across.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replacing the Across Application Parent POM with the Across Platform BOM</title>
+      <link>https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/</link>
+      <pubDate>Tue, 17 Dec 2024 12:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/blog/2024/12/replacing-the-across-application-parent-pom-with-the-across-platform-bom/</guid>
+      <description>&lt;p&gt;This blog introduces the &lt;code&gt;across-platform-bom&lt;/code&gt;, and explains why it&#xA;should be used instead of the &lt;code&gt;across-application-parent&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Across deprecation</title>
+      <link>https://foreach-across.github.io/blog/2024/01/across-deprecation/</link>
+      <pubDate>Thu, 11 Jan 2024 13:00:00 +0100</pubDate>
+      <guid>https://foreach-across.github.io/blog/2024/01/across-deprecation/</guid>
+      <description>&lt;p&gt;Across development will be very limited from now on, basically only&#xA;upgrading to newer Spring Boot versions. Modules that are not used&#xA;anymore, will be gradually removed as applications will migrate away&#xA;from Across.&lt;/p&gt;&#xA;&lt;p&gt;You should definitely not start any new projects with Across.&lt;/p&gt;&#xA;&lt;p&gt;A more lightweight alternative is &lt;a href=&#34;https://spring.io/projects/spring-modulith&#34;&gt;Spring&#xA;Modulith&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Across 5.2.1 released</title>
       <link>https://foreach-across.github.io/blog/2023/08/across-5.2.1-released/</link>
