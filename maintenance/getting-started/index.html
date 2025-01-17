@@ -51,7 +51,7 @@ modules and platform." />
 your laptop, in order to efficiently work on the Across framework,
 modules and platform.">
 
-<meta itemprop="wordCount" content="1379">
+<meta itemprop="wordCount" content="1482">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Getting started with development on Across"/>
 <meta name="twitter:description" content="These instructions are for setting up your development environment on
 your laptop, in order to efficiently work on the Across framework,
@@ -272,6 +272,16 @@ directory.</p>
 the latest 1.8 and 17 in the <code>~/.jdks</code> directory.</p>
 </li>
 </ul>
+<p>So you should end up with a directory structure like this:</p>
+<pre><code>$ ls -l ~/.jdks/
+lrwxrwxrwx 1 dvsp dvsp   15 aug  9 17:45 17 -&gt; temurin-17.0.12
+lrwxrwxrwx 1 dvsp dvsp   18 jun 27  2022 1.8 -&gt; temurin-1.8.0_332/
+drwxrwxr-x 9 dvsp dvsp 4096 aug  9 17:42 temurin-17.0.12
+drwxrwxr-x 8 dvsp dvsp 4096 jun 27  2022 temurin-1.8.0_332
+</code></pre>
+<p>On macOS, IntelliJ installs the JDKS somewhere else in your home
+directory; just make sure that the <code>1.8</code> and <code>17</code> links in <code>~/.jdks</code>
+point to the those directories and you will be find.</p>
 <h2 id="clone-the-repositories">Clone the repositories</h2>
 <h3 id="clone-the-across-development-repository">Clone the across-development repository:</h3>
 <p>First of all, make a directory where you will work on Across:</p>
@@ -307,15 +317,17 @@ Linux and macOS (there is a separate <code>activate.fish</code> script if you
 like the <code>fish</code> shell):</p>
 <pre><code>source ../venv-6/bin/activate
 </code></pre>
-<p>Or, more idiomatically:</p>
+<p>Or, more idiomatically in the <code>bash</code> shell (This does not work in the
+<code>zsh</code> shell):</p>
 <pre><code>. ../venv-6/bin/activate
 </code></pre>
 <p>On Windows, the activate script is in the Scripts/ directory:</p>
 <pre><code>source ../venv-6/Scripts/activate
 </code></pre>
-<p>Note that on some installations there is no python3 executable in the virtual environment.
-If this is the case, make a symbolic link in the directory of the virtual environment:</p>
-<pre><code>ln-s python.exe python3.exe
+<p>Note that on some installations there is no python3 executable in the
+virtual environment.  If this is the case, make a symbolic link in the
+directory of the virtual environment:</p>
+<pre><code>ln -s python.exe python3.exe
 </code></pre>
 <p>If you now run:</p>
 <pre><code>which python3
@@ -336,7 +348,7 @@ ax-list.py modules --with-repo
 ax-list.py repositories
 </code></pre>
 <p>These commands should list the modules and repositories, in the order
-that they are build (and are <a href="https://foreach-across.github.io/modules/">listed on the website</a>).</p>
+that they need to be build (and are <a href="https://foreach-across.github.io/modules/">listed on the website</a>).</p>
 <p>The order of the repositories is something you need to know by heart,
 if you want to efficiently work on Across. It&rsquo;s not a long list, and
 the order is pretty logical, so this shouldn&rsquo;t be a problem.</p>

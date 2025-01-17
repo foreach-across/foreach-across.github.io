@@ -78,7 +78,7 @@ And a few post-release steps.
 
 ">
 
-<meta itemprop="wordCount" content="1210">
+<meta itemprop="wordCount" content="1245">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Release procedure"/>
 <meta name="twitter:description" content="The release procedure consists of:
 
@@ -480,6 +480,12 @@ git add 5.4.1.md
 </code></pre>
 <p>Change the title, date and author (if necessary) in the header of the
 new document.</p>
+<p>Second, if this is an X.Y.0 release (e.g. a new minor release of
+Across), then you also have to update the overview table at the start
+of <code>release-notes/_index.md</code> (which is rendered at the top of the
+<a href="/release-notes/">Release notes page</a>. You need to add a
+new column for the new Across version, with the corresponding versions
+of Spring Boot, Spring Framework, etc.</p>
 <p>Start the <a href="https://gohugo.io">Hugo static site generator</a> in
 development mode:</p>
 <pre><code>cd website
@@ -489,8 +495,6 @@ make start
 and navigate to your new release notes. Whenever you edit the Markdown
 file (in your editor), it will immediately be rerendered in the
 browser.</p>
-<p>If this is an X.Y.0 release, do not forget to add a new X.Y column in
-the table at the start of the <a href="/release-notes/">Release notes</a> page.</p>
 <p>Once your release notes are finished you can deploy the changes to
 the website (you will need write access to the <a href="https://github.com/foreach-across/foreach-across.github.io">website
 repository</a>):</p>
