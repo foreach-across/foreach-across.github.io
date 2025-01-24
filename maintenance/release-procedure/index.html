@@ -78,7 +78,7 @@ And a few post-release steps.
 
 ">
 
-<meta itemprop="wordCount" content="1245">
+<meta itemprop="wordCount" content="1321">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Release procedure"/>
 <meta name="twitter:description" content="The release procedure consists of:
 
@@ -295,6 +295,10 @@ across-platform: 5.4.1
 <p>Note that the order is important: it should follow the dependencies,
 and the order in which the repositories are to be released.</p>
 <h2 id="run-the-release-script-for-each-repository">Run the release script for each repository</h2>
+<p>Warning: This is a procedure that takes a fairly long time (think 1.5
+to 2 hours), so the recommendation is <em>NOT</em> use the terminal in
+IntelliJ, but an OS-native terminal (&ldquo;Terminal&rdquo; in macOS, Gnome
+terminal, Windows Terminal etc).</p>
 <p>First of all, make sure you have sourced the right Python virtual
 environments, and your <code>JAVA_HOME</code> and <code>PATH</code> environment variables
 point to the right JDK (1.8 for Across 5, 17 for Across 6). For my
@@ -505,6 +509,10 @@ repository</a>):</p>
 the progress here:</p>
 <p><a href="https://github.com/foreach-across/foreach-across.github.io/actions">https://github.com/foreach-across/foreach-across.github.io/actions</a></p>
 <h2 id="reset-versions-to---snapshot">Reset versions to &ndash;SNAPSHOT</h2>
+<p>Warning: This is a procedure that takes a fairly long time (think 1.5
+to 2 hours), so the recommendation is <em>NOT</em> use the terminal in
+IntelliJ, but an OS-native terminal (&ldquo;Terminal&rdquo; in macOS, Gnome
+terminal, Windows Terminal etc).</p>
 <ol>
 <li>
 <p>Make sure you are still in the same <code>across-development</code> repository

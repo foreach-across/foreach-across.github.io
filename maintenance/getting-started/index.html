@@ -51,7 +51,7 @@ modules and platform." />
 your laptop, in order to efficiently work on the Across framework,
 modules and platform.">
 
-<meta itemprop="wordCount" content="1564">
+<meta itemprop="wordCount" content="1608">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Getting started with development on Across"/>
 <meta name="twitter:description" content="These instructions are for setting up your development environment on
 your laptop, in order to efficiently work on the Across framework,
@@ -384,6 +384,17 @@ followed by a space, and <code>enter</code>.</p>
 can now do:</p>
 <pre><code>ax-exec.sh git checkout 6.0
 </code></pre>
+<h3 id="clone-the-ananke-theme-for-the-website">Clone the Ananke theme for the website</h3>
+<p>From the top-level directory:</p>
+<pre><code>git submodule init
+git submodule update --remote
+</code></pre>
+<p>At the moment the website is built with the commit
+<code>91df000ca82769a7578df81fa142d1a18e446bc0</code>, so to be safe,
+you best checkout that specific version:</p>
+<pre><code>cd website/themes/ananke/
+git checkout 91df000ca82769a7578df81fa142d1a18e446bc0
+</code></pre>
 <h3 id="clone-the-website-repository">Clone the website repository</h3>
 <p>The <a href="https://foreach-across.github.io">Across website</a> is actually
 just a <a href="https://github.com/foreach-across/foreach-across.github.io">GitHub
@@ -521,6 +532,7 @@ database(s) running using <code>docker-compose</code> (see above).</p><ul class=
         <li><a href="#clone-the-across-development-repository">Clone the across-development repository:</a></li>
         <li><a href="#setup-the-python-virtualenv">Setup the Python virtualenv</a></li>
         <li><a href="#clone-the-framework-modules-and-platform-repositories">Clone the Framework, modules and Platform repositories</a></li>
+        <li><a href="#clone-the-ananke-theme-for-the-website">Clone the Ananke theme for the website</a></li>
         <li><a href="#clone-the-website-repository">Clone the website repository</a></li>
       </ul>
     </li>
