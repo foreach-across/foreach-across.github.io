@@ -51,7 +51,7 @@ modules and platform." />
 your laptop, in order to efficiently work on the Across framework,
 modules and platform.">
 
-<meta itemprop="wordCount" content="1482">
+<meta itemprop="wordCount" content="1564">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Getting started with development on Across"/>
 <meta name="twitter:description" content="These instructions are for setting up your development environment on
 your laptop, in order to efficiently work on the Across framework,
@@ -249,15 +249,28 @@ scripts work. Do <em>NOT</em> skip this step.</p>
 <p><a href="https://graphviz.org/download/">GraphViz</a></p>
 </li>
 <li>
-<p><a href="https://gohugo.io/">Hugo</a> static site generator: use the extended
-version.</p>
+<p><a href="https://gohugo.io/">Hugo</a> static site generator: You <em>need</em> version
+<a href="https://github.com/gohugoio/hugo/releases/tag/v0.121.2"><code>0.121.2</code></a>,
+and it MUST be the <em>extended</em> version of <code>hugo</code>.</p>
+<p>On macOS, it should be possible to use (this is the extended version):</p>
+<pre><code>brew install hugo@0.121.2
+brew pin hugo
+</code></pre>
+<p>On Windows, you can use Chocolatey:</p>
+<pre><code>choco install hugo-extended --version=0.121.2
+choco pin add hugo-extended
+</code></pre>
+<p>Alternatively, <code>hugo</code> is easy to install by hand, since it&rsquo;s just a
+single binary (it&rsquo;s written in Go). Just download the extended
+version from the link above (near the bottom of the list) and put it
+in your <code>~/bin</code> (if you have that in your <code>PATH</code>) or
+<code>/usr/local/bin</code>.</p>
 </li>
 <li>
-<p>Go (if using a Hugo theme which requires Go modules)</p>
+<p>Optional: Install the <a href="https://plugins.jetbrains.com/plugin/13215-hugo-integration">Hugo plugin for
+IntelliJ</a></p>
 </li>
 </ul>
-<p>IntelliJ: install the <a href="https://plugins.jetbrains.com/plugin/13215-hugo-integration">Hugo
-plugin</a></p>
 <h2 id="jdk-installation-instructions">JDK installation instructions</h2>
 <p>Install both a JDK 1.8 and a JDK 17 in <code>~/.jdks</code>. The easiest way to
 do this is:</p>
